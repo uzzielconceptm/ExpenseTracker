@@ -6,37 +6,37 @@ import JournalPageTestimonial from "@/components/ui/journal-page-testimonial";
 export default function Testimonials() {
   const containerRef = useRef<HTMLDivElement>(null);
   
-  // Testimonial data in first-person format
+  // Testimonial data in realistic format
   const stickyTestimonials = [
     {
-      quote: "I stopped dreading tax time! My accountant actually said I have the most organized records of any client.",
+      quote: "Before ExpenseWise, I would scramble at tax time trying to find receipts from months ago. Now I'm saving about $2,300 annually in deductions I would have missed.",
       author: "Sarah J.",
-      role: "Freelance Designer"
+      role: "Independent Photographer"
     },
     {
-      quote: "ExpenseWise saves me 3+ hours a week. That's time I can spend with clients instead of sorting receipts.",
+      quote: "I spent 5-6 hours every month organizing expenses. ExpenseWise automated most of it, and now it takes me less than an hour. The mobile app is particularly useful for capturing receipts on the go.",
       author: "Marcus T.",
-      role: "Marketing Consultant"
+      role: "Financial Consultant"
     },
     {
-      quote: "The email scanner is MAGIC. I never manually save a receipt from my inbox now.",
+      quote: "The integration with my bank account has been seamless. When I make business purchases, ExpenseWise categorizes them automatically with about 90% accuracy.",
       author: "Alicia R.",
-      role: "Content Creator"
+      role: "E-commerce Store Owner"
     }
   ];
   
   const journalTestimonials = [
     {
-      quote: "Month end used to be a nightmare. Now I click one button and get a perfectly categorized expense report. My taxes basically file themselves!",
+      quote: "I used to struggle with expense tracking for my business trips. ExpenseWise lets me scan receipts right away, tag them to specific clients, and generate accurate reports for billing. This has improved my reimbursement rate by approximately 15%.",
       author: "James K.",
-      role: "Freelance Developer",
-      date: "April 18, 2023"
+      role: "IT Consultant",
+      date: "February 8, 2023"
     },
     {
-      quote: "As someone with ADHD, keeping track of receipts was impossible. ExpenseWise's automatic scanning turned my financial chaos into perfect organization without any effort.",
+      quote: "I've tried at least five different expense tracking apps over the years. ExpenseWise is the only one that has the right balance of automation and flexibility. The dashboard gives me a clear picture of where my money is going each month.",
       author: "Elena M.",
-      role: "Graphic Artist",
-      date: "May 2, 2023"
+      role: "Interior Designer",
+      date: "April 12, 2023"
     }
   ];
 

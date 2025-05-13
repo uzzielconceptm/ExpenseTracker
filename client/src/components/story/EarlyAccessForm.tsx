@@ -146,13 +146,6 @@ export default function StoryEarlyAccessForm() {
                     </div>
                   </div>
                 </div>
-                
-                <div className="bg-white/10 p-4 rounded-lg border border-white/20">
-                  <p className="italic">
-                    "I should have started using this years ago. My only regret is all the time I wasted before."
-                  </p>
-                  <p className="mt-2 font-medium">— Alex, Freelance Photographer</p>
-                </div>
               </div>
               
               {/* Right column - Form */}
