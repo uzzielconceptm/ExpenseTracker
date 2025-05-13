@@ -268,10 +268,10 @@
   75% { transform: rotate(-1deg); }
 }
 
-/* Scrolling animation */
+/* Scrolling animation - always visible now */
 .scroll-reveal {
-  opacity: 0;
-  transform: translateY(30px);
+  opacity: 1;
+  transform: translateY(0);
   transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform, opacity;
 }
@@ -281,16 +281,16 @@
   transform: translateY(0);
 }
 
-/* Different reveal directions */
+/* Different reveal directions - now all visible by default */
 .scroll-reveal-left {
-  transform: translateX(-30px) translateY(0);
+  transform: translateX(0) translateY(0);
 }
 .scroll-reveal-left.visible {
   transform: translateX(0) translateY(0);
 }
 
 .scroll-reveal-right {
-  transform: translateX(30px) translateY(0);
+  transform: translateX(0) translateY(0);
 }
 .scroll-reveal-right.visible {
   transform: translateX(0) translateY(0);

@@ -1,4 +1,3 @@
-import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { motion } from "framer-motion";
 
 interface TimeNodeProps {
@@ -16,13 +15,8 @@ export default function TimeNode({
   index, 
   children 
 }: TimeNodeProps) {
-  const [ref, inView] = useScrollReveal<HTMLDivElement>();
-  
+  // Simple animation variants
   const variants = {
-    hidden: { 
-      opacity: 0, 
-      x: position === "left" ? -30 : 30 
-    },
     visible: { 
       opacity: 1, 
       x: 0,
@@ -47,14 +41,11 @@ export default function TimeNode({
         style={{ top: "2rem" }}
       />
       
-      {/* Content container */}
+      {/* Content container - always visible */}
       <motion.div
-        ref={ref}
-        className={`scroll-reveal ${position === "left" ? "mr-auto" : "ml-auto"} 
-                    max-w-md md:max-w-lg ${position === "left" ? "md:mr-[5%]" : "md:ml-[5%]"}`}
-        variants={variants}
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
+        className={`${position === "left" ? "mr-auto" : "ml-auto"} 
+                   max-w-md md:max-w-lg ${position === "left" ? "md:mr-[5%]" : "md:ml-[5%]"}`}
+        animate="visible"
       >
         <div className={`mb-4 inline-block px-3 py-1 rounded-full text-sm font-medium ${phaseColors[phase]}`}>
           {phase === "past" ? "BEFORE" : phase === "present" ? "SOLUTION" : "FREEDOM"}
