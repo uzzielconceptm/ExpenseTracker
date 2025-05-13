@@ -78,7 +78,10 @@ export default function CombinedSuccessStories() {
   const DesignerDashboard = () => (
     <div className="p-4 bg-muted/30 rounded-lg">
       <div className="mb-4 flex justify-between items-center">
-        <h3 className="font-medium">Sarah's Expense Dashboard</h3>
+        <div className="flex items-center gap-2">
+          <Logo variant="icon" size="sm" colorMode="light" className="h-5 w-5" />
+          <h3 className="font-medium">Sarah's Expense Dashboard</h3>
+        </div>
         <div className="text-sm text-muted-foreground">May 2023</div>
       </div>
       
@@ -242,7 +245,10 @@ export default function CombinedSuccessStories() {
   const CreatorDashboard = () => (
     <div className="p-4 bg-muted/30 rounded-lg">
       <div className="mb-4 flex justify-between items-center">
-        <h3 className="font-medium">Alicia's Equipment Tracking</h3>
+        <div className="flex items-center gap-2">
+          <Logo variant="icon" size="sm" colorMode="light" className="h-5 w-5" />
+          <h3 className="font-medium">Alicia's Equipment Tracking</h3>
+        </div>
         <div className="text-sm text-muted-foreground">2023 YTD</div>
       </div>
       
