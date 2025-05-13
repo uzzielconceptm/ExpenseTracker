@@ -115,8 +115,8 @@ export default function IntegrationShowcase() {
         
         {/* FreshBooks-inspired app badges */}
         <div className="mt-16 text-center">
-          <div className="flex items-center justify-center mb-6 gap-2">
-            <Logo variant="icon" size="sm" colorMode="light" className="h-6 w-6" />
+          <div className="flex flex-col items-center justify-center mb-6">
+            <Logo variant="full" size="sm" colorMode="light" className="h-6 mb-3" />
             <h3 className="text-xl font-semibold">Available Everywhere You Need It</h3>
           </div>
           <div className="flex flex-wrap justify-center gap-4">

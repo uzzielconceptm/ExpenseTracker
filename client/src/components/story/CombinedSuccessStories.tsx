@@ -5,6 +5,7 @@ import StickyNoteTestimonial from "@/components/ui/sticky-note-testimonial";
 import JournalPageTestimonial from "@/components/ui/journal-page-testimonial";
 import { Button } from "@/components/ui/button";
 import { Receipt, CreditCard, Tag, PieChart, Calendar } from "lucide-react";
+import Logo from "@/assets/logo";
 
 export default function CombinedSuccessStories() {
   const containerRef = useRef<HTMLDivElement>(null);
