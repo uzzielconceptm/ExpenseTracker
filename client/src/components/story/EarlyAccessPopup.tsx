@@ -88,13 +88,13 @@ export default function EarlyAccessPopup({ isOpen, onOpenChange }: EarlyAccessPo
 
   return (
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[900px] p-0">
-        <DialogHeader className="px-6 pt-6">
+      <DialogContent className="sm:max-w-[500px] p-6 animate-fadeIn">
+        <DialogHeader className="mb-4">
           <div className="flex justify-between items-center w-full">
             <div>
-              <DialogTitle className="text-2xl font-bold">Get Early Access to ExpenseWise</DialogTitle>
+              <DialogTitle className="text-xl font-bold">Get Early Access</DialogTitle>
               <DialogDescription className="text-sm text-muted-foreground">
-                Fill out the form to request early access to our expense tracking platform
+                Join ExpenseWise early access program
               </DialogDescription>
             </div>
             <DialogClose className="h-6 w-6 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">
@@ -104,213 +104,156 @@ export default function EarlyAccessPopup({ isOpen, onOpenChange }: EarlyAccessPo
           </div>
         </DialogHeader>
         
-        <div className="flex flex-col md:flex-row">
-          {/* Left column - Clean Slate Benefits */}
-          <div className="md:w-2/5 bg-primary text-white relative overflow-hidden">
-            <div className="relative p-8 h-full flex flex-col justify-between">
-              <div className="mb-8">
-                <h3 className="font-heading text-xl font-bold mb-4">
-                  Start Your Clean Slate
-                </h3>
-                <div className="space-y-6 mb-8">
-                  <div className="flex items-start">
-                    <div className="bg-white bg-opacity-20 p-2 rounded mr-4 mt-1">
-                      <Sparkles size={20} className="text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-medium text-lg mb-1">Painless Onboarding</h3>
-                      <p className="text-white/80">
-                        We'll help you set up everything in under 10 minutes
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="bg-white bg-opacity-20 p-2 rounded mr-4 mt-1">
-                      <Sparkles size={20} className="text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-medium text-lg mb-1">14-Day Free Access</h3>
-                      <p className="text-white/80">
-                        Experience the full platform with no commitment
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="bg-white bg-opacity-20 p-2 rounded mr-4 mt-1">
-                      <Sparkles size={20} className="text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-medium text-lg mb-1">Keep Your Accounting Software</h3>
-                      <p className="text-white/80">
-                        We integrate with FreshBooks, QuickBooks, and more
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        {isSuccess ? (
+          <div className="text-center py-4">
+            <div className="text-5xl text-primary mb-4 mx-auto">
+              <CheckCircle size={56} className="mx-auto" />
             </div>
-          </div>
-          
-          {/* Right column - Form */}
-          <div className="p-8 md:p-10 md:w-3/5">
-            {isSuccess ? (
-              <div className="text-center py-8">
-                <div className="text-6xl text-primary mb-6 mx-auto">
-                  <CheckCircle size={64} className="mx-auto" />
-                </div>
-                <h3 className="font-heading font-semibold text-2xl mb-4">You're All Set!</h3>
-                
-                {receiptCount && (
-                  <div className="bg-muted p-6 rounded-lg mb-6">
-                    <p className="text-lg mb-2">
-                      It looks like you process <span className="font-bold">~{receiptCount} receipts/month</span>.
-                    </p>
-                    <p className="text-muted-foreground">
-                      We'll handle that for you with ease!
-                    </p>
-                  </div>
-                )}
-                
-                <p className="text-muted-foreground mb-8">
-                  We've received your request for early access. Check your email for next steps within 24 hours.
+            <h3 className="font-heading font-semibold text-xl mb-3">You're All Set!</h3>
+            
+            {receiptCount && (
+              <div className="bg-muted p-4 rounded-lg mb-4">
+                <p className="text-base mb-1">
+                  It looks like you process <span className="font-bold">~{receiptCount} receipts/month</span>.
                 </p>
-                
-                <Button
-                  variant="outline"
-                  className="border-primary text-primary"
-                  onClick={() => onOpenChange(false)}
-                >
-                  Close
-                </Button>
+                <p className="text-muted-foreground text-sm">
+                  We'll handle that for you with ease!
+                </p>
               </div>
-            ) : (
-              <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                  <h3 className="font-heading text-xl font-bold mb-6">
-                    Tell Us About Your Business
-                  </h3>
-                  
-                  <FormField
-                    control={form.control}
-                    name="fullName"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-sm font-medium text-foreground">Full Name</FormLabel>
-                        <FormControl>
-                          <Input 
-                            placeholder="Your name" 
-                            className="w-full px-4 py-3 border border-border rounded-lg"
-                            {...field} 
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-sm font-medium text-foreground">Email Address</FormLabel>
-                        <FormControl>
-                          <Input 
-                            placeholder="you@example.com" 
-                            type="email"
-                            className="w-full px-4 py-3 border border-border rounded-lg"
-                            {...field} 
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  
-                  <FormField
-                    control={form.control}
-                    name="businessType"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-sm font-medium text-foreground">What Best Describes You?</FormLabel>
-                        <Select 
-                          onValueChange={field.onChange} 
-                          defaultValue={field.value}
-                        >
-                          <FormControl>
-                            <SelectTrigger className="w-full px-4 py-3 border border-border rounded-lg">
-                              <SelectValue placeholder="Select your business type" />
-                            </SelectTrigger>
-                          </FormControl>
-                          <SelectContent>
-                            <SelectItem value="freelancer">Freelancer</SelectItem>
-                            <SelectItem value="consultant">Consultant</SelectItem>
-                            <SelectItem value="creator">Content Creator</SelectItem>
-                            <SelectItem value="ecommerce">E-commerce</SelectItem>
-                            <SelectItem value="other">Other</SelectItem>
-                          </SelectContent>
-                        </Select>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  
-                  <FormField
-                    control={form.control}
-                    name="monthlyExpenses"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-sm font-medium text-foreground">Monthly Business Expenses</FormLabel>
-                        <Select 
-                          onValueChange={field.onChange} 
-                          defaultValue={field.value}
-                        >
-                          <FormControl>
-                            <SelectTrigger className="w-full px-4 py-3 border border-border rounded-lg">
-                              <SelectValue placeholder="Select range" />
-                            </SelectTrigger>
-                          </FormControl>
-                          <SelectContent>
-                            <SelectItem value="under-1k">Under $1,000/month</SelectItem>
-                            <SelectItem value="1k-5k">$1,000 - $5,000/month</SelectItem>
-                            <SelectItem value="5k-10k">$5,000 - $10,000/month</SelectItem>
-                            <SelectItem value="over-10k">Over $10,000/month</SelectItem>
-                          </SelectContent>
-                        </Select>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  
-                  <DialogFooter className="mt-6">
-                    <Button 
-                      type="submit" 
-                      className="w-full bg-primary hover:bg-primary/90 text-white font-medium rounded-lg px-6 py-3"
-                      disabled={isSubmitting}
-                    >
-                      {isSubmitting ? (
-                        <>
-                          <span className="animate-spin mr-2">
-                            <i className="fas fa-circle-notch"></i>
-                          </span>
-                          Processing...
-                        </>
-                      ) : (
-                        "Start My Clean Slate"
-                      )}
-                    </Button>
-                  </DialogFooter>
-                  
-                  <p className="text-center text-xs text-muted-foreground">
-                    By signing up, you agree to our Terms of Service and Privacy Policy.
-                  </p>
-                </form>
-              </Form>
             )}
+            
+            <p className="text-muted-foreground text-sm mb-6">
+              We've received your request for early access. Check your email for next steps within 24 hours.
+            </p>
+            
+            <Button
+              variant="outline"
+              className="border-primary text-primary"
+              onClick={() => onOpenChange(false)}
+            >
+              Close
+            </Button>
           </div>
-        </div>
+        ) : (
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+              <FormField
+                control={form.control}
+                name="fullName"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-sm font-medium text-foreground">Full Name</FormLabel>
+                    <FormControl>
+                      <Input 
+                        placeholder="Your name" 
+                        className="w-full px-3 py-2 border border-border rounded-md"
+                        {...field} 
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-sm font-medium text-foreground">Email Address</FormLabel>
+                    <FormControl>
+                      <Input 
+                        placeholder="you@example.com" 
+                        type="email"
+                        className="w-full px-3 py-2 border border-border rounded-md"
+                        {...field} 
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              
+              <FormField
+                control={form.control}
+                name="businessType"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-sm font-medium text-foreground">Business Type</FormLabel>
+                    <Select 
+                      onValueChange={field.onChange} 
+                      defaultValue={field.value}
+                    >
+                      <FormControl>
+                        <SelectTrigger className="w-full px-3 py-2 border border-border rounded-md">
+                          <SelectValue placeholder="Select type" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        <SelectItem value="freelancer">Freelancer</SelectItem>
+                        <SelectItem value="consultant">Consultant</SelectItem>
+                        <SelectItem value="creator">Content Creator</SelectItem>
+                        <SelectItem value="ecommerce">E-commerce</SelectItem>
+                        <SelectItem value="other">Other</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              
+              <FormField
+                control={form.control}
+                name="monthlyExpenses"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-sm font-medium text-foreground">Monthly Expenses</FormLabel>
+                    <Select 
+                      onValueChange={field.onChange} 
+                      defaultValue={field.value}
+                    >
+                      <FormControl>
+                        <SelectTrigger className="w-full px-3 py-2 border border-border rounded-md">
+                          <SelectValue placeholder="Select range" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        <SelectItem value="under-1k">Under $1,000/month</SelectItem>
+                        <SelectItem value="1k-5k">$1,000 - $5,000/month</SelectItem>
+                        <SelectItem value="5k-10k">$5,000 - $10,000/month</SelectItem>
+                        <SelectItem value="over-10k">Over $10,000/month</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              
+              <DialogFooter className="mt-4">
+                <Button 
+                  type="submit" 
+                  className="w-full bg-primary hover:bg-primary/90 text-white font-medium rounded-md px-4 py-2"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? (
+                    <>
+                      <span className="animate-spin mr-2">
+                        <i className="fas fa-circle-notch"></i>
+                      </span>
+                      Processing...
+                    </>
+                  ) : (
+                    "Apply for Early Access"
+                  )}
+                </Button>
+              </DialogFooter>
+              
+              <p className="text-center text-xs text-muted-foreground">
+                By signing up, you agree to our Terms of Service and Privacy Policy.
+              </p>
+            </form>
+          </Form>
+        )}
       </DialogContent>
     </Dialog>
   );
