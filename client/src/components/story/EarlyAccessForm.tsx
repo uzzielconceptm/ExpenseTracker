@@ -11,7 +11,7 @@ export default function StoryEarlyAccessForm() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsOpen(true);
-    }, 2000); // Small delay for better user experience
+    }, 3000); // Longer delay for better slow fade-in effect
     
     return () => clearTimeout(timer);
   }, []);

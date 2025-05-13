@@ -80,11 +80,15 @@ export default {
           },
         },
         "fade-in": {
-          from: {
+          "0%": {
             opacity: "0",
-            transform: "scale(0.95)",
+            transform: "scale(0.98)",
           },
-          to: {
+          "50%": {
+            opacity: "0.5",
+            transform: "scale(0.99)",
+          },
+          "100%": {
             opacity: "1",
             transform: "scale(1)",
           },
@@ -93,7 +97,7 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fadeIn": "fade-in 0.8s ease-out",
+        "fadeIn": "fade-in 3s ease-in",
       },
     },
   },
