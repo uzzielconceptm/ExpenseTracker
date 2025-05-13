@@ -88,7 +88,7 @@ export default function EarlyAccessPopup({ isOpen, onOpenChange }: EarlyAccessPo
 
   return (
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[500px] p-6 animate-fadeIn">
+      <DialogContent className="sm:max-w-[400px] p-4 animate-fadeIn">
         <DialogHeader className="mb-4">
           <div className="flex justify-between items-center w-full">
             <div>
@@ -107,9 +107,9 @@ export default function EarlyAccessPopup({ isOpen, onOpenChange }: EarlyAccessPo
         {isSuccess ? (
           <div className="text-center py-4">
             <div className="text-5xl text-primary mb-4 mx-auto">
-              <CheckCircle size={56} className="mx-auto" />
+              <CheckCircle size={48} className="mx-auto" />
             </div>
-            <h3 className="font-heading font-semibold text-xl mb-3">You're All Set!</h3>
+            <h3 className="font-heading font-semibold text-lg mb-3">You're All Set!</h3>
             
             {receiptCount && (
               <div className="bg-muted p-4 rounded-lg mb-4">

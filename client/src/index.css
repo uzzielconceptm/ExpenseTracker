@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom styles */
+.popup-dialog {
+  position: fixed;
+  z-index: 100;
+}
+
+[data-radix-popper-content-wrapper] {
+  position: absolute !important;
+  top: 2rem !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 100 !important;
+}
+
 :root {
   /* New color palette: soft yellows, forest green, lavender, charcoal */
   --background: 0 0% 100%;
