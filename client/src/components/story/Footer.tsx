@@ -16,7 +16,7 @@ export default function StoryFooter() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              ExpenseFlow
+              ExpenseWise
             </motion.h3>
             <p className="text-neutral-400 mb-6">
               From shoebox to streamlined expense management.

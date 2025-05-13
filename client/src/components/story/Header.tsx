@@ -46,7 +46,7 @@ export default function StoryHeader() {
             repeatType: "reverse"
           }}
         >
-          <span className="font-heading text-2xl font-bold">ExpenseFlow</span>
+          <span className="font-heading text-2xl font-bold">ExpenseWise</span>
         </motion.div>
         
         {/* Desktop Navigation */}

@@ -60,7 +60,7 @@ export default function Pricing() {
             <div className="flex flex-col md:flex-row">
               {/* Left side: Plan details */}
               <div className="p-8 md:p-12 md:w-1/2">
-                <h3 className="font-heading text-2xl font-bold mb-2">ExpenseFlow Pro</h3>
+                <h3 className="font-heading text-2xl font-bold mb-2">ExpenseWise Pro</h3>
                 <div className="flex items-end mb-6">
                   <span className="text-4xl font-bold">$19</span>
                   <span className="text-muted-foreground ml-2 mb-1">/month</span>

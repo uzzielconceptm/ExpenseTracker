@@ -62,7 +62,7 @@ export default function SecurityFeatures() {
             Enterprise-Grade Security for Solo Entrepreneurs
           </h2>
           <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
-            Your financial data deserves the best protection. ExpenseFlow uses the same security technology trusted by banks and financial institutions.
+            Your financial data deserves the best protection. ExpenseWise uses the same security technology trusted by banks and financial institutions.
           </p>
         </div>
         
@@ -98,7 +98,7 @@ export default function SecurityFeatures() {
               </div>
             </div>
             <p className="text-sm text-muted-foreground mb-4">
-              ExpenseFlow undergoes regular security audits and penetration testing to ensure your data remains protected against the latest threats.
+              ExpenseWise undergoes regular security audits and penetration testing to ensure your data remains protected against the latest threats.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="p-2 bg-gray-100 rounded text-xs font-medium text-gray-600">GDPR Compliant</div>

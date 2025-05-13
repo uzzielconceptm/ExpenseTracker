@@ -77,7 +77,7 @@ export default function IntegrationShowcase() {
             Connect Your Entire Financial World
           </h2>
           <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
-            ExpenseFlow works seamlessly with your existing tools and accounts to create a unified expense management system.
+            ExpenseWise works seamlessly with your existing tools and accounts to create a unified expense management system.
           </p>
         </div>
         

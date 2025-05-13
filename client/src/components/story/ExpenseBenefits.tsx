@@ -13,7 +13,7 @@ export default function ExpenseBenefits() {
       icon: <Camera className="h-5 w-5" />,
       content: {
         title: "Capture Receipts in a Snap",
-        description: "Take a photo of any receipt with your phone and ExpenseFlow automatically extracts and categorizes the data for you. No manual entry required.",
+        description: "Take a photo of any receipt with your phone and ExpenseWise automatically extracts and categorizes the data for you. No manual entry required.",
         image: "/demo-receipt-scan.jpg",
         features: [
           "OCR technology reads receipt details instantly",
@@ -28,7 +28,7 @@ export default function ExpenseBenefits() {
       icon: <Clock className="h-5 w-5" />,
       content: {
         title: "Automatic Expense Tracking",
-        description: "Connect your bank accounts and credit cards for automatic expense tracking. ExpenseFlow matches transactions to receipts so you never miss an expense.",
+        description: "Connect your bank accounts and credit cards for automatic expense tracking. ExpenseWise matches transactions to receipts so you never miss an expense.",
         image: "/demo-auto-track.jpg",
         features: [
           "Automatically import transactions daily",
@@ -232,7 +232,7 @@ export default function ExpenseBenefits() {
                 ))}
               </div>
               <blockquote className="text-xl md:text-2xl font-medium italic mb-6">
-                "Since switching to ExpenseFlow, I've saved over 5 hours a week on expense tracking. The receipt scanning feature is life-changing for me as a consultant who's always on the go."
+                "Since switching to ExpenseWise, I've saved over 5 hours a week on expense tracking. The receipt scanning feature is life-changing for me as a consultant who's always on the go."
               </blockquote>
               <div>
                 <p className="font-semibold">Sarah Martinez</p>
