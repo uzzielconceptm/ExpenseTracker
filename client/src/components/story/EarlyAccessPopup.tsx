@@ -9,7 +9,15 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle, Sparkles, X } from "lucide-react";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
-import { Dialog, DialogContent, DialogTitle, DialogHeader, DialogFooter, DialogClose } from "@/components/ui/dialog";
+import { 
+  Dialog, 
+  DialogContent, 
+  DialogTitle, 
+  DialogHeader, 
+  DialogDescription,
+  DialogFooter, 
+  DialogClose 
+} from "@/components/ui/dialog";
 
 const formSchema = z.object({
   fullName: z.string().min(2, { message: "Name must be at least 2 characters" }),
@@ -83,7 +91,12 @@ export default function EarlyAccessPopup({ isOpen, onOpenChange }: EarlyAccessPo
       <DialogContent className="sm:max-w-[900px] p-0">
         <DialogHeader className="px-6 pt-6">
           <div className="flex justify-between items-center w-full">
-            <DialogTitle className="text-2xl font-bold">Get Early Access to ExpenseWise</DialogTitle>
+            <div>
+              <DialogTitle className="text-2xl font-bold">Get Early Access to ExpenseWise</DialogTitle>
+              <DialogDescription className="text-sm text-muted-foreground">
+                Fill out the form to request early access to our expense tracking platform
+              </DialogDescription>
+            </div>
             <DialogClose className="h-6 w-6 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">
               <X className="h-4 w-4" />
               <span className="sr-only">Close</span>
