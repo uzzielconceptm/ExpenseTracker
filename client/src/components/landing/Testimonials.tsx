@@ -33,7 +33,7 @@ export default function Testimonials() {
         <div className="text-center mb-16">
           <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">What Our Users Say</h2>
           <p className="text-neutral-300 text-lg max-w-3xl mx-auto">
-            Join hundreds of solopreneurs who are saving time and getting organized with ExpenseFlow.
+            Join hundreds of solopreneurs who are saving time and getting organized with ExpenseWise.
           </p>
         </div>
         

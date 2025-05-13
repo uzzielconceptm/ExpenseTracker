@@ -72,7 +72,7 @@ export default function EarlyAccessForm() {
             <div>
               <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">Get Early Access</h2>
               <p className="text-neutral-700 mb-6">
-                Be among the first to experience ExpenseFlow and help shape the future of expense tracking for solopreneurs.
+                Be among the first to experience ExpenseWise and help shape the future of expense tracking for solopreneurs.
               </p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start">

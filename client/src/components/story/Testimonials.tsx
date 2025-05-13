@@ -14,7 +14,7 @@ export default function Testimonials() {
       role: "Freelance Designer"
     },
     {
-      quote: "ExpenseFlow saves me 3+ hours a week. That's time I can spend with clients instead of sorting receipts.",
+      quote: "ExpenseWise saves me 3+ hours a week. That's time I can spend with clients instead of sorting receipts.",
       author: "Marcus T.",
       role: "Marketing Consultant"
     },
@@ -33,7 +33,7 @@ export default function Testimonials() {
       date: "April 18, 2023"
     },
     {
-      quote: "As someone with ADHD, keeping track of receipts was impossible. ExpenseFlow's automatic scanning turned my financial chaos into perfect organization without any effort.",
+      quote: "As someone with ADHD, keeping track of receipts was impossible. ExpenseWise's automatic scanning turned my financial chaos into perfect organization without any effort.",
       author: "Elena M.",
       role: "Graphic Artist",
       date: "May 2, 2023"

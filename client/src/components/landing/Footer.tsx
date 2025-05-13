@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="container mx-auto max-w-6xl">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <h3 className="font-heading font-bold text-2xl mb-4">ExpenseFlow</h3>
+            <h3 className="font-heading font-bold text-2xl mb-4">ExpenseWise</h3>
             <p className="text-neutral-400 mb-6">
               Smart expense tracking built for solopreneurs.
             </p>
@@ -53,7 +53,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-neutral-800 mt-12 pt-8 text-center text-neutral-500">
-          <p>&copy; {new Date().getFullYear()} ExpenseFlow. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} ExpenseWise. All rights reserved.</p>
         </div>
       </div>
     </footer>

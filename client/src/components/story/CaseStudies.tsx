@@ -359,7 +359,7 @@ export default function CaseStudies() {
             Real-World Success Stories
           </h2>
           <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
-            See how different professionals use ExpenseFlow to streamline their businesses
+            See how different professionals use ExpenseWise to streamline their businesses
           </p>
         </div>
         
