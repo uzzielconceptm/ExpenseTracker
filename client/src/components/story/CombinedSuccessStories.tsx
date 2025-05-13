@@ -17,7 +17,7 @@ export default function CombinedSuccessStories() {
       role: "Freelance Designer"
     },
     {
-      quote: "ExpenseFlow saves me 3+ hours a week. That's time I can spend with clients instead of sorting receipts.",
+      quote: "ExpenseWise saves me 3+ hours a week. That's time I can spend with clients instead of sorting receipts.",
       author: "Marcus T.",
       role: "Marketing Consultant"
     },
@@ -31,7 +31,7 @@ export default function CombinedSuccessStories() {
   // Journal-style testimonials
   const journalTestimonials = [
     {
-      quote: "Before ExpenseFlow, I'd dread the end of each quarter. Digging through emails, paper receipts, bank statements... it was like an archaeological dig through my financial life. Now everything is categorized automatically. I actually look forward to reviewing my expenses because the insights help me make better business decisions.",
+      quote: "Before ExpenseWise, I'd dread the end of each quarter. Digging through emails, paper receipts, bank statements... it was like an archaeological dig through my financial life. Now everything is categorized automatically. I actually look forward to reviewing my expenses because the insights help me make better business decisions.",
       author: "Diego M.",
       role: "Independent Consultant",
       date: "May 10, 2023",
@@ -314,7 +314,7 @@ export default function CombinedSuccessStories() {
             Success Stories
           </h2>
           <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
-            Real people, real results with ExpenseFlow
+            Real people, real results with ExpenseWise
           </p>
         </div>
         

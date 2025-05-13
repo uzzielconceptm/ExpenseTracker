@@ -69,7 +69,7 @@ export default function StoryFooter() {
         </div>
         
         <div className="border-t border-neutral-800 mt-12 pt-8 text-center text-neutral-500">
-          <p>&copy; {currentYear} ExpenseFlow. All rights reserved.</p>
+          <p>&copy; {currentYear} ExpenseWise. All rights reserved.</p>
         </div>
       </div>
     </footer>

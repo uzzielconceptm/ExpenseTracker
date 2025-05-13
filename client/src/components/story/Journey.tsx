@@ -254,7 +254,7 @@ export default function Journey() {
             position="right"
             index={1}
           >
-            <p className="mb-4">What if your receipts could organize themselves? ExpenseFlow monitors your email for receipts and automatically processes them.</p>
+            <p className="mb-4">What if your receipts could organize themselves? ExpenseWise monitors your email for receipts and automatically processes them.</p>
             
             <p className="mb-6">No more manual hunting - we find everything for you:</p>
             
@@ -395,7 +395,7 @@ export default function Journey() {
             position="left"
             index={3}
           >
-            <p className="mb-4">Say goodbye to manual reconciliation. ExpenseFlow automatically matches your receipts to your bank and credit card transactions.</p>
+            <p className="mb-4">Say goodbye to manual reconciliation. ExpenseWise automatically matches your receipts to your bank and credit card transactions.</p>
             
             <p className="mb-6">Create a perfect audit trail with no effort:</p>
             
@@ -434,7 +434,7 @@ export default function Journey() {
             position="right"
             index={3}
           >
-            <p className="mb-4">Sometimes you still get paper receipts. No problem! ExpenseFlow makes it easy to digitize them in seconds.</p>
+            <p className="mb-4">Sometimes you still get paper receipts. No problem! ExpenseWise makes it easy to digitize them in seconds.</p>
             
             <p className="mb-6">Turn physical into digital with ease:</p>
             
@@ -680,7 +680,7 @@ export default function Journey() {
                       {/* App Header */}
                       <div className="flex justify-between items-center mb-6">
                         <div>
-                          <h4 className="font-bold text-primary">ExpenseFlow</h4>
+                          <h4 className="font-bold text-primary">ExpenseWise</h4>
                           <p className="text-xs text-muted-foreground">Manage on the go</p>
                         </div>
                         <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">
@@ -768,7 +768,7 @@ export default function Journey() {
             position="left"
             index={6}
           >
-            <p className="mb-4">Imagine never worrying about expense tracking again. With ExpenseFlow, you're always tax-ready and audit-proof.</p>
+            <p className="mb-4">Imagine never worrying about expense tracking again. With ExpenseWise, you're always tax-ready and audit-proof.</p>
             
             <p className="mb-6">Here's what your future looks like:</p>
             
@@ -801,7 +801,7 @@ export default function Journey() {
                   }
                 }}
               >
-                See How Others Use ExpenseFlow
+                See How Others Use ExpenseWise
               </Button>
             </div>
           </TimeNode>
