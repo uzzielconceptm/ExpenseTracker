@@ -55,7 +55,7 @@ export default function StoryHeader() {
           <a href="#benefits" className="text-foreground hover:text-primary transition-colors">Features</a>
           <a href="#integrations" className="text-foreground hover:text-primary transition-colors">Connect</a>
           <a href="#security" className="text-foreground hover:text-primary transition-colors">Security</a>
-          <a href="#cases" className="text-foreground hover:text-primary transition-colors">Stories</a>
+          <a href="#success-stories" className="text-foreground hover:text-primary transition-colors">Stories</a>
           <a 
             href="#early-access" 
             className="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg transition-colors ml-4"
@@ -116,19 +116,13 @@ export default function StoryHeader() {
                 Security
               </a>
               <a 
-                href="#cases" 
+                href="#success-stories" 
                 className="text-foreground hover:text-primary transition-colors block py-2"
                 onClick={closeMobileMenu}
               >
                 Stories
               </a>
-              <a 
-                href="#testimonials" 
-                className="text-foreground hover:text-primary transition-colors block py-2"
-                onClick={closeMobileMenu}
-              >
-                Voices
-              </a>
+{/* Remove testimonials link since it's now part of success stories */}
               <a 
                 href="#early-access" 
                 className="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg transition-colors text-center"

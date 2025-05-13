@@ -3,14 +3,13 @@ import { useChaos } from "@/lib/ChaosContext";
 import Header from "@/components/story/Header";
 import IntroScene from "@/components/story/IntroScene";
 import Journey from "@/components/story/Journey";
-import CaseStudies from "@/components/story/CaseStudies";
-import Testimonials from "@/components/story/Testimonials";
 import Pricing from "@/components/story/Pricing";
 import EarlyAccessForm from "@/components/story/EarlyAccessForm";
 import Footer from "@/components/story/Footer";
 import ExpenseBenefits from "@/components/story/ExpenseBenefits";
 import IntegrationShowcase from "@/components/story/IntegrationShowcase";
 import SecurityFeatures from "@/components/story/SecurityFeatures";
+import CombinedSuccessStories from "@/components/story/CombinedSuccessStories";
 
 export default function StoryLandingPage() {
   const { chaosMode } = useChaos();
@@ -70,8 +69,8 @@ export default function StoryLandingPage() {
         <ExpenseBenefits />
         <IntegrationShowcase />
         <SecurityFeatures />
-        <CaseStudies />
-        <Testimonials />
+        {/* Combined success stories section */}
+        <CombinedSuccessStories />
         <Pricing />
         <EarlyAccessForm />
       </main>
