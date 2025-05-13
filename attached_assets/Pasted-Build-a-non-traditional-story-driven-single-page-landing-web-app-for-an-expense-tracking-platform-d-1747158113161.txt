@@ -1,0 +1,89 @@
+Build a non-traditional, story-driven single-page landing web app for an expense tracking platform designed for solopreneurs. This page should surprise and engage both newcomers and experienced professionals in the industry. It should feel more like a guided personal experience than a standard pitch. Design for mobile and desktop. All functionality should simulate actual product flow (mock logic is okay).
+
+🧭 Creative Direction:
+
+The concept is: “From Shoebox to Streamlined” — tell the story of chaotic receipt management turning into automated peace-of-mind.
+
+The landing page scrolls like a narrative timeline: past → chaos, present → solution, future → freedom
+
+Visual metaphor: messy desk transforming into a clean, automated dashboard
+
+🔧 Functional + Layout Components:
+
+Intro Scene (Above the Fold)
+
+Full-screen scrollable canvas (not boxed sections)
+
+Hand-drawn animation or motion scene of a freelancer at a cluttered desk
+
+Text overlay:
+
+Headline: “Remember when tracking expenses meant panic during tax season?”
+
+CTA: “Let’s Fix That” → triggers scroll or smooth transition
+
+Journey-Based Walkthrough (Interactive Timeline)
+
+Timeline format (vertical or horizontal scroll)
+
+Each section includes a story snippet and shows features as solutions to real problems:
+
+Lost receipts → Email scanner auto-finds receipts
+
+Mislabeling → Smart auto-matching to bank records
+
+Gaps in data → Manual add flow with audit tagging
+
+Include expandable “Try This” moments where the user can click a card and simulate adding a receipt or scanning one
+
+Real-World Use Cases (Cards with Embedded Tools)
+
+Case studies: freelance designer, consultant, creator
+
+Each card opens a mock dashboard snapshot where you can “click” and watch how automation works
+
+Think: live previews, not static screenshots
+
+Emotive Testimonial Section
+
+First-person microstories (“I stopped dreading tax time”)
+
+Format as sticky notes, voice messages, or journal pages (not plain cards)
+
+Use character avatars with fun, stylized art rather than generic stock photos
+
+Pricing / Call to Action
+
+“Buy back your time” theme
+
+CTA buttons like:
+
+“Start My Clean Slate”
+
+“Try Free – Automate the Boring Stuff”
+
+One-tier pricing: focus on simplicity, transparency, and emotional gain (not just feature access)
+
+Smart Form for Onboarding
+
+Email, profession, # of receipts per month
+
+On submit, display a tailored message:
+
+“Looks like you process ~80 receipts/month. We’ll handle that for you.”
+
+✨ Design & Brand Aesthetic
+
+Illustrative UI with bold shapes, playful animations, and subtle humor
+
+Color palette: soft yellows, forest green, lavender, charcoal
+
+Serif headlines paired with monospaced UI text for contrast
+
+Surprise elements (e.g., receipt falling out of a drawer, animated coins, or “paper” that curls as you scroll)
+
+Extra Credit:
+
+Add a hidden easter egg or animation that unlocks a fun quote about freelancing
+
+Include an optional “chaos mode” toggle that lets you see what untracked expenses look like
