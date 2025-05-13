@@ -5,6 +5,7 @@ import IntroScene from "@/components/story/IntroScene";
 import Journey from "@/components/story/Journey";
 import Pricing from "@/components/story/Pricing";
 import EarlyAccessForm from "@/components/story/EarlyAccessForm";
+import EarlyAccessPopup from "@/components/story/EarlyAccessPopup";
 import Footer from "@/components/story/Footer";
 import ExpenseBenefits from "@/components/story/ExpenseBenefits";
 import IntegrationShowcase from "@/components/story/IntegrationShowcase";
@@ -73,6 +74,8 @@ export default function StoryLandingPage() {
         <CombinedSuccessStories />
         <Pricing />
         <EarlyAccessForm />
+        {/* Popup signup form */}
+        <EarlyAccessPopup />
       </main>
       <Footer />
     </div>
