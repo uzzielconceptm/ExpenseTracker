@@ -1,31 +1,26 @@
 import { motion } from "framer-motion";
 import { useChaos } from "@/lib/ChaosContext";
-import { Sparkles, Wind } from "lucide-react";
+import { Wind } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 export default function ChaosToggle() {
-  const { chaosMode, toggleChaosMode } = useChaos();
+  const { chaosMode } = useChaos();
 
   return (
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
           <motion.button
-            onClick={toggleChaosMode}
             className="chaos-toggle"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            aria-label={chaosMode ? "Disable chaos mode" : "Enable chaos mode"}
+            aria-label="Chaos mode enabled"
           >
-            {chaosMode ? (
-              <Wind size={22} className="text-primary-foreground" />
-            ) : (
-              <Sparkles size={22} className="text-primary" />
-            )}
+            <Wind size={22} className="text-primary-foreground" />
           </motion.button>
         </TooltipTrigger>
         <TooltipContent side="left">
-          <p>{chaosMode ? "Disable chaos mode" : "Enable chaos mode"}</p>
+          <p>Chaos mode is permanently enabled</p>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>

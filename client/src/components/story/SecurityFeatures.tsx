@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Shield, Lock, Database, EyeOff, Fingerprint, Key } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Logo from "@/assets/logo";
 
 export default function SecurityFeatures() {
   const securityFeatures = [
@@ -58,9 +59,12 @@ export default function SecurityFeatures() {
             <Shield className="h-6 w-6 text-primary" />
           </motion.div>
           
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
-            Enterprise-Grade Security for Solo Entrepreneurs
-          </h2>
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <Logo variant="icon" size="sm" colorMode="light" className="h-8 w-8" />
+            <h2 className="font-heading text-3xl md:text-4xl font-bold">
+              Enterprise-Grade Security
+            </h2>
+          </div>
           <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
             Your financial data deserves the best protection. ExpenseWise uses the same security technology trusted by banks and financial institutions.
           </p>
