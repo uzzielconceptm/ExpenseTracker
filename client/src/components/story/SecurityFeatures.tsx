@@ -43,7 +43,7 @@ export default function SecurityFeatures() {
   ];
 
   return (
-    <section className="py-20 relative">
+    <section id="security" className="py-20 relative">
       {/* FreshBooks-inspired security visual element */}
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-blue-50 to-transparent dark:from-blue-950/20 dark:to-transparent"></div>
       
