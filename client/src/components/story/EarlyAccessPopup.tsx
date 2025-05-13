@@ -92,36 +92,50 @@ export default function EarlyAccessPopup({ isOpen, onOpenChange }: EarlyAccessPo
         </DialogHeader>
         
         <div className="flex flex-col md:flex-row">
-          {/* Left column - Image and benefits */}
-          <div className="md:w-2/5 bg-muted relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-background/20"></div>
-            
+          {/* Left column - Clean Slate Benefits */}
+          <div className="md:w-2/5 bg-primary text-white relative overflow-hidden">
             <div className="relative p-8 h-full flex flex-col justify-between">
               <div className="mb-8">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                  <Sparkles className="text-primary" size={24} />
-                </div>
-                <h3 className="font-heading text-xl font-semibold mb-4">
-                  Why Join Early?
+                <h3 className="font-heading text-xl font-bold mb-4">
+                  Start Your Clean Slate
                 </h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <div className="mr-2 mt-1 text-primary">✓</div>
-                    <span>Free migration of your existing expense data</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="mr-2 mt-1 text-primary">✓</div>
-                    <span>Early access to advanced AI categorization</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="mr-2 mt-1 text-primary">✓</div>
-                    <span>20% lifetime discount on premium plans</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="mr-2 mt-1 text-primary">✓</div>
-                    <span>Free 1:1 setup and onboarding session</span>
-                  </li>
-                </ul>
+                <div className="space-y-6 mb-8">
+                  <div className="flex items-start">
+                    <div className="bg-white bg-opacity-20 p-2 rounded mr-4 mt-1">
+                      <Sparkles size={20} className="text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-medium text-lg mb-1">Painless Onboarding</h3>
+                      <p className="text-white/80">
+                        We'll help you set up everything in under 10 minutes
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="bg-white bg-opacity-20 p-2 rounded mr-4 mt-1">
+                      <Sparkles size={20} className="text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-medium text-lg mb-1">14-Day Free Access</h3>
+                      <p className="text-white/80">
+                        Experience the full platform with no commitment
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="bg-white bg-opacity-20 p-2 rounded mr-4 mt-1">
+                      <Sparkles size={20} className="text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-medium text-lg mb-1">Keep Your Accounting Software</h3>
+                      <p className="text-white/80">
+                        We integrate with FreshBooks, QuickBooks, and more
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
