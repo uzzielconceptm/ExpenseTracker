@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Twitter, Linkedin, Instagram, Github } from 'lucide-react';
+import Logo from "@/assets/logo";
 
 export default function StoryFooter() {
   const currentYear = new Date().getFullYear();
@@ -9,15 +10,15 @@ export default function StoryFooter() {
       <div className="container mx-auto max-w-6xl">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <motion.h3 
-              className="font-heading font-bold text-2xl mb-4"
+            <motion.div 
+              className="mb-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              ExpenseWise
-            </motion.h3>
+              <Logo variant="full" colorMode="dark" size="md" className="h-10" />
+            </motion.div>
             <p className="text-neutral-400 mb-6">
               From shoebox to streamlined expense management.
             </p>

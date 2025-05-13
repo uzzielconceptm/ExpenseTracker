@@ -5,6 +5,7 @@ import AnimatedReceipt from "@/components/ui/animated-receipt";
 import { Button } from "@/components/ui/button";
 import { Camera, Mail, CreditCard, Search, Check } from "lucide-react";
 import { motion } from "framer-motion";
+import Logo from "@/assets/logo";
 
 export default function Journey() {
   const containerRef = useRef<HTMLDivElement>(null);

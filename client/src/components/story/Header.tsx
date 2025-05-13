@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useChaos } from "@/lib/ChaosContext";
+import Logo from "@/assets/logo";
 
 export default function StoryHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -46,7 +47,7 @@ export default function StoryHeader() {
             repeatType: "reverse"
           }}
         >
-          <span className="font-heading text-2xl font-bold">ExpenseWise</span>
+          <Logo variant="full" size="md" colorMode="light" className="h-10" />
         </motion.div>
         
         {/* Desktop Navigation */}
