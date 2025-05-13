@@ -59,8 +59,8 @@ export default function SecurityFeatures() {
             <Shield className="h-6 w-6 text-primary" />
           </motion.div>
           
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <Logo variant="icon" size="sm" colorMode="light" className="h-8 w-8" />
+          <div className="flex flex-col items-center justify-center mb-4">
+            <Logo variant="full" size="md" colorMode="light" className="h-10 mb-4" />
             <h2 className="font-heading text-3xl md:text-4xl font-bold">
               Enterprise-Grade Security
             </h2>

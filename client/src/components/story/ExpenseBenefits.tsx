@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Check, Camera, Clock, PieChart, Star, CreditCard, FileCheck } from "lucide-react";
+import Logo from "@/assets/logo";
 
 // Inspired by FreshBooks benefits section
 export default function ExpenseBenefits() {
@@ -59,6 +60,14 @@ export default function ExpenseBenefits() {
     <section id="benefits" className="py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
+          <motion.div 
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex justify-center mb-6"
+          >
+            <Logo variant="full" size="md" colorMode="light" className="h-10" />
+          </motion.div>
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
             Streamlined Expense Management
           </h2>

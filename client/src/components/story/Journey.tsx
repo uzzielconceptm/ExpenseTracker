@@ -682,7 +682,7 @@ export default function Journey() {
                       <div className="flex justify-between items-center mb-6">
                         <div>
                           <div className="mb-1">
-                            <Logo variant="icon" size="sm" colorMode="light" className="h-6 w-6" />
+                            <Logo variant="full" size="sm" colorMode="light" className="h-6" />
                           </div>
                           <p className="text-xs text-muted-foreground">Manage on the go</p>
                         </div>
