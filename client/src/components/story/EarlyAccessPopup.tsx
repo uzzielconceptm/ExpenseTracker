@@ -93,9 +93,6 @@ export default function EarlyAccessPopup({ isOpen, onOpenChange }: EarlyAccessPo
           <div className="flex justify-between items-center w-full">
             <div>
               <DialogTitle className="text-xl font-bold">Get Early Access</DialogTitle>
-              <DialogDescription className="text-sm text-muted-foreground">
-                Join ExpenseWise early access program
-              </DialogDescription>
             </div>
             <DialogClose className="h-6 w-6 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">
               <X className="h-4 w-4" />
