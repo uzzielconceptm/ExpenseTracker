@@ -42,7 +42,7 @@ export default function Hero() {
           >
             <img 
               src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-              alt="ExpenseFlow dashboard with receipt matching" 
+              alt="ExpenseWise dashboard with receipt matching" 
               className="rounded-xl shadow-2xl w-full object-cover"
             />
           </motion.div>

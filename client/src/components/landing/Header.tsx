@@ -34,7 +34,7 @@ export default function Header() {
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
-          <span className="text-primary text-2xl font-heading font-bold">ExpenseFlow</span>
+          <span className="text-primary text-2xl font-heading font-bold">ExpenseWise</span>
         </div>
         
         {/* Desktop Navigation */}

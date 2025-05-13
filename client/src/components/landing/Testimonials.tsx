@@ -7,7 +7,7 @@ export default function Testimonials() {
     {
       name: "Sarah J.",
       role: "Freelance Designer",
-      quote: "ExpenseFlow has saved me hours each month on expense tracking. The receipt matching is like magic!",
+      quote: "ExpenseWise has saved me hours each month on expense tracking. The receipt matching is like magic!",
       image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
       rating: 5
     },

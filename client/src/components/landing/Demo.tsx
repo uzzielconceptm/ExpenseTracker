@@ -60,7 +60,7 @@ export default function Demo() {
         <div className="text-center mb-16">
           <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">See How It Works</h2>
           <p className="text-neutral-700 text-lg max-w-3xl mx-auto">
-            Experience how ExpenseFlow simplifies expense tracking with our interactive demo.
+            Experience how ExpenseWise simplifies expense tracking with our interactive demo.
           </p>
         </div>
         

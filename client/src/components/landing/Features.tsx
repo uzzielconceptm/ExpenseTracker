@@ -18,7 +18,7 @@ export default function Features() {
       color: "accent",
       title: "Auto-match Receipts",
       description: "Connect your bank and credit cards for automatic receipt matching and reconciliation.",
-      details: "ExpenseFlow uses intelligent algorithms to match your receipts with corresponding bank transactions, eliminating manual reconciliation and ensuring every expense is accounted for."
+      details: "ExpenseWise uses intelligent algorithms to match your receipts with corresponding bank transactions, eliminating manual reconciliation and ensuring every expense is accounted for."
     },
     {
       id: "feature-3",
@@ -26,7 +26,7 @@ export default function Features() {
       color: "primary",
       title: "Email Receipt Scanning",
       description: "Automatically detect and process receipts from your Gmail or Outlook inbox.",
-      details: "Connect your email accounts to ExpenseFlow, and we'll automatically scan for receipts, extract the relevant data, and add them to your expense records without any manual intervention."
+      details: "Connect your email accounts to ExpenseWise, and we'll automatically scan for receipts, extract the relevant data, and add them to your expense records without any manual intervention."
     },
     {
       id: "feature-4",
