@@ -153,8 +153,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       let expenses;
       
-      if (category && Object.values(categoryEnum.enumValues).includes(category)) {
-        expenses = await storage.getUserExpensesByCategory(userId, category);
+      if (category) {
+        // Check if the category is a valid enum value
+        const validCategory = Object.values(categoryEnum.enumValues).includes(category as any);
+        if (validCategory) {
+          expenses = await storage.getUserExpensesByCategory(userId, category);
+        } else {
+          return res.status(400).json({ message: "Invalid expense category" });
+        }
       } else {
         expenses = await storage.getUserExpenses(userId);
       }

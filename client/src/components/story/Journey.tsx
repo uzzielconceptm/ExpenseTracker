@@ -287,12 +287,114 @@ export default function Journey() {
             </TryThisCard>
           </TimeNode>
           
+          {/* Present: The Solution - Link Accounts */}
+          <TimeNode
+            title="Connect All Your Accounts"
+            phase="present"
+            position="left"
+            index={2}
+          >
+            <p className="mb-4">Seamlessly connect your bank accounts and credit cards to bring all your financial data into one place.</p>
+            
+            <p className="mb-6">Say goodbye to manual transactions entry:</p>
+            
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-start">
+                <span className="text-primary mr-2">•</span>
+                <span>Connect unlimited bank accounts and credit cards</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-2">•</span>
+                <span>Secure connections using bank-level encryption</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-2">•</span>
+                <span>Auto-import transactions daily</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-2">•</span>
+                <span>View all your finances in one dashboard</span>
+              </li>
+            </ul>
+            
+            <TryThisCard
+              title="Account Linking"
+              description="See how easy it is to connect your financial accounts"
+              actionLabel="Connect Account"
+            >
+              <div className="p-4 bg-muted/50 rounded-lg">
+                <div className="max-w-md mx-auto">
+                  <div className="space-y-5">
+                    <div className="text-center">
+                      <h4 className="text-lg font-medium mb-1">Connect Your Account</h4>
+                      <p className="text-sm text-muted-foreground">Choose your bank to securely connect</p>
+                    </div>
+                    
+                    <div className="grid grid-cols-2 gap-3">
+                      <div className="p-3 border border-border rounded-lg bg-card hover:border-primary cursor-pointer transition-colors duration-200 flex flex-col items-center justify-center">
+                        <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-2">
+                          <span className="font-bold text-blue-700">C</span>
+                        </div>
+                        <span className="text-sm">Chase</span>
+                      </div>
+                      
+                      <div className="p-3 border border-border rounded-lg bg-card hover:border-primary cursor-pointer transition-colors duration-200 flex flex-col items-center justify-center">
+                        <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mb-2">
+                          <span className="font-bold text-red-700">B</span>
+                        </div>
+                        <span className="text-sm">Bank of America</span>
+                      </div>
+                      
+                      <div className="p-3 border border-border rounded-lg bg-card hover:border-primary cursor-pointer transition-colors duration-200 flex flex-col items-center justify-center">
+                        <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-2">
+                          <span className="font-bold text-blue-700">C</span>
+                        </div>
+                        <span className="text-sm">Citi</span>
+                      </div>
+                      
+                      <div className="p-3 border border-border rounded-lg bg-card hover:border-primary cursor-pointer transition-colors duration-200 flex flex-col items-center justify-center">
+                        <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mb-2">
+                          <span className="font-bold text-purple-700">W</span>
+                        </div>
+                        <span className="text-sm">Wells Fargo</span>
+                      </div>
+                    </div>
+                    
+                    <div className="relative">
+                      <div className="absolute inset-0 flex items-center">
+                        <div className="w-full border-t border-border"></div>
+                      </div>
+                      <div className="relative flex justify-center text-xs uppercase">
+                        <span className="bg-muted/50 px-2 text-muted-foreground">Or search</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center border border-border rounded-lg overflow-hidden">
+                      <div className="px-3 py-2 bg-card">
+                        <Search size={18} className="text-muted-foreground" />
+                      </div>
+                      <input 
+                        type="text" 
+                        placeholder="Find your bank..." 
+                        className="flex-1 bg-transparent border-none outline-none p-2 text-sm"
+                      />
+                    </div>
+                    
+                    <div className="text-center text-xs text-muted-foreground">
+                      <p>Your credentials are never stored. We use 256-bit encryption to securely connect to your bank.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TryThisCard>
+          </TimeNode>
+          
           {/* Present: The Solution - Auto Matching */}
           <TimeNode
             title="Perfect Matching, Every Time"
             phase="present"
             position="left"
-            index={2}
+            index={3}
           >
             <p className="mb-4">Say goodbye to manual reconciliation. ExpenseFlow automatically matches your receipts to your bank and credit card transactions.</p>
             
@@ -365,12 +467,179 @@ export default function Journey() {
             </TryThisCard>
           </TimeNode>
           
+          {/* Present: Smart Categorization */}
+          <TimeNode
+            title="Smart Expense Categorization"
+            phase="present"
+            position="right"
+            index={4}
+          >
+            <p className="mb-4">Keeping track of expense categories doesn't have to be tedious. Our system automatically categorizes your expenses for accurate reporting.</p>
+            
+            <p className="mb-6">Smart categorization makes tax time a breeze:</p>
+            
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-start">
+                <span className="text-primary mr-2">•</span>
+                <span>AI-powered automatic categorization of expenses</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-2">•</span>
+                <span>Customize categories to match your business needs</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-2">•</span>
+                <span>Tag expenses as tax-deductible for easy reporting</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-2">•</span>
+                <span>Generate tax-ready reports in seconds</span>
+              </li>
+            </ul>
+            
+            <TryThisCard
+              title="Expense Categories"
+              description="See how we intelligently sort your expenses"
+              actionLabel="View Categories"
+            >
+              <div className="p-4 bg-muted/50 rounded-lg">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Category Breakdown */}
+                  <div className="space-y-4">
+                    <h4 className="text-sm font-semibold">Monthly Expense Breakdown</h4>
+                    
+                    <div className="space-y-3">
+                      <div className="space-y-1">
+                        <div className="flex justify-between text-sm">
+                          <span>Travel</span>
+                          <span className="font-medium">$345.80</span>
+                        </div>
+                        <div className="w-full bg-muted rounded-full h-2">
+                          <div className="bg-blue-500 h-2 rounded-full" style={{ width: "35%" }}></div>
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-1">
+                        <div className="flex justify-between text-sm">
+                          <span>Meals</span>
+                          <span className="font-medium">$275.25</span>
+                        </div>
+                        <div className="w-full bg-muted rounded-full h-2">
+                          <div className="bg-green-500 h-2 rounded-full" style={{ width: "28%" }}></div>
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-1">
+                        <div className="flex justify-between text-sm">
+                          <span>Office Supplies</span>
+                          <span className="font-medium">$187.99</span>
+                        </div>
+                        <div className="w-full bg-muted rounded-full h-2">
+                          <div className="bg-amber-500 h-2 rounded-full" style={{ width: "19%" }}></div>
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-1">
+                        <div className="flex justify-between text-sm">
+                          <span>Software</span>
+                          <span className="font-medium">$99.99</span>
+                        </div>
+                        <div className="w-full bg-muted rounded-full h-2">
+                          <div className="bg-purple-500 h-2 rounded-full" style={{ width: "10%" }}></div>
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-1">
+                        <div className="flex justify-between text-sm">
+                          <span>Other</span>
+                          <span className="font-medium">$78.45</span>
+                        </div>
+                        <div className="w-full bg-muted rounded-full h-2">
+                          <div className="bg-gray-500 h-2 rounded-full" style={{ width: "8%" }}></div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="pt-3 border-t border-border flex justify-between text-sm">
+                      <span className="font-medium">Total</span>
+                      <span className="font-bold">$987.48</span>
+                    </div>
+                  </div>
+                  
+                  {/* Tax Deduction Tagging */}
+                  <div className="space-y-4">
+                    <h4 className="text-sm font-semibold">Tax Deductible Expenses</h4>
+                    
+                    <div className="space-y-3">
+                      <div className="p-3 border border-green-200 bg-green-50 dark:bg-green-900/10 dark:border-green-900/20 rounded-lg">
+                        <div className="flex justify-between items-center">
+                          <div>
+                            <p className="font-medium">Client Lunch</p>
+                            <p className="text-xs text-muted-foreground">May 18, 2023</p>
+                          </div>
+                          <span className="font-bold">$85.00</span>
+                        </div>
+                        <div className="mt-2 pt-2 border-t border-border flex justify-between items-center">
+                          <div className="flex items-center">
+                            <Check size={16} className="text-green-600 mr-1" />
+                            <span className="text-xs text-green-700">Tax Deductible</span>
+                          </div>
+                          <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">
+                            50% Eligible
+                          </span>
+                        </div>
+                      </div>
+                      
+                      <div className="p-3 border border-border rounded-lg">
+                        <div className="flex justify-between items-center">
+                          <div>
+                            <p className="font-medium">Design Software</p>
+                            <p className="text-xs text-muted-foreground">May 10, 2023</p>
+                          </div>
+                          <span className="font-bold">$99.99</span>
+                        </div>
+                        <div className="mt-2 pt-2 border-t border-border flex justify-between items-center">
+                          <div className="flex items-center">
+                            <Check size={16} className="text-green-600 mr-1" />
+                            <span className="text-xs text-green-700">Tax Deductible</span>
+                          </div>
+                          <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">
+                            100% Eligible
+                          </span>
+                        </div>
+                      </div>
+                      
+                      <div className="p-3 border border-border rounded-lg">
+                        <div className="flex justify-between items-center">
+                          <div>
+                            <p className="font-medium">Office Chair</p>
+                            <p className="text-xs text-muted-foreground">April 28, 2023</p>
+                          </div>
+                          <span className="font-bold">$125.00</span>
+                        </div>
+                        <div className="mt-2 pt-2 border-t border-border flex justify-between items-center">
+                          <div className="flex items-center">
+                            <Check size={16} className="text-green-600 mr-1" />
+                            <span className="text-xs text-green-700">Tax Deductible</span>
+                          </div>
+                          <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">
+                            100% Eligible
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TryThisCard>
+          </TimeNode>
+          
           {/* Present: Mobile Access and Security */}
           <TimeNode
             title="Secure Access Anywhere"
             phase="present"
             position="left"
-            index={4}
+            index={5}
           >
             <p className="mb-4">Take control of your finances from anywhere with our mobile-friendly interface and robust 256-bit SSL security.</p>
             
@@ -498,7 +767,7 @@ export default function Journey() {
             title="The Freedom of Automation"
             phase="future"
             position="left"
-            index={5}
+            index={6}
           >
             <p className="mb-4">Imagine never worrying about expense tracking again. With ExpenseFlow, you're always tax-ready and audit-proof.</p>
             
