@@ -1,0 +1,39 @@
+Build a fully functional single-page landing web app for a modern expense tracking tool built for solopreneurs. The app should be responsive and optimized for desktop and mobile use.
+Goals:
+•	Clearly communicate the product's key benefits
+•	Provide a smooth experience that allows users to explore features and request early access or sign up
+•	Integrate functionality such as demo workflows, interactive UI components, and form inputs
+Core Layout Requirements:
+1.	Hero Section
+o	Bold headline: “Smart Expense Tracking Built for Solopreneurs”
+o	Subheadline explaining benefit: “Stop losing receipts. Start automating your audit trail.”
+o	CTA button: “Try It Free” or “Request Early Access”
+o	Light animation or image of dashboard and receipt-matching process
+2.	Feature Highlights (with Icons or Mini Demos)
+o	Audit Trail Automation
+o	Auto-match receipts to credit cards & bank transactions
+o	Email scanning to detect receipts (Gmail, Outlook integrations)
+o	Manual receipt uploads with smart matching
+o	Workflow tool for unmatched receipts with quick tagging
+o	Use toggles or hover cards to expand on each feature
+3.	Interactive Demo or Walkthrough Section
+o	Simulated interface that shows the matching process
+o	Upload/scan demo button (mocked)
+o	Visual of a receipt being matched to a bank transaction
+4.	Testimonials or Use Cases
+o	Quotes from freelancers/consultants/creators who use the product
+o	Emphasize how it saves time, improves tax prep, and eliminates chaos
+5.	Pricing Preview or Free Trial CTA Section
+o	“Try free for 14 days — no credit card required”
+o	Simple 2- or 3-tier card layout for future pricing structure
+6.	Email Collection or Account Creation Form
+o	Clean, minimal form with email, business name, and use case
+o	Connected to a backend service or Airtable/GSheet (if supported by tool)
+7.	Footer with basic navigation links
+o	About, Privacy, Contact
+Design & Functionality Notes:
+•	Use modern UI design: flat, minimal, with soft shadows and vibrant accent color (like cobalt blue or mint green)
+•	Use animations/transitions on hover and scroll
+•	Include basic client-side logic to simulate receipt-matching steps (e.g., upload > show spinner > success)
+•	Page should be SEO-friendly and fast-loading
+
