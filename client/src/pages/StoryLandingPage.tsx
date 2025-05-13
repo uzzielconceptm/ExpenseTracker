@@ -13,12 +13,8 @@ export default function StoryLandingPage() {
   const { chaosMode } = useChaos();
   
   useEffect(() => {
-    // Update body class when chaos mode changes
-    if (chaosMode) {
-      document.body.classList.add('chaos-mode');
-    } else {
-      document.body.classList.remove('chaos-mode');
-    }
+    // Always add chaos mode to body
+    document.body.classList.add('chaos-mode');
     
     // Scroll to element on hash change and initial load
     const scrollToElement = () => {
@@ -59,10 +55,10 @@ export default function StoryLandingPage() {
       window.removeEventListener('scroll', handleScroll);
       document.body.classList.remove('chaos-mode');
     };
-  }, [chaosMode]);
+  }, []);
 
   return (
-    <div className={`font-mono text-foreground bg-background ${chaosMode ? 'chaos-mode' : ''}`}>
+    <div className="font-mono text-foreground bg-background chaos-mode">
       <Header />
       <main>
         <IntroScene />

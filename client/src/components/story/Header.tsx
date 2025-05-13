@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useChaos } from "@/lib/ChaosContext";
-import ChaosToggle from "@/components/ui/chaos-toggle";
 
 export default function StoryHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -65,9 +64,8 @@ export default function StoryHeader() {
         
         {/* Mobile Menu Button */}
         <div className="flex items-center md:hidden">
-          <ChaosToggle />
           <button 
-            className="ml-4 text-foreground hover:text-primary focus:outline-none" 
+            className="text-foreground hover:text-primary focus:outline-none" 
             onClick={toggleMobileMenu}
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           >
@@ -120,10 +118,7 @@ export default function StoryHeader() {
         )}
       </AnimatePresence>
       
-      {/* Chaos toggle for desktop */}
-      <div className="hidden md:block">
-        <ChaosToggle />
-      </div>
+      {/* No toggle here - chaos mode is always enabled */}
     </header>
   );
 }

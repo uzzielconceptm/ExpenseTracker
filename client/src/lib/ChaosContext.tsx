@@ -1,31 +1,23 @@
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, ReactNode } from "react";
 
+// Simplified context that only provides chaosMode as true
 type ChaosContextType = {
   chaosMode: boolean;
-  toggleChaosMode: () => void;
 };
 
-const ChaosContext = createContext<ChaosContextType | undefined>(undefined);
+const ChaosContext = createContext<ChaosContextType>({ chaosMode: true });
 
 export function ChaosProvider({ children }: { children: ReactNode }) {
-  // Start with chaos mode enabled by default
-  const [chaosMode, setChaosMode] = useState(true);
-
-  const toggleChaosMode = () => {
-    setChaosMode((prev) => !prev);
-  };
+  // Always provide chaosMode as true
+  const value = { chaosMode: true };
 
   return (
-    <ChaosContext.Provider value={{ chaosMode, toggleChaosMode }}>
+    <ChaosContext.Provider value={value}>
       {children}
     </ChaosContext.Provider>
   );
 }
 
 export function useChaos() {
-  const context = useContext(ChaosContext);
-  if (context === undefined) {
-    throw new Error("useChaos must be used within a ChaosProvider");
-  }
-  return context;
+  return useContext(ChaosContext);
 }
