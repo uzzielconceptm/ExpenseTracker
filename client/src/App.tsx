@@ -4,13 +4,15 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
+import StoryLandingPage from "@/pages/StoryLandingPage";
 import LandingPage from "@/pages/LandingPage";
 import { ChaosProvider } from "./lib/ChaosContext";
 
 function Router() {
   return (
     <Switch>
-      <Route path="/" component={LandingPage} />
+      <Route path="/" component={StoryLandingPage} />
+      <Route path="/classic" component={LandingPage} />
       <Route component={NotFound} />
     </Switch>
   );
