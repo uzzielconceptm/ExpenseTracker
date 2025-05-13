@@ -8,7 +8,8 @@ type ChaosContextType = {
 const ChaosContext = createContext<ChaosContextType | undefined>(undefined);
 
 export function ChaosProvider({ children }: { children: ReactNode }) {
-  const [chaosMode, setChaosMode] = useState(false);
+  // Start with chaos mode enabled by default
+  const [chaosMode, setChaosMode] = useState(true);
 
   const toggleChaosMode = () => {
     setChaosMode((prev) => !prev);
