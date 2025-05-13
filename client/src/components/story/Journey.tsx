@@ -681,7 +681,9 @@ export default function Journey() {
                       {/* App Header */}
                       <div className="flex justify-between items-center mb-6">
                         <div>
-                          <h4 className="font-bold text-primary">ExpenseWise</h4>
+                          <div className="mb-1">
+                            <Logo variant="icon" size="sm" colorMode="light" className="h-6 w-6" />
+                          </div>
                           <p className="text-xs text-muted-foreground">Manage on the go</p>
                         </div>
                         <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Clock, Check } from "lucide-react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+import Logo from "@/assets/logo";
 
 export default function Pricing() {
   const [ref] = useScrollReveal<HTMLDivElement>();
@@ -60,7 +61,10 @@ export default function Pricing() {
             <div className="flex flex-col md:flex-row">
               {/* Left side: Plan details */}
               <div className="p-8 md:p-12 md:w-1/2">
-                <h3 className="font-heading text-2xl font-bold mb-2">ExpenseWise Pro</h3>
+                <div className="flex items-center gap-2 mb-2">
+                  <Logo variant="icon" size="sm" colorMode="light" className="h-8 w-8" />
+                  <h3 className="font-heading text-2xl font-bold">Pro</h3>
+                </div>
                 <div className="flex items-end mb-6">
                   <span className="text-4xl font-bold">$19</span>
                   <span className="text-muted-foreground ml-2 mb-1">/month</span>
