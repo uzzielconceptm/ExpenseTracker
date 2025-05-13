@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
@@ -23,14 +22,9 @@ export default function StickyNoteTestimonial({
   const color = colors[index % colors.length];
 
   return (
-    <motion.div
+    <div
       ref={ref}
       className={`scroll-reveal sticky-note ${rotation} ${color} hover:shadow-xl transition-shadow`}
-      whileHover={{ 
-        scale: 1.02, 
-        rotate: 0,
-        transition: { type: "spring", stiffness: 300, damping: 10 }
-      }}
     >
       <Quote size={24} className="mb-2 text-secondary-foreground opacity-60" />
       <p className="text-base md:text-lg font-medium italic mb-4">{quote}</p>
@@ -45,6 +39,6 @@ export default function StickyNoteTestimonial({
           <p className="text-xs text-secondary-foreground">{role}</p>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

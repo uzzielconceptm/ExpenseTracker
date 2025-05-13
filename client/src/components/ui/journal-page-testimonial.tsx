@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 interface JournalPageTestimonialProps {
@@ -19,13 +18,9 @@ export default function JournalPageTestimonial({
   const [ref] = useScrollReveal<HTMLDivElement>();
 
   return (
-    <motion.div
+    <div
       ref={ref}
       className="scroll-reveal journal-page"
-      whileHover={{ 
-        scale: 1.02,
-        transition: { type: "spring", stiffness: 300, damping: 10 }
-      }}
     >
       <div className="text-right text-sm text-muted-foreground mb-4">{date}</div>
       <p className="text-base md:text-lg mb-4 leading-relaxed">
@@ -37,6 +32,6 @@ export default function JournalPageTestimonial({
           <p className="text-sm text-muted-foreground">{role}</p>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
