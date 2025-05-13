@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Logo from "@/assets/logo";
 
 // FreshBooks-inspired integrations showcase
 export default function IntegrationShowcase() {
@@ -73,6 +74,14 @@ export default function IntegrationShowcase() {
     <section id="integrations" className="py-16 bg-muted/20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
+          <motion.div 
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex justify-center mb-6"
+          >
+            <Logo variant="full" size="md" colorMode="light" className="h-10" />
+          </motion.div>
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
             Connect Your Entire Financial World
           </h2>
@@ -106,7 +115,10 @@ export default function IntegrationShowcase() {
         
         {/* FreshBooks-inspired app badges */}
         <div className="mt-16 text-center">
-          <h3 className="text-xl font-semibold mb-6">Available Everywhere You Need It</h3>
+          <div className="flex items-center justify-center mb-6 gap-2">
+            <Logo variant="icon" size="sm" colorMode="light" className="h-6 w-6" />
+            <h3 className="text-xl font-semibold">Available Everywhere You Need It</h3>
+          </div>
           <div className="flex flex-wrap justify-center gap-4">
             <div className="bg-gradient-to-r from-gray-900 to-black text-white rounded-lg px-5 py-3 flex items-center hover:opacity-90 transition-opacity cursor-pointer">
               <svg className="w-8 h-8 mr-3" viewBox="0 0 24 24" fill="currentColor">
