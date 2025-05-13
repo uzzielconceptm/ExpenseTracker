@@ -8,6 +8,9 @@ import Testimonials from "@/components/story/Testimonials";
 import Pricing from "@/components/story/Pricing";
 import EarlyAccessForm from "@/components/story/EarlyAccessForm";
 import Footer from "@/components/story/Footer";
+import ExpenseBenefits from "@/components/story/ExpenseBenefits";
+import IntegrationShowcase from "@/components/story/IntegrationShowcase";
+import SecurityFeatures from "@/components/story/SecurityFeatures";
 
 export default function StoryLandingPage() {
   const { chaosMode } = useChaos();
@@ -63,6 +66,10 @@ export default function StoryLandingPage() {
       <main>
         <IntroScene />
         <Journey />
+        {/* FreshBooks-inspired sections */}
+        <ExpenseBenefits />
+        <IntegrationShowcase />
+        <SecurityFeatures />
         <CaseStudies />
         <Testimonials />
         <Pricing />

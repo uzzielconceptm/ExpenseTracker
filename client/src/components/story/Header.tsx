@@ -52,8 +52,10 @@ export default function StoryHeader() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <a href="#journey" className="text-foreground hover:text-primary transition-colors">Journey</a>
+          <a href="#benefits" className="text-foreground hover:text-primary transition-colors">Features</a>
+          <a href="#integrations" className="text-foreground hover:text-primary transition-colors">Connect</a>
+          <a href="#security" className="text-foreground hover:text-primary transition-colors">Security</a>
           <a href="#cases" className="text-foreground hover:text-primary transition-colors">Stories</a>
-          <a href="#testimonials" className="text-foreground hover:text-primary transition-colors">Voices</a>
           <a 
             href="#early-access" 
             className="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg transition-colors ml-4"
@@ -91,6 +93,27 @@ export default function StoryHeader() {
                 onClick={closeMobileMenu}
               >
                 Journey
+              </a>
+              <a 
+                href="#benefits" 
+                className="text-foreground hover:text-primary transition-colors block py-2"
+                onClick={closeMobileMenu}
+              >
+                Features
+              </a>
+              <a 
+                href="#integrations" 
+                className="text-foreground hover:text-primary transition-colors block py-2"
+                onClick={closeMobileMenu}
+              >
+                Connect
+              </a>
+              <a 
+                href="#security" 
+                className="text-foreground hover:text-primary transition-colors block py-2"
+                onClick={closeMobileMenu}
+              >
+                Security
               </a>
               <a 
                 href="#cases" 
