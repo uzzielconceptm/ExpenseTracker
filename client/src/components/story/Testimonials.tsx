@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import StickyNoteTestimonial from "@/components/ui/sticky-note-testimonial";
-import JournalPageTestimonial from "@/components/ui/journal-page-testimonial";
 
 export default function Testimonials() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -22,21 +21,16 @@ export default function Testimonials() {
       quote: "The integration with my bank account has been seamless. When I make business purchases, ExpenseWise categorizes them automatically with about 90% accuracy.",
       author: "Alicia R.",
       role: "E-commerce Store Owner"
-    }
-  ];
-  
-  const journalTestimonials = [
-    {
-      quote: "I used to struggle with expense tracking for my business trips. ExpenseWise lets me scan receipts right away, tag them to specific clients, and generate accurate reports for billing. This has improved my reimbursement rate by approximately 15%.",
-      author: "James K.",
-      role: "IT Consultant",
-      date: "February 8, 2023"
     },
     {
-      quote: "I've tried at least five different expense tracking apps over the years. ExpenseWise is the only one that has the right balance of automation and flexibility. The dashboard gives me a clear picture of where my money is going each month.",
+      quote: "I used to struggle with expense tracking for my business trips. ExpenseWise lets me scan receipts right away, tag them to specific clients, and generate accurate reports for billing.",
+      author: "James K.",
+      role: "IT Consultant"
+    },
+    {
+      quote: "I've tried at least five different expense tracking apps over the years. ExpenseWise is the only one that has the right balance of automation and flexibility.",
       author: "Elena M.",
-      role: "Interior Designer",
-      date: "April 12, 2023"
+      role: "Interior Designer"
     }
   ];
 
@@ -54,27 +48,13 @@ export default function Testimonials() {
         
         <div className="max-w-6xl mx-auto">
           {/* Sticky notes section */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
             {stickyTestimonials.map((testimonial, index) => (
               <StickyNoteTestimonial
                 key={index}
                 quote={testimonial.quote}
                 author={testimonial.author}
                 role={testimonial.role}
-                index={index}
-              />
-            ))}
-          </div>
-          
-          {/* Journal entries section */}
-          <div className="grid md:grid-cols-2 gap-12">
-            {journalTestimonials.map((testimonial, index) => (
-              <JournalPageTestimonial
-                key={index}
-                quote={testimonial.quote}
-                author={testimonial.author}
-                role={testimonial.role}
-                date={testimonial.date}
                 index={index}
               />
             ))}

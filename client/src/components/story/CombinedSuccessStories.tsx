@@ -2,7 +2,6 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import CaseStudyCard from "@/components/ui/case-study-card";
 import StickyNoteTestimonial from "@/components/ui/sticky-note-testimonial";
-import JournalPageTestimonial from "@/components/ui/journal-page-testimonial";
 import { Button } from "@/components/ui/button";
 import { Receipt, CreditCard, Tag, PieChart, Calendar } from "lucide-react";
 import Logo from "@/assets/logo";
@@ -29,16 +28,7 @@ export default function CombinedSuccessStories() {
     }
   ];
   
-  // Journal-style testimonials
-  const journalTestimonials = [
-    {
-      quote: "Before ExpenseWise, I'd dread the end of each quarter. Digging through emails, paper receipts, bank statements... it was like an archaeological dig through my financial life. Now everything is categorized automatically. I actually look forward to reviewing my expenses because the insights help me make better business decisions.",
-      author: "Diego M.",
-      role: "Independent Consultant",
-      date: "May 10, 2023",
-      index: 0
-    }
-  ];
+
 
   // Case study data
   const caseStudies = [
@@ -362,16 +352,7 @@ export default function CombinedSuccessStories() {
           {/* Testimonials column */}
           <div className="lg:col-span-1 order-1 lg:order-2">
             <div className="space-y-6">
-              {/* Journal testimonial */}
-              <div className="mb-8">
-                <JournalPageTestimonial
-                  quote={journalTestimonials[0].quote}
-                  author={journalTestimonials[0].author}
-                  role={journalTestimonials[0].role}
-                  date={journalTestimonials[0].date}
-                  index={journalTestimonials[0].index}
-                />
-              </div>
+
               
               {/* Sticky notes */}
               <div className="space-y-4">
