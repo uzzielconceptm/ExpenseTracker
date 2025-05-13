@@ -96,8 +96,7 @@
 }
 
 .timeline-line {
-  @apply absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-accent via-primary to-secondary transform -translate-x-1/2;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  display: none; /* Hidden as requested */
 }
 
 .timeline-dot {

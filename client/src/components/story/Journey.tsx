@@ -173,8 +173,7 @@ export default function Journey() {
         </div>
         
         <div className="timeline-container max-w-6xl mx-auto">
-          {/* Timeline vertical line */}
-          <div className="timeline-line"></div>
+          {/* Timeline has no vertical line as requested */}
           
           {/* Past: The Chaos */}
           <TimeNode
