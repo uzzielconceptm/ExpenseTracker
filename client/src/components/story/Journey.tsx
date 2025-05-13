@@ -365,12 +365,140 @@ export default function Journey() {
             </TryThisCard>
           </TimeNode>
           
+          {/* Present: Mobile Access and Security */}
+          <TimeNode
+            title="Secure Access Anywhere"
+            phase="present"
+            position="left"
+            index={4}
+          >
+            <p className="mb-4">Take control of your finances from anywhere with our mobile-friendly interface and robust 256-bit SSL security.</p>
+            
+            <p className="mb-6">Access everything on the go:</p>
+            
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-start">
+                <span className="text-primary mr-2">•</span>
+                <span>Capture receipts with your phone camera</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-2">•</span>
+                <span>Track mileage using GPS on your phone</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-2">•</span>
+                <span>Bank-level security with 256-bit SSL encryption</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-2">•</span>
+                <span>Two-factor authentication for account protection</span>
+              </li>
+            </ul>
+            
+            <TryThisCard
+              title="Mobile & Security Features"
+              description="See how our mobile app works with enterprise-grade security"
+              actionLabel="View Demo"
+            >
+              <div className="p-4 bg-muted/50 rounded-lg">
+                <div className="flex flex-wrap justify-center gap-6">
+                  {/* Mobile App Mockup */}
+                  <div className="w-[280px] h-[560px] rounded-[36px] border-8 border-gray-800 relative overflow-hidden shadow-xl bg-white">
+                    <div className="absolute top-0 inset-x-0 h-6 bg-gray-800 z-10"></div>
+                    <div className="absolute bottom-0 inset-x-0 h-6 bg-gray-800 z-10"></div>
+                    
+                    {/* App Content */}
+                    <div className="h-full overflow-y-auto p-4">
+                      {/* App Header */}
+                      <div className="flex justify-between items-center mb-6">
+                        <div>
+                          <h4 className="font-bold text-primary">ExpenseFlow</h4>
+                          <p className="text-xs text-muted-foreground">Manage on the go</p>
+                        </div>
+                        <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">
+                          <span className="text-xs font-bold">JS</span>
+                        </div>
+                      </div>
+                      
+                      {/* Expense Cards */}
+                      <div className="space-y-3">
+                        <div className="p-3 border border-border rounded-lg bg-card">
+                          <div className="flex justify-between items-center">
+                            <span className="font-medium">Coffee Shop</span>
+                            <span className="font-bold">$4.50</span>
+                          </div>
+                          <div className="flex justify-between text-xs text-muted-foreground mt-1">
+                            <span>Today, 9:30 AM</span>
+                            <span className="bg-secondary text-secondary-foreground px-2 py-0.5 rounded-full">Meals</span>
+                          </div>
+                        </div>
+                        
+                        <div className="p-3 border border-border rounded-lg bg-card">
+                          <div className="flex justify-between items-center">
+                            <span className="font-medium">Uber</span>
+                            <span className="font-bold">$24.50</span>
+                          </div>
+                          <div className="flex justify-between text-xs text-muted-foreground mt-1">
+                            <span>Yesterday</span>
+                            <span className="bg-secondary text-secondary-foreground px-2 py-0.5 rounded-full">Travel</span>
+                          </div>
+                        </div>
+                        
+                        <div className="p-3 border border-primary/30 rounded-lg bg-card">
+                          <div className="flex justify-between items-center">
+                            <span className="font-medium">Office Supply Co.</span>
+                            <span className="font-bold">$47.99</span>
+                          </div>
+                          <div className="flex justify-between text-xs text-muted-foreground mt-1">
+                            <span>May 15, 2023</span>
+                            <span className="bg-secondary text-secondary-foreground px-2 py-0.5 rounded-full">Supplies</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Security Badge */}
+                      <div className="mt-6 p-3 rounded-lg border border-green-200 bg-green-50 dark:bg-green-900/10 dark:border-green-900/20">
+                        <div className="flex items-center">
+                          <div className="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mr-3">
+                            <Check size={20} className="text-green-600 dark:text-green-400" />
+                          </div>
+                          <div>
+                            <p className="text-sm font-semibold text-green-700 dark:text-green-400">256-bit SSL Encrypted</p>
+                            <p className="text-xs text-green-600 dark:text-green-500">Your data is secure</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Feature Callouts */}
+                  <div className="w-full md:w-auto md:max-w-[320px] space-y-4">
+                    <div className="p-3 rounded-lg bg-card border border-border">
+                      <h5 className="font-semibold text-sm mb-1">Enterprise Security</h5>
+                      <p className="text-xs text-muted-foreground">Your financial data is always protected with bank-level security and two-factor authentication.</p>
+                    </div>
+                    
+                    <div className="p-3 rounded-lg bg-card border border-border">
+                      <h5 className="font-semibold text-sm mb-1">Automatic Backups</h5>
+                      <p className="text-xs text-muted-foreground">Your information is backed up in multiple databases and can be retrieved if ever lost.</p>
+                    </div>
+                    
+                    <div className="p-3 rounded-lg bg-card border border-border">
+                      <h5 className="font-semibold text-sm mb-1">Minimal Data Collection</h5>
+                      <p className="text-xs text-muted-foreground">We collect only what's necessary to provide our service, maintaining your privacy.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TryThisCard>
+          </TimeNode>
+          
           {/* Future: Freedom */}
           <TimeNode
             title="The Freedom of Automation"
             phase="future"
             position="left"
-            index={4}
+            index={5}
           >
             <p className="mb-4">Imagine never worrying about expense tracking again. With ExpenseFlow, you're always tax-ready and audit-proof.</p>
             
