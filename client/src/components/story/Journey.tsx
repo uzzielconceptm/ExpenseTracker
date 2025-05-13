@@ -1,0 +1,416 @@
+import { useRef } from "react";
+import TimeNode from "@/components/ui/time-node";
+import TryThisCard from "@/components/ui/try-this-card";
+import AnimatedReceipt from "@/components/ui/animated-receipt";
+import { Button } from "@/components/ui/button";
+import { Camera, Mail, CreditCard, Search, Check } from "lucide-react";
+import { motion } from "framer-motion";
+
+export default function Journey() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // Mock receipt scanning demo
+  const ReceiptScanDemo = () => {
+    return (
+      <div className="p-4 bg-muted/50 rounded-lg">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="flex flex-col items-center">
+            <div className="text-center mb-4">
+              <h4 className="text-lg font-semibold mb-2">Step 1: Upload Receipt</h4>
+              <p className="text-sm text-muted-foreground">Take a photo or select a file</p>
+            </div>
+            <div className="border-2 border-dashed border-border rounded-lg p-8 text-center w-full">
+              <Camera size={48} className="mx-auto mb-4 text-muted-foreground" />
+              <Button variant="outline" className="mx-auto">
+                Upload Receipt
+              </Button>
+            </div>
+          </div>
+          
+          <div className="flex flex-col items-center">
+            <div className="text-center mb-4">
+              <h4 className="text-lg font-semibold mb-2">Step 2: Smart Extraction</h4>
+              <p className="text-sm text-muted-foreground">AI extracts all important details</p>
+            </div>
+            <AnimatedReceipt className="w-full">
+              <div className="space-y-2">
+                <div className="flex justify-between items-center">
+                  <p className="font-bold">Office Supply Co.</p>
+                  <p className="font-bold">$47.99</p>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <p>Date: May 15, 2023</p>
+                  <div className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded-full">
+                    Office Supplies
+                  </div>
+                </div>
+                <div className="pt-2 mt-2 border-t border-border text-center">
+                  <Check size={18} className="inline mr-1 text-green-500" />
+                  <span className="text-sm text-green-600">Matched to your bank transaction</span>
+                </div>
+              </div>
+            </AnimatedReceipt>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  // Email scanning demo
+  const EmailScanDemo = () => {
+    return (
+      <div className="p-4 bg-muted/50 rounded-lg">
+        <div className="space-y-4">
+          <div className="bg-white rounded-lg p-4 shadow-sm border border-border">
+            <div className="flex items-start gap-3">
+              <Mail size={20} className="mt-1 text-primary" />
+              <div>
+                <div className="flex justify-between items-center w-full">
+                  <p className="font-medium">Amazon Order Confirmation</p>
+                  <p className="text-sm text-muted-foreground">10:32 AM</p>
+                </div>
+                <p className="text-sm text-muted-foreground">Your order #112-5283947-7262257 has shipped...</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="bg-white rounded-lg p-4 shadow-sm border border-primary/30">
+            <div className="flex items-start gap-3">
+              <Mail size={20} className="mt-1 text-primary" />
+              <div className="w-full">
+                <div className="flex justify-between items-center w-full">
+                  <p className="font-medium">Uber Receipt</p>
+                  <p className="text-sm text-muted-foreground">Yesterday</p>
+                </div>
+                <p className="text-sm text-muted-foreground">Thanks for riding with Javier...</p>
+                <div className="mt-2 pt-2 border-t border-border flex justify-between items-center">
+                  <div>
+                    <p className="text-xs text-muted-foreground">TOTAL AMOUNT</p>
+                    <p className="font-medium">$24.50</p>
+                  </div>
+                  <Button size="sm" variant="outline" className="text-xs h-8">
+                    <Check size={14} className="mr-1" /> Auto-processed
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="bg-white rounded-lg p-4 shadow-sm border border-border">
+            <div className="flex items-start gap-3">
+              <Mail size={20} className="mt-1 text-muted-foreground" />
+              <div>
+                <div className="flex justify-between items-center w-full">
+                  <p className="font-medium">Weekly Newsletter</p>
+                  <p className="text-sm text-muted-foreground">Feb 28</p>
+                </div>
+                <p className="text-sm text-muted-foreground">Check out our latest updates and news...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  // Bank matching demo
+  const BankMatchingDemo = () => {
+    return (
+      <div className="p-4 bg-muted/50 rounded-lg">
+        <div className="space-y-4">
+          <div className="bg-white rounded-lg shadow-sm border border-border">
+            <div className="p-3 border-b border-border bg-muted/30">
+              <h5 className="font-medium">Transaction Details</h5>
+            </div>
+            <div className="p-4">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center">
+                  <CreditCard size={20} className="text-primary mr-2" />
+                  <div>
+                    <p className="font-medium">Office Supply Co.</p>
+                    <p className="text-sm text-muted-foreground">May 15, 2023</p>
+                  </div>
+                </div>
+                <p className="font-bold">$47.99</p>
+              </div>
+              
+              <div className="mt-4 pt-4 border-t border-border">
+                <div className="flex justify-between items-center">
+                  <p className="text-sm text-muted-foreground">Status</p>
+                  <div className="flex items-center text-green-600">
+                    <Check size={16} className="mr-1" />
+                    <span className="text-sm">Matched with receipt</span>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center mt-2">
+                  <p className="text-sm text-muted-foreground">Category</p>
+                  <div className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded-full">
+                    Office Supplies
+                  </div>
+                </div>
+                <div className="flex justify-between items-center mt-2">
+                  <p className="text-sm text-muted-foreground">Account</p>
+                  <p className="text-sm">Business Credit Card</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <section id="journey" className="py-20 relative overflow-hidden" ref={containerRef}>
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
+            From Shoebox to Streamlined
+          </h2>
+          <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
+            Follow the journey from chaotic receipt management to automated peace-of-mind
+          </p>
+        </div>
+        
+        <div className="timeline-container max-w-6xl mx-auto">
+          {/* Timeline vertical line */}
+          <div className="timeline-line"></div>
+          
+          {/* Past: The Chaos */}
+          <TimeNode
+            title="Lost in a Sea of Paper"
+            phase="past"
+            position="left"
+            index={0}
+          >
+            <p className="mb-4">Remember rummaging through shoeboxes of receipts when tax season arrives? Trying to match crumpled paper to bank statements manually?</p>
+            
+            <p className="mb-6">It's a nightmare we've all experienced:</p>
+            
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-start">
+                <span className="text-accent mr-2">•</span>
+                <span>Faded thermal paper receipts you can barely read</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-accent mr-2">•</span>
+                <span>Missing documentation for important purchases</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-accent mr-2">•</span>
+                <span>Hours spent reconciling expenses with statements</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-accent mr-2">•</span>
+                <span>The anxiety of potential audits looming over you</span>
+              </li>
+            </ul>
+            
+            <TryThisCard
+              title="The Shoebox Method"
+              description="See how messy and time-consuming manual tracking can be"
+              actionLabel="Experience the Chaos"
+            >
+              <div className="relative p-4 border border-border bg-muted/30 rounded-lg">
+                <div className="grid grid-cols-3 gap-2">
+                  {Array.from({ length: 9 }).map((_, i) => (
+                    <motion.div
+                      key={i}
+                      className="aspect-[4/5] bg-white rounded shadow-sm transform rotate-1"
+                      style={{ 
+                        transformOrigin: "center",
+                        rotate: (Math.random() * 20 - 10) + "deg",
+                        opacity: Math.random() * 0.5 + 0.5
+                      }}
+                      whileHover={{ 
+                        scale: 1.05, 
+                        rotate: 0,
+                        opacity: 1,
+                        zIndex: 10
+                      }}
+                    >
+                      <div className="h-full w-full p-1 flex flex-col">
+                        <div className="h-1 w-1/2 bg-accent mb-1 rounded"></div>
+                        <div className="h-1 w-3/4 bg-muted mb-1 rounded"></div>
+                        <div className="h-1 w-1/3 bg-muted rounded"></div>
+                        <div className="mt-auto h-2 w-full flex justify-end">
+                          <div className="h-2 w-2/5 bg-muted rounded"></div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+                <div className="mt-4 text-center text-sm text-muted-foreground">
+                  <Search size={16} className="inline mr-1" />
+                  <span>Which one was for that client dinner in March?</span>
+                </div>
+              </div>
+            </TryThisCard>
+          </TimeNode>
+          
+          {/* Present: The Solution - Email Scanning */}
+          <TimeNode
+            title="Your Inbox, Automatically Organized"
+            phase="present"
+            position="right"
+            index={1}
+          >
+            <p className="mb-4">What if your receipts could organize themselves? ExpenseFlow monitors your email for receipts and automatically processes them.</p>
+            
+            <p className="mb-6">No more manual hunting - we find everything for you:</p>
+            
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-start">
+                <span className="text-primary mr-2">•</span>
+                <span>Connect your Gmail or Outlook account once</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-2">•</span>
+                <span>We automatically detect receipts in your emails</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-2">•</span>
+                <span>All data is extracted and categorized</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-2">•</span>
+                <span>Works with services like Uber, Amazon, airline tickets, and more</span>
+              </li>
+            </ul>
+            
+            <TryThisCard
+              title="Email Receipt Scanner"
+              description="Watch how we automatically find and process receipts in your inbox"
+              actionLabel="See it in Action"
+            >
+              <EmailScanDemo />
+            </TryThisCard>
+          </TimeNode>
+          
+          {/* Present: The Solution - Auto Matching */}
+          <TimeNode
+            title="Perfect Matching, Every Time"
+            phase="present"
+            position="left"
+            index={2}
+          >
+            <p className="mb-4">Say goodbye to manual reconciliation. ExpenseFlow automatically matches your receipts to your bank and credit card transactions.</p>
+            
+            <p className="mb-6">Create a perfect audit trail with no effort:</p>
+            
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-start">
+                <span className="text-primary mr-2">•</span>
+                <span>Connect your bank accounts and credit cards</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-2">•</span>
+                <span>Our AI matches receipts to transactions automatically</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-2">•</span>
+                <span>Get alerted about missing receipts</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-2">•</span>
+                <span>Enjoy 100% reconciliation with minimal effort</span>
+              </li>
+            </ul>
+            
+            <TryThisCard
+              title="Smart Matching"
+              description="See how we match a receipt to the correct transaction automatically"
+              actionLabel="Watch the Match"
+            >
+              <BankMatchingDemo />
+            </TryThisCard>
+          </TimeNode>
+          
+          {/* Present: The Solution - Manual Uploads */}
+          <TimeNode
+            title="For Those Paper Receipts Too"
+            phase="present"
+            position="right"
+            index={3}
+          >
+            <p className="mb-4">Sometimes you still get paper receipts. No problem! ExpenseFlow makes it easy to digitize them in seconds.</p>
+            
+            <p className="mb-6">Turn physical into digital with ease:</p>
+            
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-start">
+                <span className="text-primary mr-2">•</span>
+                <span>Snap a photo with our mobile app</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-2">•</span>
+                <span>OCR technology extracts all relevant details</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-2">•</span>
+                <span>Data is processed and matched to transactions</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-2">•</span>
+                <span>Original receipts are securely stored in the cloud</span>
+              </li>
+            </ul>
+            
+            <TryThisCard
+              title="Receipt Scanner"
+              description="See how we turn a paper receipt into organized data"
+              actionLabel="Try the Scanner"
+            >
+              <ReceiptScanDemo />
+            </TryThisCard>
+          </TimeNode>
+          
+          {/* Future: Freedom */}
+          <TimeNode
+            title="The Freedom of Automation"
+            phase="future"
+            position="left"
+            index={4}
+          >
+            <p className="mb-4">Imagine never worrying about expense tracking again. With ExpenseFlow, you're always tax-ready and audit-proof.</p>
+            
+            <p className="mb-6">Here's what your future looks like:</p>
+            
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-start">
+                <span className="text-secondary mr-2">•</span>
+                <span>Hours saved every month on manual data entry</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-secondary mr-2">•</span>
+                <span>Tax season becomes just another time of year</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-secondary mr-2">•</span>
+                <span>Complete confidence in your financial records</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-secondary mr-2">•</span>
+                <span>More time to focus on growing your business</span>
+              </li>
+            </ul>
+            
+            <div className="flex justify-center mt-8">
+              <Button 
+                className="bg-primary hover:bg-primary/90 text-white"
+                onClick={() => {
+                  const element = document.getElementById('cases');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                See How Others Use ExpenseFlow
+              </Button>
+            </div>
+          </TimeNode>
+        </div>
+      </div>
+    </section>
+  );
+}
