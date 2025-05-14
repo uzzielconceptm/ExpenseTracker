@@ -114,8 +114,12 @@ export default function ExpenseBenefits() {
                 ))}
               </ul>
               
-              <Button className="mt-6 px-8" size="lg">
-                Try It Free
+              <Button 
+                className="mt-6 px-8" 
+                size="lg"
+                onClick={() => window.location.href = '#early-access'}
+              >
+                Start Now
               </Button>
             </motion.div>
           </div>
