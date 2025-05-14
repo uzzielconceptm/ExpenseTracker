@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Shield, Lock, Database, EyeOff, Fingerprint, Key } from "lucide-react";
 import { cn } from "@/lib/utils";
-import Logo from "@/assets/logo";
 
 export default function SecurityFeatures() {
   const securityFeatures = [
@@ -60,7 +59,6 @@ export default function SecurityFeatures() {
           </motion.div>
           
           <div className="flex flex-col items-center justify-center mb-4">
-            <Logo variant="full" size="md" colorMode="light" className="h-10 mb-4" />
             <h2 className="font-heading text-3xl md:text-4xl font-bold">
               Enterprise-Grade Security
             </h2>
