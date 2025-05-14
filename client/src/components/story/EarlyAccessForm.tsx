@@ -90,7 +90,7 @@ export default function StoryEarlyAccessForm() {
                   size="lg"
                   className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white"
                 >
-                  Apply for Early Access
+                  Apply
                 </Button>
               </div>
             </div>

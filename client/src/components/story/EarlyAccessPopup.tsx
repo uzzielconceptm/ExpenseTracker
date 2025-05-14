@@ -236,7 +236,7 @@ export default function EarlyAccessPopup({ isOpen, onOpenChange }: EarlyAccessPo
                       Processing...
                     </>
                   ) : (
-                    "Apply for Early Access"
+                    "Apply"
                   )}
                 </Button>
               </DialogFooter>
