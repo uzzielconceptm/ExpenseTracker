@@ -6,16 +6,15 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Sparkles, X, Loader2 } from "lucide-react";
-import { apiRequest, queryClient } from "@/lib/queryClient";
+import { CheckCircle, Sparkles, X } from "lucide-react";
+import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
-import { useMutation } from "@tanstack/react-query";
 import { 
   Dialog, 
   DialogContent, 
   DialogTitle, 
-  DialogHeader,
-  DialogDescription, 
+  DialogHeader, 
+  DialogDescription,
   DialogFooter, 
   DialogClose 
 } from "@/components/ui/dialog";
@@ -35,6 +34,7 @@ interface EarlyAccessPopupProps {
 }
 
 export default function EarlyAccessPopup({ isOpen, onOpenChange }: EarlyAccessPopupProps) {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [receiptCount, setReceiptCount] = useState<number | null>(null);
   const { toast } = useToast();
@@ -49,44 +49,41 @@ export default function EarlyAccessPopup({ isOpen, onOpenChange }: EarlyAccessPo
     },
   });
 
-  // Use TanStack Query mutation for API call
-  const earlyAccessMutation = useMutation({
-    mutationFn: async (formData: FormValues) => {
-      const response = await apiRequest("POST", "/api/early-access", formData);
-      return await response.json();
-    },
-    onSuccess: (data) => {
-      // Calculate estimated receipts based on expenses
+  const onSubmit = async (data: FormValues) => {
+    setIsSubmitting(true);
+    
+    try {
+      // Simulate API delay
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Example estimation of monthly receipts based on expenses
       let estimatedReceiptCount = null;
-      const monthlyExpenses = form.getValues("monthlyExpenses");
-      if (monthlyExpenses === 'under-1k') estimatedReceiptCount = 25;
-      if (monthlyExpenses === '1k-5k') estimatedReceiptCount = 75;
-      if (monthlyExpenses === '5k-10k') estimatedReceiptCount = 130;
-      if (monthlyExpenses === 'over-10k') estimatedReceiptCount = 200;
+      if (data.monthlyExpenses === 'under-1k') estimatedReceiptCount = 25;
+      if (data.monthlyExpenses === '1k-5k') estimatedReceiptCount = 75;
+      if (data.monthlyExpenses === '5k-10k') estimatedReceiptCount = 130;
+      if (data.monthlyExpenses === 'over-10k') estimatedReceiptCount = 200;
       
       setReceiptCount(estimatedReceiptCount);
+      
+      // Call API to submit early access request
+      await apiRequest('/api/early-access', 'POST', data);
+      
       setIsSuccess(true);
       
       toast({
         title: "Success!",
         description: "Your early access request has been submitted.",
       });
-      
-      // Invalidate any queries that might depend on this data
-      queryClient.invalidateQueries({ queryKey: ["/api/early-access"] });
-    },
-    onError: (error: Error) => {
+    } catch (error) {
       console.error("Error submitting form:", error);
       toast({
         title: "Submission failed",
-        description: error.message || "There was a problem submitting your request. Please try again.",
+        description: "There was a problem submitting your request. Please try again.",
         variant: "destructive",
       });
+    } finally {
+      setIsSubmitting(false);
     }
-  });
-
-  const onSubmit = (data: FormValues) => {
-    earlyAccessMutation.mutate(data);
   };
 
   return (
@@ -96,9 +93,6 @@ export default function EarlyAccessPopup({ isOpen, onOpenChange }: EarlyAccessPo
           <div className="flex justify-between items-center w-full">
             <div>
               <DialogTitle className="text-xl font-bold">Get Early Access</DialogTitle>
-              <DialogDescription className="text-sm text-muted-foreground">
-                Sign up below to join our early access program.
-              </DialogDescription>
             </div>
           </div>
         </DialogHeader>
@@ -232,11 +226,13 @@ export default function EarlyAccessPopup({ isOpen, onOpenChange }: EarlyAccessPo
                 <Button 
                   type="submit" 
                   className="w-full bg-primary hover:bg-primary/90 text-white font-medium rounded-md px-4 py-2"
-                  disabled={earlyAccessMutation.isPending}
+                  disabled={isSubmitting}
                 >
-                  {earlyAccessMutation.isPending ? (
+                  {isSubmitting ? (
                     <>
-                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      <span className="animate-spin mr-2">
+                        <i className="fas fa-circle-notch"></i>
+                      </span>
                       Processing...
                     </>
                   ) : (
