@@ -112,7 +112,6 @@ export default function Logo({
   };
   
   return (
-    <div className="flex flex-col items-center">
       <svg
         width="50"
         height="50"
@@ -163,9 +162,5 @@ export default function Logo({
           strokeLinejoin="round"
         />
       </svg>
-      <span className={`font-medium mt-2 ${fontSizes[size]}`} style={{ color: currentColors.text }}>
-        ExpenseWise
-      </span>
-    </div>
   );
 }
