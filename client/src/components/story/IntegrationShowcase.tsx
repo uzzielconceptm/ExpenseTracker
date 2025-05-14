@@ -83,10 +83,10 @@ export default function IntegrationShowcase() {
             <Logo variant="full" size="md" colorMode="light" className="h-10" />
           </motion.div>
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
-            Connect Your Entire Financial World
+            Seamless Integrations
           </h2>
           <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
-            ExpenseWise works seamlessly with your existing tools and accounts to create a unified expense management system.
+            ExpenseWise works with your favorite tools to streamline your workflow.
           </p>
         </div>
         
