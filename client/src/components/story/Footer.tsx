@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Twitter, Linkedin, Instagram, Github } from 'lucide-react';
+import { Twitter, Linkedin, Instagram, Github, Phone, Mail } from 'lucide-react';
 import Logo from "@/assets/logo";
 
 export default function StoryFooter() {
@@ -69,8 +69,19 @@ export default function StoryFooter() {
           </div>
         </div>
         
-        <div className="border-t border-neutral-800 mt-12 pt-8 text-center text-neutral-500">
-          <p>&copy; {currentYear} ExpenseWise. All rights reserved.</p>
+        <div className="border-t border-neutral-800 mt-12 pt-8 text-center">
+          <div className="mb-4 text-neutral-400">
+            <p className="font-medium text-white mb-3">Contact Us</p>
+            <p className="flex items-center justify-center gap-2 mb-2">
+              <Phone size={16} />
+              <a href="tel:+18001234567" className="hover:text-white transition-colors">+1 (800) 123-4567</a>
+            </p>
+            <p className="flex items-center justify-center gap-2">
+              <Mail size={16} />
+              <a href="mailto:support@expensewise.com" className="hover:text-white transition-colors">support@expensewise.com</a>
+            </p>
+          </div>
+          <p className="text-neutral-500">&copy; {currentYear} ExpenseWise. All rights reserved.</p>
         </div>
       </div>
     </footer>
