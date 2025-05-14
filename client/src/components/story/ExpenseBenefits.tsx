@@ -229,27 +229,6 @@ export default function ExpenseBenefits() {
             </div>
           </div>
         </div>
-        
-        {/* FreshBooks-inspired testimonial section */}
-        <div className="mt-24 bg-muted/30 rounded-lg p-8 relative overflow-hidden">
-          <div className="absolute right-0 top-0 w-1/3 h-full bg-primary/5"></div>
-          <div className="relative z-10 max-w-3xl mx-auto">
-            <div className="flex flex-col items-center text-center">
-              <div className="flex mb-6">
-                {[1, 2, 3, 4, 5].map(i => (
-                  <Star key={i} fill="currentColor" className="w-5 h-5 text-amber-400" />
-                ))}
-              </div>
-              <blockquote className="text-xl md:text-2xl font-medium italic mb-6">
-                "Since switching to ExpenseWise, I've saved over 5 hours a week on expense tracking. The receipt scanning feature is life-changing for me as a consultant who's always on the go."
-              </blockquote>
-              <div>
-                <p className="font-semibold">Sarah Martinez</p>
-                <p className="text-sm text-muted-foreground">Independent Consultant</p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
