@@ -87,11 +87,8 @@ export default function Pricing() {
                   </div>
                 </div>
                 
-                <Button className="w-full bg-primary hover:bg-primary/90 text-white text-lg py-6">
-                  Start My Clean Slate
-                </Button>
-                
-                <p className="text-center text-sm text-muted-foreground mt-4">
+                <div className="mt-8 mb-4"></div>
+                <p className="text-center text-sm text-muted-foreground">
                   Cancel anytime. No long-term contracts.
                 </p>
               </div>
