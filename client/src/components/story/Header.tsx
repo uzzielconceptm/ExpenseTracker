@@ -54,7 +54,6 @@ export default function StoryHeader() {
         <nav className="hidden md:flex items-center space-x-8">
           <a href="#journey" className="text-foreground hover:text-primary transition-colors">Journey</a>
           <a href="#benefits" className="text-foreground hover:text-primary transition-colors">Features</a>
-          <a href="#integrations" className="text-foreground hover:text-primary transition-colors">Connect</a>
           <a href="#security" className="text-foreground hover:text-primary transition-colors">Security</a>
           <a href="#success-stories" className="text-foreground hover:text-primary transition-colors">Stories</a>
           <a 
@@ -101,13 +100,6 @@ export default function StoryHeader() {
                 onClick={closeMobileMenu}
               >
                 Features
-              </a>
-              <a 
-                href="#integrations" 
-                className="text-foreground hover:text-primary transition-colors block py-2"
-                onClick={closeMobileMenu}
-              >
-                Connect
               </a>
               <a 
                 href="#security" 
