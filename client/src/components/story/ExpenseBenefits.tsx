@@ -119,7 +119,7 @@ export default function ExpenseBenefits() {
                 size="lg"
                 onClick={() => window.location.href = '#early-access'}
               >
-                Start Now
+                Try It Free
               </Button>
             </motion.div>
           </div>
