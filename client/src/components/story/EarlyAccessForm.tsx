@@ -7,14 +7,7 @@ import EarlyAccessPopup from "./EarlyAccessPopup";
 export default function StoryEarlyAccessForm() {
   const [isOpen, setIsOpen] = useState(false);
   
-  // Open popup automatically when component mounts
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsOpen(true);
-    }, 3000); // Longer delay for better slow fade-in effect
-    
-    return () => clearTimeout(timer);
-  }, []);
+  // Removed automatic popup opening to prevent unwanted scrolling
 
   return (
     <section id="early-access" className="py-20 relative">

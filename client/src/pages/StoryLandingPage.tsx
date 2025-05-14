@@ -18,7 +18,7 @@ export default function StoryLandingPage() {
     // Always add chaos mode to body
     document.body.classList.add('chaos-mode');
     
-    // Scroll to element on hash change and initial load
+    // Scroll to element only on hash change, not initial load
     const scrollToElement = () => {
       const hash = window.location.hash;
       if (hash) {
@@ -31,8 +31,8 @@ export default function StoryLandingPage() {
       }
     };
 
+    // Only add event listener for hash changes, don't scroll on initial load
     window.addEventListener("hashchange", scrollToElement);
-    scrollToElement(); // For initial load
     
     // Initialize scroll reveal
     const handleScroll = () => {
