@@ -22,7 +22,22 @@ export default function Journey() {
             </div>
             <div className="border-2 border-dashed border-border rounded-lg p-8 text-center w-full">
               <Camera size={48} className="mx-auto mb-4 text-muted-foreground" />
-              <Button variant="outline" className="mx-auto">
+              <Button 
+                variant="outline" 
+                className="mx-auto"
+                onClick={() => {
+                  // Create an input element and trigger file selection
+                  const input = document.createElement('input');
+                  input.type = 'file';
+                  input.accept = 'image/*';
+                  input.onchange = (e) => {
+                    // This would typically upload the file to your server
+                    // For demo purposes, we'll just show an alert
+                    alert('Receipt uploaded! In a real app, this would be processed.');
+                  };
+                  input.click();
+                }}
+              >
                 Upload Receipt
               </Button>
             </div>
