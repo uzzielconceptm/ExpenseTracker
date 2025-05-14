@@ -121,6 +121,9 @@ export default function Logo({
         xmlns="http://www.w3.org/2000/svg"
         className={`${sizeMap[size]} ${className}`}
       >
+        {/* Green rounded square background */}
+        <rect width="50" height="50" rx="10" fill={currentColors.primary} />
+        
         {/* Dollar sign */}
         <path
           d="M20 14C20 13.4477 20.4477 13 21 13H24C24.5523 13 25 13.4477 25 14V17C25 17.5523 24.5523 18 24 18H21C20.4477 18 20 17.5523 20 17V14Z"

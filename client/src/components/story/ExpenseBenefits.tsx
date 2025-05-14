@@ -59,13 +59,23 @@ export default function ExpenseBenefits() {
   return (
     <section id="benefits" className="py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
-            Streamlined Expense Management
-          </h2>
-          <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
-            Save hours every month with automated expense tracking and receipt management that works for you.
-          </p>
+        <div className="mb-12">
+          <motion.div 
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex justify-start mb-6"
+          >
+            <Logo variant="full" size="md" colorMode="light" className="h-10" />
+          </motion.div>
+          <div className="text-center">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
+              Streamlined Expense Management
+            </h2>
+            <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
+              Save hours every month with automated expense tracking and receipt management that works for you.
+            </p>
+          </div>
         </div>
         
         {/* FreshBooks-inspired tab navigation */}

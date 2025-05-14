@@ -69,6 +69,14 @@ export default function IntroScene() {
       ))}
       
       <div className="container mx-auto px-4 z-20">
+        <motion.div
+          className="flex mb-8 justify-start max-w-3xl mx-auto"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+          <Logo variant="full" size="lg" colorMode="light" className="h-20" />
+        </motion.div>
         <div className="max-w-3xl mx-auto text-center">
           <motion.h1 
             className="font-heading text-4xl md:text-6xl font-bold leading-tight mb-6"
