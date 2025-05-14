@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-
 interface TimeNodeProps {
   title: string;
   phase: "past" | "present" | "future";
@@ -42,10 +40,9 @@ export default function TimeNode({
       />
       
       {/* Content container - always visible */}
-      <motion.div
+      <div
         className={`${position === "left" ? "mr-auto" : "ml-auto"} 
                    max-w-md md:max-w-lg ${position === "left" ? "md:mr-[5%]" : "md:ml-[5%]"}`}
-        animate="visible"
       >
         <div className={`mb-4 inline-block px-3 py-1 rounded-full text-sm font-medium ${phaseColors[phase]}`}>
           {phase === "past" ? "BEFORE" : phase === "present" ? "SOLUTION" : "FREEDOM"}
@@ -54,7 +51,7 @@ export default function TimeNode({
         <div className="bg-white/90 backdrop-blur-sm rounded-lg p-5 shadow-lg">
           {children}
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }
