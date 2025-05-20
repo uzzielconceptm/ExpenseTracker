@@ -24,12 +24,12 @@ export default function IntroScene() {
 
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      {/* Background with subtle pattern */}
+      {/* Modern gradient background */}
       <div 
-        className="absolute inset-0 z-0 bg-gradient-to-b from-white to-muted"
+        className="absolute inset-0 z-0 bg-gradient-to-br from-white via-accent/20 to-white"
         style={{
-          backgroundImage: `radial-gradient(circle at 20% 30%, rgba(210, 220, 255, 0.2) 0%, transparent 30%),
-                            radial-gradient(circle at 80% 70%, rgba(255, 210, 230, 0.2) 0%, transparent 40%)`
+          backgroundImage: `radial-gradient(circle at 20% 30%, rgba(176, 255, 240, 0.3) 0%, transparent 30%),
+                            radial-gradient(circle at 80% 70%, rgba(180, 240, 255, 0.3) 0%, transparent 40%)`
         }}
       />
       
@@ -44,8 +44,9 @@ export default function IntroScene() {
             width: item.size,
             height: item.size * 1.3,
             background: 'white',
-            boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
-            borderRadius: '4px'
+            boxShadow: '0 8px 24px rgba(0,0,0,0.07)',
+            borderRadius: '8px',
+            border: '1px solid rgba(0,0,0,0.06)'
           }}
           initial={{ rotate: 0, y: 0 }}
           animate={{ 
