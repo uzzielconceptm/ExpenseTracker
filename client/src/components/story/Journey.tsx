@@ -10,61 +10,47 @@ export default function Journey() {
   // Mock receipt scanning demo
   const ReceiptScanDemo = () => {
     return (
-      <div className="p-4 bg-muted/50 rounded-lg">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="flex flex-col items-center">
-            <div className="text-center mb-4">
-              <h4 className="text-lg font-semibold mb-2">Step 1: Upload Receipt</h4>
-              <p className="text-sm text-muted-foreground">Take a photo or select a file</p>
-            </div>
-            <div className="border-2 border-dashed border-border rounded-lg p-8 text-center w-full">
-              <Camera size={48} className="mx-auto mb-4 text-muted-foreground" />
-              <Button 
-                variant="outline" 
-                className="mx-auto"
-                onClick={() => {
-                  // Create an input element and trigger file selection
-                  const input = document.createElement('input');
-                  input.type = 'file';
-                  input.accept = 'image/*';
-                  input.onchange = (e) => {
-                    // This would typically upload the file to your server
-                    // For demo purposes, we'll just show an alert
-                    alert('Receipt uploaded! In a real app, this would be processed.');
-                  };
-                  input.click();
-                }}
-              >
-                Upload Receipt
-              </Button>
-            </div>
-          </div>
-          
-          <div className="flex flex-col items-center">
-            <div className="text-center mb-4">
-              <h4 className="text-lg font-semibold mb-2">Step 2: Smart Extraction</h4>
-              <p className="text-sm text-muted-foreground">AI extracts all important details</p>
-            </div>
-            <AnimatedReceipt className="w-full">
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <p className="font-bold">Office Supply Co.</p>
-                  <p className="font-bold">$47.99</p>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <p>Date: May 15, 2023</p>
-                  <div className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded-full">
-                    Office Supplies
-                  </div>
-                </div>
-                <div className="pt-2 mt-2 border-t border-border text-center">
-                  <Check size={18} className="inline mr-1 text-green-500" />
-                  <span className="text-sm text-green-600">Matched to your bank transaction</span>
-                </div>
-              </div>
-            </AnimatedReceipt>
+      <div className="space-y-4">
+        <div className="flex flex-col items-center">
+          <div className="border-2 border-dashed border-border rounded-lg p-4 text-center w-full">
+            <Camera size={36} className="mx-auto mb-2 text-muted-foreground" />
+            <Button 
+              variant="outline" 
+              size="sm"
+              className="mx-auto"
+              onClick={() => {
+                const input = document.createElement('input');
+                input.type = 'file';
+                input.accept = 'image/*';
+                input.onchange = () => {
+                  alert('Receipt uploaded! In a real app, this would be processed.');
+                };
+                input.click();
+              }}
+            >
+              Upload Receipt
+            </Button>
           </div>
         </div>
+          
+        <AnimatedReceipt className="w-full">
+          <div className="space-y-2">
+            <div className="flex justify-between items-center">
+              <p className="font-bold">Office Supply Co.</p>
+              <p className="font-bold">$47.99</p>
+            </div>
+            <div className="flex justify-between text-sm">
+              <p>Date: May 15, 2023</p>
+              <div className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded-full">
+                Office Supplies
+              </div>
+            </div>
+            <div className="pt-2 mt-2 border-t border-border text-center">
+              <Check size={16} className="inline mr-1 text-green-500" />
+              <span className="text-sm text-green-600">Matched to your bank transaction</span>
+            </div>
+          </div>
+        </AnimatedReceipt>
       </div>
     );
   };
@@ -72,38 +58,23 @@ export default function Journey() {
   // Email scanning demo
   const EmailScanDemo = () => {
     return (
-      <div className="p-4 bg-muted/50 rounded-lg">
-        <div className="space-y-4">
-          <div className="bg-white rounded-lg p-4 shadow-sm border border-border">
-            <div className="flex items-start gap-3">
-              <Mail size={20} className="mt-1 text-primary" />
-              <div>
-                <div className="flex justify-between items-center w-full">
-                  <p className="font-medium">Amazon Order Confirmation</p>
-                  <p className="text-sm text-muted-foreground">10:32 AM</p>
-                </div>
-                <p className="text-sm text-muted-foreground">Your order #112-5283947-7262257 has shipped...</p>
+      <div className="space-y-3">
+        <div className="bg-white rounded-lg p-3 shadow-sm border border-primary/30">
+          <div className="flex items-start gap-2">
+            <Mail size={18} className="mt-1 text-primary" />
+            <div className="w-full">
+              <div className="flex justify-between items-center w-full">
+                <p className="font-medium text-sm">Uber Receipt</p>
+                <p className="text-xs text-muted-foreground">Yesterday</p>
               </div>
-            </div>
-          </div>
-          
-          <div className="bg-white rounded-lg p-4 shadow-sm border border-primary/30">
-            <div className="flex items-start gap-3">
-              <Mail size={20} className="mt-1 text-primary" />
-              <div className="w-full">
-                <div className="flex justify-between items-center w-full">
-                  <p className="font-medium">Uber Receipt</p>
-                  <p className="text-sm text-muted-foreground">Yesterday</p>
+              <p className="text-xs text-muted-foreground">Thanks for riding with Javier...</p>
+              <div className="mt-2 pt-2 border-t border-border flex justify-between items-center">
+                <div>
+                  <p className="text-xs text-muted-foreground">TOTAL</p>
+                  <p className="font-medium text-sm">$24.50</p>
                 </div>
-                <p className="text-sm text-muted-foreground">Thanks for riding with Javier...</p>
-                <div className="mt-2 pt-2 border-t border-border flex justify-between items-center">
-                  <div>
-                    <p className="text-xs text-muted-foreground">TOTAL AMOUNT</p>
-                    <p className="font-medium">$24.50</p>
-                  </div>
-                  <Button size="sm" variant="outline" className="text-xs h-8">
-                    <Check size={14} className="mr-1" /> Auto-processed
-                  </Button>
+                <div className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full flex items-center">
+                  <Check size={12} className="mr-1" /> Processed
                 </div>
               </div>
             </div>
@@ -116,41 +87,29 @@ export default function Journey() {
   // Bank matching demo
   const BankMatchingDemo = () => {
     return (
-      <div className="p-4 bg-muted/50 rounded-lg">
-        <div className="space-y-4">
-          <div className="bg-white rounded-lg shadow-sm border border-border">
-            <div className="p-3 border-b border-border bg-muted/30">
-              <h5 className="font-medium">Transaction Details</h5>
-            </div>
-            <div className="p-4">
-              <div className="flex justify-between items-center">
-                <div className="flex items-center">
-                  <CreditCard size={20} className="text-primary mr-2" />
-                  <div>
-                    <p className="font-medium">Office Supply Co.</p>
-                    <p className="text-sm text-muted-foreground">May 15, 2023</p>
-                  </div>
+      <div className="space-y-3">
+        <div className="bg-white rounded-lg shadow-sm border border-border">
+          <div className="p-3 border-b border-border bg-muted/30">
+            <h5 className="font-medium text-sm">Transaction Details</h5>
+          </div>
+          <div className="p-3">
+            <div className="flex justify-between items-center">
+              <div className="flex items-center">
+                <CreditCard size={18} className="text-primary mr-2" />
+                <div>
+                  <p className="font-medium text-sm">Office Supply Co.</p>
+                  <p className="text-xs text-muted-foreground">May 15, 2023</p>
                 </div>
-                <p className="font-bold">$47.99</p>
               </div>
-              
-              <div className="mt-4 pt-4 border-t border-border">
-                <div className="flex justify-between items-center">
-                  <p className="text-sm text-muted-foreground">Status</p>
-                  <div className="flex items-center text-green-600">
-                    <Check size={16} className="mr-1" />
-                    <span className="text-sm">Matched with receipt</span>
-                  </div>
-                </div>
-                <div className="flex justify-between items-center mt-2">
-                  <p className="text-sm text-muted-foreground">Category</p>
-                  <div className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded-full">
-                    Office Supplies
-                  </div>
-                </div>
-                <div className="flex justify-between items-center mt-2">
-                  <p className="text-sm text-muted-foreground">Account</p>
-                  <p className="text-sm">Business Credit Card</p>
+              <p className="font-bold text-sm">$47.99</p>
+            </div>
+            
+            <div className="mt-3 pt-3 border-t border-border">
+              <div className="flex justify-between items-center">
+                <p className="text-xs text-muted-foreground">Status</p>
+                <div className="flex items-center text-green-600">
+                  <Check size={12} className="mr-1" />
+                  <span className="text-xs">Matched with receipt</span>
                 </div>
               </div>
             </div>
