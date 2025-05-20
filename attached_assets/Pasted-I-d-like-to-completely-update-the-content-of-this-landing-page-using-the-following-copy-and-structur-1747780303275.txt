@@ -1,0 +1,101 @@
+I’d like to completely update the content of this landing page using the following copy and structure. Please do the following:
+
+✅ Update the Navigation Menu:
+
+Change the brand name to FinMatch
+
+Update menu links to:
+Features, How It Works, For Accountants, Security, Early Access
+
+Ensure each item links to the correct section on the page using anchors (e.g., #features, #how-it-works, etc.)
+
+✅ Header Section (Hero):
+
+Hero Tagline:
+“Receipts, bank transactions, and expenses—organized in one place.”
+
+Subheadline:
+“Automatically extract receipts from email and match them to your bank transactions.”
+
+Primary CTA button:
+“Get early access”
+
+Secondary CTA:
+“See how it works” (this should scroll to the How It Works section)
+
+✅ Primary Pain Section:
+
+Title: “Why most expense tools fail solo workers”
+
+Copy:
+“Manual data entry, missing receipts, and tax-time stress.”
+
+✅ Primary Benefit Section:
+
+Copy block:
+“Save hours and stay tax-ready — no more digging through emails.”
+
+✅ Features Section (#features):
+
+Headline: “Designed for real business workflows”
+
+Feature list (bullets):
+
+Auto-email receipt extraction
+
+Bank and card matching
+
+Tax-category tagging
+
+Real-time reports
+
+Invite your accountant for free
+
+Custom rules for auto-categorization
+
+✅ “How It Works” Section (#how-it-works):
+
+Layout idea: 3-step visual or simple timeline
+
+Example steps:
+
+Connect your email
+
+We find receipts and match them to your transactions
+
+You get clean, audit-ready records
+
+✅ “For Accountants” Section (#for-accountants):
+
+Headline: “Built for solopreneurs and bookkeepers”
+
+Add a trust block:
+
+“Used by early-access accountants in the U.S.”
+
+Display Gmail and Bank icons (no partner text)
+
+✅ CTA Repetition Section (#early-access):
+
+Headline: “Start organizing your finances in minutes”
+
+CTA Button: “Join the waitlist”
+
+Secondary links:
+“Talk to an expert”, “Try it free”
+
+✅ Footer:
+
+Reaffirm brand name FinMatch
+
+Light disclaimer: “FinMatch is not affiliated with any banking institution. Gmail is a trademark of Google.”
+
+✅ Tone:
+
+Keep the tone simple, reassuring, and results-driven. Speak to busy, overwhelmed professionals (solopreneurs, freelancers, bookkeepers, accountants).
+
+✅ Font:
+
+Use the same bold, modern font used in the hero section throughout the page.
+
+Please apply this copy and structure throughout the page and ensure all navigation links correctly anchor to the intended sections.

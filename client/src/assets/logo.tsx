@@ -97,7 +97,7 @@ export default function Logo({
           />
         </svg>
         <span className={`font-medium mt-1 ${fontSizes[size]}`} style={{ color: currentColors.text }}>
-          ExpenseWise
+          FinMatch
         </span>
       </div>
     );
@@ -164,7 +164,7 @@ export default function Logo({
         />
       </svg>
       <span className={`font-medium mt-2 ${fontSizes[size]}`} style={{ color: currentColors.text }}>
-        ExpenseWise
+        FinMatch
       </span>
     </div>
   );

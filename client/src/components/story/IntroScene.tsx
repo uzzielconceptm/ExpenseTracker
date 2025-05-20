@@ -6,8 +6,15 @@ import { Button } from "@/components/ui/button";
 export default function IntroScene() {
   const { chaosMode } = useChaos();
   
-  const scrollToJourney = () => {
-    const element = document.getElementById('journey');
+  const scrollToHowItWorks = () => {
+    const element = document.getElementById('how-it-works');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
+  const scrollToEarlyAccess = () => {
+    const element = document.getElementById('early-access');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -76,30 +83,38 @@ export default function IntroScene() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Remember when tracking expenses meant panic during tax season?
+            Receipts, bank transactions, and expenses—organized in one place.
           </motion.h1>
           
           <motion.p
-            className="text-xl md:text-2xl text-foreground/80 mb-10 max-w-2xl leading-relaxed"
+            className="text-xl md:text-2xl text-foreground/80 mb-10 max-w-2xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            From overflowing shoeboxes to missing receipts, the nightmare of expense tracking
-            stops here. It's time for a better way.
+            Automatically extract receipts from email and match them to your bank transactions.
           </motion.p>
           
           <motion.div
+            className="flex flex-col sm:flex-row gap-4 justify-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <Button 
-              onClick={scrollToJourney}
+              onClick={scrollToEarlyAccess}
               size="lg" 
               className="gradient-btn text-white text-lg px-8 py-6 rounded-xl shadow-lg"
             >
-              Let's Fix That
+              Get early access
+            </Button>
+            <Button 
+              onClick={scrollToHowItWorks}
+              size="lg" 
+              variant="outline"
+              className="text-lg px-8 py-6 rounded-xl shadow-sm border-2"
+            >
+              See how it works
             </Button>
           </motion.div>
         </div>

@@ -47,20 +47,24 @@ export default function StoryHeader() {
             repeatType: "reverse"
           }}
         >
-          <Logo variant="full" size="md" colorMode="light" className="h-10" />
+          {/* Updated brand name to FinMatch */}
+          <div className="flex items-center">
+            <Logo variant="icon" size="sm" colorMode="light" className="h-8 w-8 mr-2" />
+            <span className="font-bold text-xl">FinMatch</span>
+          </div>
         </motion.div>
         
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
-          <a href="#journey" className="text-foreground hover:text-primary transition-colors">Journey</a>
-          <a href="#benefits" className="text-foreground hover:text-primary transition-colors">Features</a>
+        {/* Desktop Navigation - Updated menu items */}
+        <nav className="hidden md:flex items-center space-x-6">
+          <a href="#features" className="text-foreground hover:text-primary transition-colors">Features</a>
+          <a href="#how-it-works" className="text-foreground hover:text-primary transition-colors">How It Works</a>
+          <a href="#for-accountants" className="text-foreground hover:text-primary transition-colors">For Accountants</a>
           <a href="#security" className="text-foreground hover:text-primary transition-colors">Security</a>
-          <a href="#success-stories" className="text-foreground hover:text-primary transition-colors">Stories</a>
           <a 
             href="#early-access" 
             className="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg transition-colors ml-4"
           >
-            Start My Clean Slate
+            Get early access
           </a>
         </nav>
         
@@ -76,7 +80,7 @@ export default function StoryHeader() {
         </div>
       </div>
       
-      {/* Mobile Navigation */}
+      {/* Mobile Navigation - Updated menu items */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div 
@@ -88,18 +92,25 @@ export default function StoryHeader() {
           >
             <div className="container mx-auto px-4 flex flex-col space-y-4">
               <a 
-                href="#journey" 
-                className="text-foreground hover:text-primary transition-colors block py-2"
-                onClick={closeMobileMenu}
-              >
-                Journey
-              </a>
-              <a 
-                href="#benefits" 
+                href="#features" 
                 className="text-foreground hover:text-primary transition-colors block py-2"
                 onClick={closeMobileMenu}
               >
                 Features
+              </a>
+              <a 
+                href="#how-it-works" 
+                className="text-foreground hover:text-primary transition-colors block py-2"
+                onClick={closeMobileMenu}
+              >
+                How It Works
+              </a>
+              <a 
+                href="#for-accountants" 
+                className="text-foreground hover:text-primary transition-colors block py-2"
+                onClick={closeMobileMenu}
+              >
+                For Accountants
               </a>
               <a 
                 href="#security" 
@@ -109,19 +120,11 @@ export default function StoryHeader() {
                 Security
               </a>
               <a 
-                href="#success-stories" 
-                className="text-foreground hover:text-primary transition-colors block py-2"
-                onClick={closeMobileMenu}
-              >
-                Stories
-              </a>
-{/* Remove testimonials link since it's now part of success stories */}
-              <a 
                 href="#early-access" 
                 className="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg transition-colors text-center"
                 onClick={closeMobileMenu}
               >
-                Start My Clean Slate
+                Get early access
               </a>
             </div>
           </motion.div>
