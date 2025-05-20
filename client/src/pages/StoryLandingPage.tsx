@@ -2,14 +2,13 @@ import { useEffect } from "react";
 import { useChaos } from "@/lib/ChaosContext";
 import Header from "@/components/story/Header";
 import IntroScene from "@/components/story/IntroScene";
-import Journey from "@/components/story/Journey";
-import Pricing from "@/components/story/Pricing";
+import HowItWorks from "@/components/story/HowItWorks";
 import EarlyAccessForm from "@/components/story/EarlyAccessForm";
 import Footer from "@/components/story/Footer";
 import ExpenseBenefits from "@/components/story/ExpenseBenefits";
-
 import SecurityFeatures from "@/components/story/SecurityFeatures";
 import CombinedSuccessStories from "@/components/story/CombinedSuccessStories";
+import ForAccountants from "@/components/story/ForAccountants";
 
 export default function StoryLandingPage() {
   const { chaosMode } = useChaos();
@@ -64,13 +63,11 @@ export default function StoryLandingPage() {
       <Header />
       <main>
         <IntroScene />
-        <Journey />
-        {/* FreshBooks-inspired sections */}
         <ExpenseBenefits />
+        <HowItWorks />
+        <ForAccountants />
         <SecurityFeatures />
-        {/* Combined success stories section */}
         <CombinedSuccessStories />
-        <Pricing />
         <EarlyAccessForm />
       </main>
       <Footer />

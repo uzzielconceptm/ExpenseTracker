@@ -20,7 +20,7 @@ export default function StoryFooter() {
               <Logo variant="full" colorMode="dark" size="md" className="h-10" />
             </motion.div>
             <p className="text-neutral-400 mb-6">
-              From shoebox to streamlined expense management.
+              Receipts, bank transactions, and expenses—organized in one place.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-neutral-400 hover:text-white transition-colors">
@@ -41,10 +41,10 @@ export default function StoryFooter() {
           <div>
             <h4 className="font-medium text-lg mb-4">Product</h4>
             <ul className="space-y-2">
-              <li><a href="#journey" className="text-neutral-400 hover:text-white transition-colors">Journey</a></li>
-              <li><a href="#cases" className="text-neutral-400 hover:text-white transition-colors">Case Studies</a></li>
-              <li><a href="#pricing" className="text-neutral-400 hover:text-white transition-colors">Pricing</a></li>
-              <li><a href="#" className="text-neutral-400 hover:text-white transition-colors">Roadmap</a></li>
+              <li><a href="#features" className="text-neutral-400 hover:text-white transition-colors">Features</a></li>
+              <li><a href="#how-it-works" className="text-neutral-400 hover:text-white transition-colors">How It Works</a></li>
+              <li><a href="#for-accountants" className="text-neutral-400 hover:text-white transition-colors">For Accountants</a></li>
+              <li><a href="#security" className="text-neutral-400 hover:text-white transition-colors">Security</a></li>
             </ul>
           </div>
           
@@ -54,7 +54,7 @@ export default function StoryFooter() {
               <li><a href="#" className="text-neutral-400 hover:text-white transition-colors">Help Center</a></li>
               <li><a href="#" className="text-neutral-400 hover:text-white transition-colors">Blog</a></li>
               <li><a href="#" className="text-neutral-400 hover:text-white transition-colors">Guides</a></li>
-              <li><a href="#" className="text-neutral-400 hover:text-white transition-colors">API Docs</a></li>
+              <li><a href="#early-access" className="text-neutral-400 hover:text-white transition-colors">Early Access</a></li>
             </ul>
           </div>
           
@@ -78,10 +78,15 @@ export default function StoryFooter() {
             </p>
             <p className="flex items-center justify-center gap-2">
               <Mail size={16} />
-              <a href="mailto:support@expensewise.com" className="hover:text-white transition-colors">support@expensewise.com</a>
+              <a href="mailto:hello@finmatch.com" className="hover:text-white transition-colors">hello@finmatch.com</a>
             </p>
           </div>
-          <p className="text-neutral-500">&copy; {currentYear} ExpenseWise. All rights reserved.</p>
+          
+          <div className="mb-4 text-neutral-500 max-w-xl mx-auto">
+            <p>FinMatch is not affiliated with any banking institution. Gmail is a trademark of Google.</p>
+          </div>
+          
+          <p className="text-neutral-500">&copy; {currentYear} FinMatch. All rights reserved.</p>
         </div>
       </div>
     </footer>
