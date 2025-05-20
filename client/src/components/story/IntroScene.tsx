@@ -80,7 +80,7 @@ export default function IntroScene() {
           </motion.h1>
           
           <motion.p
-            className="text-xl md:text-2xl text-foreground/80 mb-10"
+            className="text-xl md:text-2xl text-foreground/80 mb-10 max-w-2xl leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -97,7 +97,7 @@ export default function IntroScene() {
             <Button 
               onClick={scrollToJourney}
               size="lg" 
-              className="bg-primary hover:bg-primary/90 text-white text-lg px-8 py-6"
+              className="gradient-btn text-white text-lg px-8 py-6 rounded-xl shadow-lg"
             >
               Let's Fix That
             </Button>
@@ -120,14 +120,15 @@ export default function IntroScene() {
         <ArrowDown size={36} className="text-primary animate-bounce" />
       </motion.div>
       
-      {/* "Messy desk" illustration as a background element */}
-      <div className="absolute bottom-0 left-0 right-0 h-40 md:h-80 bg-contain bg-bottom bg-no-repeat z-10"
-           style={{ 
-             backgroundImage: `url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=60')`,
-             opacity: 0.2,
-             backgroundSize: 'contain',
-             filter: 'grayscale(80%)'
-           }}>
+      {/* Abstract wave pattern */}
+      <div className="absolute bottom-0 left-0 right-0 h-40 md:h-60 z-10">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full h-full">
+          <path 
+            fill="rgba(176, 253, 240, 0.15)" 
+            fillOpacity="1" 
+            d="M0,96L48,112C96,128,192,160,288,154.7C384,149,480,107,576,96C672,85,768,107,864,133.3C960,160,1056,192,1152,186.7C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+          </path>
+        </svg>
       </div>
     </section>
   );

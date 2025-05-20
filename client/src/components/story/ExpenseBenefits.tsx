@@ -76,10 +76,10 @@ export default function ExpenseBenefits() {
               <button
                 key={index}
                 onClick={() => setActiveTab(index)}
-                className={`flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium transition-colors ${
+                className={`flex items-center gap-2 px-5 py-3 rounded-full text-sm font-medium transition-all shadow-sm ${
                   activeTab === index
-                    ? "bg-primary text-white"
-                    : "hover:bg-muted"
+                    ? "bg-primary text-white shadow-md"
+                    : "bg-white hover:bg-muted/50"
                 }`}
               >
                 {tab.icon}
@@ -103,19 +103,19 @@ export default function ExpenseBenefits() {
               <h3 className="text-2xl font-bold">{benefitTabs[activeTab].content.title}</h3>
               <p className="text-foreground/80">{benefitTabs[activeTab].content.description}</p>
               
-              <ul className="space-y-3">
+              <ul className="space-y-4 my-8">
                 {benefitTabs[activeTab].content.features.map((feature, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="flex-shrink-0 h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center">
+                  <li key={i} className="flex items-start gap-3 hover-lift">
+                    <span className="flex-shrink-0 h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center shadow-sm">
                       <Check className="h-3.5 w-3.5 text-primary" />
                     </span>
-                    <span>{feature}</span>
+                    <span className="text-foreground/90">{feature}</span>
                   </li>
                 ))}
               </ul>
               
               <Button 
-                className="mt-6 px-8" 
+                className="mt-6 px-8 gradient-btn rounded-xl shadow-md" 
                 size="lg"
                 onClick={() => window.location.href = '#early-access'}
               >
