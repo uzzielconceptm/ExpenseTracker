@@ -1,11 +1,8 @@
 import { useRef } from "react";
-import TimeNode from "@/components/ui/time-node";
-import TryThisCard from "@/components/ui/try-this-card";
 import AnimatedReceipt from "@/components/ui/animated-receipt";
 import { Button } from "@/components/ui/button";
 import { Camera, Mail, CreditCard, Search, Check } from "lucide-react";
 import { motion } from "framer-motion";
-import Logo from "@/assets/logo";
 
 export default function Journey() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -111,19 +108,6 @@ export default function Journey() {
               </div>
             </div>
           </div>
-          
-          <div className="bg-white rounded-lg p-4 shadow-sm border border-border">
-            <div className="flex items-start gap-3">
-              <Mail size={20} className="mt-1 text-muted-foreground" />
-              <div>
-                <div className="flex justify-between items-center w-full">
-                  <p className="font-medium">Weekly Newsletter</p>
-                  <p className="text-sm text-muted-foreground">Feb 28</p>
-                </div>
-                <p className="text-sm text-muted-foreground">Check out our latest updates and news...</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     );
@@ -177,58 +161,48 @@ export default function Journey() {
   };
 
   return (
-    <section id="journey" className="py-20 relative overflow-hidden" ref={containerRef}>
+    <section id="journey" className="py-24 relative overflow-hidden" ref={containerRef}>
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
+        <div className="mb-20">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-left">
             From Shoebox to Streamlined
           </h2>
-          <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
-            Follow the journey from chaotic receipt management to automated peace-of-mind
+          <p className="text-xl text-foreground/80 max-w-3xl">
+            Follow the journey from chaotic receipt management to automated expense tracking
           </p>
         </div>
         
-        <div className="timeline-container max-w-6xl mx-auto">
-          {/* Timeline has no vertical line as requested */}
-          
-          {/* Past: The Chaos */}
-          <TimeNode
-            title="Lost in a Sea of Paper"
-            phase="past"
-            position="left"
-            index={0}
-          >
-            <p className="mb-4">Remember rummaging through shoeboxes of receipts when tax season arrives? Trying to match crumpled paper to bank statements manually?</p>
-            
-            <p className="mb-6">It's a nightmare we've all experienced:</p>
-            
-            <ul className="space-y-2 mb-6">
-              <li className="flex items-start">
-                <span className="text-accent mr-2">•</span>
-                <span>Faded thermal paper receipts you can barely read</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-accent mr-2">•</span>
-                <span>Missing documentation for important purchases</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-accent mr-2">•</span>
-                <span>Hours spent reconciling expenses with statements</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-accent mr-2">•</span>
-                <span>The anxiety of potential audits looming over you</span>
-              </li>
-            </ul>
-            
-            <TryThisCard
-              title="The Shoebox Method"
-              description="See how messy and time-consuming manual tracking can be"
-              actionLabel="Experience the Chaos"
-            >
+        {/* Problem and Solution Block - Modern Layout */}
+        <div className="max-w-6xl mx-auto mb-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            {/* The Problem */}
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-border hover-lift">
+              <h3 className="text-2xl font-bold mb-6 text-left">The Problem</h3>
+              
+              <p className="mb-6">Remember rummaging through shoeboxes of receipts when tax season arrives? Trying to match crumpled paper to bank statements manually?</p>
+              
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 text-lg">📄</span>
+                  <span>Faded thermal paper receipts you can barely read</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 text-lg">🔍</span>
+                  <span>Missing documentation for important purchases</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 text-lg">⏱️</span>
+                  <span>Hours spent reconciling expenses with statements</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 text-lg">😓</span>
+                  <span>The anxiety of potential audits looming over you</span>
+                </li>
+              </ul>
+              
               <div className="relative p-4 border border-border bg-muted/30 rounded-lg">
                 <div className="grid grid-cols-3 gap-2">
-                  {Array.from({ length: 9 }).map((_, i) => (
+                  {Array.from({ length: 6 }).map((_, i) => (
                     <motion.div
                       key={i}
                       className="aspect-[4/5] bg-white rounded shadow-sm transform rotate-1"
@@ -260,394 +234,155 @@ export default function Journey() {
                   <span>Which one was for that client dinner in March?</span>
                 </div>
               </div>
-            </TryThisCard>
-          </TimeNode>
-          
-          {/* Present: The Solution - Email Scanning */}
-          <TimeNode
-            title="Your Inbox, Automatically Organized"
-            phase="present"
-            position="right"
-            index={1}
-          >
-            <p className="mb-4">What if your receipts could organize themselves? ExpenseWise monitors your email for receipts and automatically processes them.</p>
+            </div>
             
-            <p className="mb-6">No more manual hunting - we find everything for you:</p>
-            
-            <ul className="space-y-2 mb-6">
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span>Connect your Gmail or Outlook account once</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span>We automatically detect receipts in your emails</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span>All data is extracted and categorized</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span>Works with services like Uber, Amazon, airline tickets, and more</span>
-              </li>
-            </ul>
-            
-            <TryThisCard
-              title="Email Receipt Scanner"
-              description="Watch how we automatically find and process receipts in your inbox"
-              actionLabel="See it in Action"
-            >
-              <EmailScanDemo />
-            </TryThisCard>
-          </TimeNode>
-          
-          {/* Present: The Solution - Link Accounts */}
-          <TimeNode
-            title="Connect All Your Accounts"
-            phase="present"
-            position="left"
-            index={2}
-          >
-            <p className="mb-4">Seamlessly connect your bank accounts and credit cards to bring all your financial data into one place.</p>
-            
-            <p className="mb-6">Say goodbye to manual transactions entry:</p>
-            
-            <ul className="space-y-2 mb-6">
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span>Connect unlimited bank accounts and credit cards</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span>Secure connections using bank-level encryption</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span>Auto-import transactions daily</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span>View all your finances in one dashboard</span>
-              </li>
-            </ul>
-            
-            <TryThisCard
-              title="Account Linking"
-              description="See how easy it is to connect your financial accounts"
-              actionLabel="Connect Account"
-            >
-              <div className="p-4 bg-muted/50 rounded-lg">
-                <div className="max-w-md mx-auto">
-                  <div className="space-y-5">
-                    <div className="text-center">
-                      <h4 className="text-lg font-medium mb-1">Connect Your Account</h4>
-                      <p className="text-sm text-muted-foreground">Choose your bank to securely connect</p>
-                    </div>
-                    
-                    <div className="grid grid-cols-2 gap-3">
-                      <div className="p-3 border border-border rounded-lg bg-card hover:border-primary cursor-pointer transition-colors duration-200 flex flex-col items-center justify-center">
-                        <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-2">
-                          <span className="font-bold text-blue-700">C</span>
-                        </div>
-                        <span className="text-sm">Chase</span>
-                      </div>
-                      
-                      <div className="p-3 border border-border rounded-lg bg-card hover:border-primary cursor-pointer transition-colors duration-200 flex flex-col items-center justify-center">
-                        <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mb-2">
-                          <span className="font-bold text-red-700">B</span>
-                        </div>
-                        <span className="text-sm">Bank of America</span>
-                      </div>
-                      
-                      <div className="p-3 border border-border rounded-lg bg-card hover:border-primary cursor-pointer transition-colors duration-200 flex flex-col items-center justify-center">
-                        <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-2">
-                          <span className="font-bold text-blue-700">C</span>
-                        </div>
-                        <span className="text-sm">Citi</span>
-                      </div>
-                      
-                      <div className="p-3 border border-border rounded-lg bg-card hover:border-primary cursor-pointer transition-colors duration-200 flex flex-col items-center justify-center">
-                        <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mb-2">
-                          <span className="font-bold text-purple-700">W</span>
-                        </div>
-                        <span className="text-sm">Wells Fargo</span>
-                      </div>
-                    </div>
-                    
-                    <div className="relative">
-                      <div className="absolute inset-0 flex items-center">
-                        <div className="w-full border-t border-border"></div>
-                      </div>
-                      <div className="relative flex justify-center text-xs uppercase">
-                        <span className="bg-muted/50 px-2 text-muted-foreground">Or search</span>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center border border-border rounded-lg overflow-hidden">
-                      <div className="px-3 py-2 bg-card">
-                        <Search size={18} className="text-muted-foreground" />
-                      </div>
-                      <input 
-                        type="text" 
-                        placeholder="Find your bank..." 
-                        className="flex-1 bg-transparent border-none outline-none p-2 text-sm"
-                      />
-                    </div>
-                    
-                    <div className="text-center text-xs text-muted-foreground">
-                      <p>Your credentials are never stored. We use 256-bit encryption to securely connect to your bank.</p>
-                    </div>
-                  </div>
-                </div>
+            {/* Our Solution */}
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-border hover-lift">
+              <h3 className="text-2xl font-bold mb-6 text-left">Our Solution</h3>
+              
+              <p className="mb-6">What if your receipts could organize themselves? ExpenseWise monitors your email for receipts and automatically processes them.</p>
+              
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 text-lg">📬</span>
+                  <span>Connect your Gmail or Outlook account just once</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 text-lg">🔍</span>
+                  <span>We automatically detect receipts in your emails</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 text-lg">✅</span>
+                  <span>All data is extracted and categorized instantly</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 text-lg">🚗</span>
+                  <span>Works with Uber, Amazon, airline tickets, and more</span>
+                </li>
+              </ul>
+              
+              <div className="bg-muted/30 p-4 rounded-lg">
+                <EmailScanDemo />
               </div>
-            </TryThisCard>
-          </TimeNode>
+            </div>
+          </div>
+        </div>
+        
+        {/* How It Works Section */}
+        <div className="max-w-6xl mx-auto mb-24">
+          <h2 className="text-3xl font-bold mb-10 text-left">How FinMatch Works</h2>
           
-          {/* Present: The Solution - Auto Matching */}
-          <TimeNode
-            title="Perfect Matching, Every Time"
-            phase="present"
-            position="left"
-            index={3}
-          >
-            <p className="mb-4">Say goodbye to manual reconciliation. ExpenseWise automatically matches your receipts to your bank and credit card transactions.</p>
-            
-            <p className="mb-6">Create a perfect audit trail with no effort:</p>
-            
-            <ul className="space-y-2 mb-6">
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span>Connect your bank accounts and credit cards</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span>Our AI matches receipts to transactions automatically</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span>Get alerted about missing receipts</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span>Enjoy 100% reconciliation with minimal effort</span>
-              </li>
-            </ul>
-            
-            <TryThisCard
-              title="Smart Matching"
-              description="See how we match a receipt to the correct transaction automatically"
-              actionLabel="Watch the Match"
-            >
-              <BankMatchingDemo />
-            </TryThisCard>
-          </TimeNode>
-          
-          {/* Present: The Solution - Manual Uploads */}
-          <TimeNode
-            title="For Those Paper Receipts Too"
-            phase="present"
-            position="right"
-            index={3}
-          >
-            <p className="mb-4">Sometimes you still get paper receipts. No problem! ExpenseWise makes it easy to digitize them in seconds.</p>
-            
-            <p className="mb-6">Turn physical into digital with ease:</p>
-            
-            <ul className="space-y-2 mb-6">
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span>Snap a photo with our mobile app</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span>OCR technology extracts all relevant details</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span>Data is processed and matched to transactions</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span>Original receipts are securely stored in the cloud</span>
-              </li>
-            </ul>
-            
-            <TryThisCard
-              title="Receipt Scanner"
-              description="See how we turn a paper receipt into organized data"
-              actionLabel="Try the Scanner"
-            >
-              <ReceiptScanDemo />
-            </TryThisCard>
-          </TimeNode>
-          
-          {/* Present: Smart Categorization */}
-          <TimeNode
-            title="Smart Expense Categorization"
-            phase="present"
-            position="right"
-            index={4}
-          >
-            <p className="mb-4">Keeping track of expense categories doesn't have to be tedious. Our system automatically categorizes your expenses for accurate reporting.</p>
-            
-            <p className="mb-6">Smart categorization makes tax time a breeze:</p>
-            
-            <ul className="space-y-2 mb-6">
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span>AI-powered automatic categorization of expenses</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span>Customize categories to match your business needs</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span>Tag expenses as tax-deductible for easy reporting</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span>Generate tax-ready reports in seconds</span>
-              </li>
-            </ul>
-            
-            <TryThisCard
-              title="Expense Categories"
-              description="See how we intelligently sort your expenses"
-              actionLabel="View Categories"
-            >
-              <div className="p-4 bg-muted/50 rounded-lg">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* Category Breakdown */}
-                  <div className="space-y-4">
-                    <h4 className="text-sm font-semibold">Monthly Expense Breakdown</h4>
-                    
-                    <div className="space-y-3">
-                      <div className="space-y-1">
-                        <div className="flex justify-between text-sm">
-                          <span>Travel</span>
-                          <span className="font-medium">$345.80</span>
-                        </div>
-                        <div className="w-full bg-muted rounded-full h-2">
-                          <div className="bg-blue-500 h-2 rounded-full" style={{ width: "35%" }}></div>
-                        </div>
-                      </div>
-                      
-                      <div className="space-y-1">
-                        <div className="flex justify-between text-sm">
-                          <span>Meals</span>
-                          <span className="font-medium">$275.25</span>
-                        </div>
-                        <div className="w-full bg-muted rounded-full h-2">
-                          <div className="bg-green-500 h-2 rounded-full" style={{ width: "28%" }}></div>
-                        </div>
-                      </div>
-                      
-                      <div className="space-y-1">
-                        <div className="flex justify-between text-sm">
-                          <span>Office Supplies</span>
-                          <span className="font-medium">$187.99</span>
-                        </div>
-                        <div className="w-full bg-muted rounded-full h-2">
-                          <div className="bg-amber-500 h-2 rounded-full" style={{ width: "19%" }}></div>
-                        </div>
-                      </div>
-                      
-                      <div className="space-y-1">
-                        <div className="flex justify-between text-sm">
-                          <span>Software</span>
-                          <span className="font-medium">$99.99</span>
-                        </div>
-                        <div className="w-full bg-muted rounded-full h-2">
-                          <div className="bg-purple-500 h-2 rounded-full" style={{ width: "10%" }}></div>
-                        </div>
-                      </div>
-                      
-                      <div className="space-y-1">
-                        <div className="flex justify-between text-sm">
-                          <span>Other</span>
-                          <span className="font-medium">$78.45</span>
-                        </div>
-                        <div className="w-full bg-muted rounded-full h-2">
-                          <div className="bg-gray-500 h-2 rounded-full" style={{ width: "8%" }}></div>
-                        </div>
-                      </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            {/* Connect Accounts */}
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-border hover-lift">
+              <h3 className="text-2xl font-bold mb-6 text-left">Connect All Accounts</h3>
+              
+              <p className="mb-6">Seamlessly connect your bank accounts and cards to bring all your financial data into one place.</p>
+              
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 text-lg">🏦</span>
+                  <span>Connect unlimited bank accounts and credit cards</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 text-lg">🔒</span>
+                  <span>Secure connections using bank-level encryption</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 text-lg">🔄</span>
+                  <span>Auto-import transactions daily</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 text-lg">📊</span>
+                  <span>View all your finances in one dashboard</span>
+                </li>
+              </ul>
+              
+              <div className="p-4 bg-muted/30 rounded-lg">
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="p-3 border border-border rounded-lg bg-card hover:border-primary cursor-pointer transition-colors duration-200 flex flex-col items-center justify-center">
+                    <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-2">
+                      <span className="font-bold text-blue-700">C</span>
                     </div>
-                    
-                    <div className="pt-3 border-t border-border flex justify-between text-sm">
-                      <span className="font-medium">Total</span>
-                      <span className="font-bold">$987.48</span>
-                    </div>
+                    <span className="text-sm">Chase</span>
                   </div>
                   
-                  {/* Tax Deduction Tagging */}
-                  <div className="space-y-4">
-                    <h4 className="text-sm font-semibold">Tax Deductible Expenses</h4>
-                    
-                    <div className="space-y-3">
-                      <div className="p-3 border border-green-200 bg-green-50 dark:bg-green-900/10 dark:border-green-900/20 rounded-lg">
-                        <div className="flex justify-between items-center">
-                          <div>
-                            <p className="font-medium">Client Lunch</p>
-                            <p className="text-xs text-muted-foreground">May 18, 2023</p>
-                          </div>
-                          <span className="font-bold">$85.00</span>
-                        </div>
-                        <div className="mt-2 pt-2 border-t border-border flex justify-between items-center">
-                          <div className="flex items-center">
-                            <Check size={16} className="text-green-600 mr-1" />
-                            <span className="text-xs text-green-700">Tax Deductible</span>
-                          </div>
-                          <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">
-                            50% Eligible
-                          </span>
-                        </div>
-                      </div>
-                      
-                      <div className="p-3 border border-border rounded-lg">
-                        <div className="flex justify-between items-center">
-                          <div>
-                            <p className="font-medium">Design Software</p>
-                            <p className="text-xs text-muted-foreground">May 10, 2023</p>
-                          </div>
-                          <span className="font-bold">$99.99</span>
-                        </div>
-                        <div className="mt-2 pt-2 border-t border-border flex justify-between items-center">
-                          <div className="flex items-center">
-                            <Check size={16} className="text-green-600 mr-1" />
-                            <span className="text-xs text-green-700">Tax Deductible</span>
-                          </div>
-                          <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">
-                            100% Eligible
-                          </span>
-                        </div>
-                      </div>
-                      
-                      <div className="p-3 border border-border rounded-lg">
-                        <div className="flex justify-between items-center">
-                          <div>
-                            <p className="font-medium">Office Chair</p>
-                            <p className="text-xs text-muted-foreground">April 28, 2023</p>
-                          </div>
-                          <span className="font-bold">$125.00</span>
-                        </div>
-                        <div className="mt-2 pt-2 border-t border-border flex justify-between items-center">
-                          <div className="flex items-center">
-                            <Check size={16} className="text-green-600 mr-1" />
-                            <span className="text-xs text-green-700">Tax Deductible</span>
-                          </div>
-                          <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">
-                            100% Eligible
-                          </span>
-                        </div>
-                      </div>
+                  <div className="p-3 border border-border rounded-lg bg-card hover:border-primary cursor-pointer transition-colors duration-200 flex flex-col items-center justify-center">
+                    <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mb-2">
+                      <span className="font-bold text-red-700">B</span>
                     </div>
+                    <span className="text-sm">Bank of America</span>
                   </div>
                 </div>
               </div>
-            </TryThisCard>
-          </TimeNode>
+            </div>
+            
+            {/* Perfect Matching */}
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-border hover-lift">
+              <h3 className="text-2xl font-bold mb-6 text-left">Perfect Matching</h3>
+              
+              <p className="mb-6">Say goodbye to manual reconciliation. ExpenseWise automatically matches your receipts to your bank transactions.</p>
+              
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 text-lg">🔄</span>
+                  <span>Connect your bank accounts and credit cards</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 text-lg">🤖</span>
+                  <span>Our AI matches receipts to transactions automatically</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 text-lg">🔔</span>
+                  <span>Get alerted about missing receipts</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 text-lg">✅</span>
+                  <span>Enjoy 100% reconciliation with minimal effort</span>
+                </li>
+              </ul>
+              
+              <div className="p-4 bg-muted/30 rounded-lg">
+                <BankMatchingDemo />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Paper Receipts Section */}
+        <div className="max-w-6xl mx-auto mb-8">
+          <div className="bg-white rounded-xl p-8 shadow-md border border-border hover-lift">
+            <h3 className="text-2xl font-bold mb-6 text-left">Still Use Paper? We've Got You</h3>
+            
+            <p className="mb-6">Sometimes you still get paper receipts. No problem! ExpenseWise makes it easy to digitize them in seconds.</p>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div>
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-start gap-3">
+                    <span className="flex-shrink-0 text-lg">📱</span>
+                    <span>Snap a photo with our mobile app</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="flex-shrink-0 text-lg">👁️</span>
+                    <span>OCR technology extracts all relevant details</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="flex-shrink-0 text-lg">🔄</span>
+                    <span>Data is processed and matched to transactions</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="flex-shrink-0 text-lg">☁️</span>
+                    <span>Original receipts are securely stored in the cloud</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="bg-muted/30 p-4 rounded-lg">
+                <ReceiptScanDemo />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
