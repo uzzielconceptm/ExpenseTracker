@@ -9,6 +9,7 @@ import ExpenseBenefits from "@/components/story/ExpenseBenefits";
 import SecurityFeatures from "@/components/story/SecurityFeatures";
 import CombinedSuccessStories from "@/components/story/CombinedSuccessStories";
 import ForAccountants from "@/components/story/ForAccountants";
+import Plans from "@/components/story/Plans";
 
 export default function StoryLandingPage() {
   const { chaosMode } = useChaos();
@@ -66,6 +67,7 @@ export default function StoryLandingPage() {
         <ExpenseBenefits />
         <HowItWorks />
         <ForAccountants />
+        <Plans />
         <SecurityFeatures />
         <CombinedSuccessStories />
         <EarlyAccessForm />

@@ -59,6 +59,7 @@ export default function StoryHeader() {
           <a href="#features" className="text-foreground hover:text-primary transition-colors">Features</a>
           <a href="#how-it-works" className="text-foreground hover:text-primary transition-colors">How It Works</a>
           <a href="#for-accountants" className="text-foreground hover:text-primary transition-colors">For Accountants</a>
+          <a href="#plans" className="text-foreground hover:text-primary transition-colors">Plans</a>
           <a href="#security" className="text-foreground hover:text-primary transition-colors">Security</a>
           <a 
             href="#early-access" 
@@ -111,6 +112,13 @@ export default function StoryHeader() {
                 onClick={closeMobileMenu}
               >
                 For Accountants
+              </a>
+              <a 
+                href="#plans" 
+                className="text-foreground hover:text-primary transition-colors block py-2"
+                onClick={closeMobileMenu}
+              >
+                Plans
               </a>
               <a 
                 href="#security" 

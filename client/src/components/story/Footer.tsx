@@ -44,6 +44,7 @@ export default function StoryFooter() {
               <li><a href="#features" className="text-neutral-400 hover:text-white transition-colors">Features</a></li>
               <li><a href="#how-it-works" className="text-neutral-400 hover:text-white transition-colors">How It Works</a></li>
               <li><a href="#for-accountants" className="text-neutral-400 hover:text-white transition-colors">For Accountants</a></li>
+              <li><a href="#plans" className="text-neutral-400 hover:text-white transition-colors">Plans</a></li>
               <li><a href="#security" className="text-neutral-400 hover:text-white transition-colors">Security</a></li>
             </ul>
           </div>
