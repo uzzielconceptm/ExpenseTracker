@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Check, Camera, Clock, PieChart, Star, CreditCard, FileCheck, AlertTriangle, LightbulbIcon } from "lucide-react";
+import { Check, Camera, Clock, PieChart, Star, CreditCard, FileCheck, AlertTriangle, LightbulbIcon, Settings } from "lucide-react";
 
 // Updated to match the new design & content requirements
 export default function ExpenseBenefits() {
@@ -71,7 +71,7 @@ export default function ExpenseBenefits() {
             <div>
               <h3 className="text-2xl font-bold mb-2">Save hours and stay tax-ready</h3>
               <p className="text-foreground/80 text-lg">
-                No more digging through emails.
+                Save hours and stay tax-ready — no more digging through emails.
               </p>
             </div>
           </div>
@@ -163,6 +163,25 @@ export default function ExpenseBenefits() {
           "Export tax-ready reports anytime"
         ]
       }
+    }
+  ];
+  
+  // Additional features
+  const additionalFeatures = [
+    {
+      title: "Real-time reports",
+      description: "Get instant insights into your spending patterns and tax liability with beautiful, easy-to-understand visualizations.",
+      icon: <PieChart className="h-6 w-6 text-primary" />
+    },
+    {
+      title: "Invite your accountant for free",
+      description: "Give your accountant direct access to your organized data so they can work more efficiently and save you money.",
+      icon: <FileCheck className="h-6 w-6 text-primary" />
+    },
+    {
+      title: "Custom rules for auto-categorization",
+      description: "Create personalized rules that automatically assign categories based on merchant, amount, or other criteria.",
+      icon: <Settings className="h-6 w-6 text-primary" />
     }
   ];
 
@@ -339,6 +358,22 @@ export default function ExpenseBenefits() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+            
+            {/* Additional features grid */}
+            <div className="mt-24 max-w-6xl mx-auto">
+              <h3 className="text-2xl font-bold mb-8 text-center">More powerful features</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {additionalFeatures.map((feature, index) => (
+                  <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-border hover-lift">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                      {feature.icon}
+                    </div>
+                    <h4 className="text-xl font-bold mb-2">{feature.title}</h4>
+                    <p className="text-foreground/80">{feature.description}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
