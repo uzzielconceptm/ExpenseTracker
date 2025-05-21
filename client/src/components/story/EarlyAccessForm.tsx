@@ -72,19 +72,41 @@ export default function StoryEarlyAccessForm() {
               {/* Right column */}
               <div className="p-8 md:p-12 flex flex-col justify-center">
                 <h3 className="font-heading text-2xl font-bold mb-4">
-                  Ready to Transform Your Finances?
+                  Start organizing your finances in minutes
                 </h3>
                 <p className="text-muted-foreground mb-8">
-                  Join ExpenseWise early access and get special benefits only available to our founding members.
+                  Join FinMatch early access and get special benefits only available to our founding members.
                 </p>
                 
-                <Button 
-                  onClick={() => setIsOpen(true)}
-                  size="lg"
-                  className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white"
-                >
-                  Start Now
-                </Button>
+                <div className="space-y-4">
+                  <Button 
+                    onClick={() => setIsOpen(true)}
+                    size="lg"
+                    className="w-full bg-primary hover:bg-primary/90 text-white"
+                  >
+                    Join the waitlist
+                  </Button>
+                  
+                  <div className="flex justify-between gap-4">
+                    <Button 
+                      variant="outline"
+                      size="sm"
+                      className="flex-1"
+                      onClick={() => window.open('mailto:contact@finmatch.com')}
+                    >
+                      Talk to an expert
+                    </Button>
+                    
+                    <Button 
+                      variant="outline"
+                      size="sm"
+                      className="flex-1"
+                      onClick={() => setIsOpen(true)}
+                    >
+                      Try it free
+                    </Button>
+                  </div>
+                </div>
               </div>
             </div>
           </motion.div>
