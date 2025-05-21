@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, CreditCard, FileCheck } from "lucide-react";
+import { Mail, CreditCard, FileCheck, Camera, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function HowItWorks() {
@@ -69,6 +69,30 @@ export default function HowItWorks() {
                 <p className="text-foreground/80">
                   Access organized expenses with categorized transactions and downloadable reports anytime.
                 </p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Paper receipts section */}
+          <div className="mt-20 max-w-3xl mx-auto bg-white rounded-xl p-8 shadow-sm border border-border hover-lift">
+            <div className="flex flex-col md:flex-row items-center gap-6">
+              <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <Camera className="h-10 w-10 text-primary" />
+              </div>
+              
+              <div>
+                <h3 className="text-xl font-bold mb-2">For Paper Receipts Too</h3>
+                <p className="text-foreground/80 mb-4">
+                  Have physical receipts? No problem. Simply snap a photo with your phone, and FinMatch's 
+                  OCR technology extracts all the data automatically. All your receipts organized in one place — 
+                  digital and physical.
+                </p>
+                <div className="flex items-center">
+                  <span className="flex-shrink-0 h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center mr-2">
+                    <Check className="h-3 w-3 text-primary" />
+                  </span>
+                  <span className="text-foreground/90 text-sm">Automatic text recognition for paper receipts</span>
+                </div>
               </div>
             </div>
           </div>
