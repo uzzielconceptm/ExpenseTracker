@@ -53,7 +53,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
       req, 
       res, 
       insertEarlyAccessSchema, 
-      (data) => storage.createEarlyAccessEntry(data),
+      async (data) => {
+        const result = await storage.createEarlyAccessEntry(data);
+        try {
+          await sendConfirmationEmail(data.email, data.fullName);
+        } catch (error) {
+          console.error('Error sending confirmation email:', error);
+          // Continue even if email fails
+        }
+        return result;
+      },
       "Early access request received"
     );
   });
