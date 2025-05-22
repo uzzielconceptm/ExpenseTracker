@@ -1,21 +1,25 @@
 
 import nodemailer from 'nodemailer';
 
+// Create reusable transporter object using SMTP transport
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: 'smtp.gmail.com',
+  port: 587,
+  secure: false,
   auth: {
     user: process.env.GMAIL_USER,
     pass: process.env.GMAIL_APP_PASSWORD
   },
-  tls: {
-    rejectUnauthorized: false
-  }
+  debug: true // Enable debug logs
 });
 
 export const sendConfirmationEmail = async (email: string, fullName: string) => {
   try {
+    // Verify connection configuration
+    await transporter.verify();
+    
     const msg = {
-      from: process.env.GMAIL_USER,
+      from: `"ExpenseWise" <${process.env.GMAIL_USER}>`,
       to: email,
       subject: 'Welcome to ExpenseWise!',
       html: `
@@ -28,10 +32,11 @@ export const sendConfirmationEmail = async (email: string, fullName: string) => 
       `
     };
 
-    await transporter.sendMail(msg);
-    console.log('Confirmation email sent successfully to:', email);
+    const info = await transporter.sendMail(msg);
+    console.log('Email sent successfully:', info.messageId);
+    return info;
   } catch (error) {
-    console.error('Error sending confirmation email:', error);
-    throw error;
+    console.error('Detailed email error:', error);
+    throw new Error('Failed to send confirmation email');
   }
 };
