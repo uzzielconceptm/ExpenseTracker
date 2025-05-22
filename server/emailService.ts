@@ -1,16 +1,19 @@
 
-import sgMail from '@sendgrid/mail';
+import nodemailer from 'nodemailer';
 
-// Initialize SendGrid with API key
-if (!process.env.SENDGRID_API_KEY) {
-  console.warn('SENDGRID_API_KEY environment variable not set');
-}
-sgMail.setApiKey(process.env.SENDGRID_API_KEY || '');
+// Create a transporter using Gmail SMTP
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.GMAIL_USER,
+    pass: process.env.GMAIL_APP_PASSWORD // Use App Password, not regular Gmail password
+  }
+});
 
 export const sendConfirmationEmail = async (email: string, fullName: string) => {
   const msg = {
+    from: process.env.GMAIL_USER,
     to: email,
-    from: process.env.SENDGRID_VERIFIED_SENDER || 'your-verified@email.com',
     subject: 'Welcome to ExpenseWise!',
     html: `
       <h1>Welcome to ExpenseWise, ${fullName}!</h1>
@@ -22,5 +25,5 @@ export const sendConfirmationEmail = async (email: string, fullName: string) => 
     `
   };
 
-  await sgMail.send(msg);
+  await transporter.sendMail(msg);
 };
