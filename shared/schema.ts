@@ -202,7 +202,7 @@ export const insertInvoiceSchema = createInsertSchema(invoices).pick({
 export const earlyAccess = pgTable("early_access", {
   id: serial("id").primaryKey(),
   fullName: varchar("full_name", { length: 255 }).notNull(),
-  email: varchar("email", { length: 255 }).notNull().unique(),
+  email: varchar("email", { length: 255 }).notNull(),
   businessType: varchar("business_type", { length: 50 }).notNull(),
   monthlyExpenses: varchar("monthly_expenses", { length: 50 }),
   createdAt: timestamp("created_at").defaultNow().notNull(),
