@@ -51,25 +51,32 @@ export default function EarlyAccessPopup({ isOpen, onOpenChange }: EarlyAccessPo
 
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
-    
+
     try {
       // Simulate API delay
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       // Example estimation of monthly receipts based on expenses
       let estimatedReceiptCount = null;
       if (data.monthlyExpenses === 'under-1k') estimatedReceiptCount = 25;
       if (data.monthlyExpenses === '1k-5k') estimatedReceiptCount = 75;
       if (data.monthlyExpenses === '5k-10k') estimatedReceiptCount = 130;
       if (data.monthlyExpenses === 'over-10k') estimatedReceiptCount = 200;
-      
+
       setReceiptCount(estimatedReceiptCount);
-      
+
       // Call API to submit early access request
       await apiRequest('/api/early-access', 'POST', data);
-      
+      const response = await fetch('/api/early-access', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
       setIsSuccess(true);
-      
+
       toast({
         title: "Success!",
         description: "Your early access request has been submitted.",
@@ -96,14 +103,14 @@ export default function EarlyAccessPopup({ isOpen, onOpenChange }: EarlyAccessPo
             </div>
           </div>
         </DialogHeader>
-        
+
         {isSuccess ? (
           <div className="text-center py-4">
             <div className="text-5xl text-primary mb-4 mx-auto">
               <CheckCircle size={48} className="mx-auto" />
             </div>
             <h3 className="font-heading font-semibold text-lg mb-3">You're All Set!</h3>
-            
+
             {receiptCount && (
               <div className="bg-muted p-4 rounded-lg mb-4">
                 <p className="text-base mb-1">
@@ -114,11 +121,11 @@ export default function EarlyAccessPopup({ isOpen, onOpenChange }: EarlyAccessPo
                 </p>
               </div>
             )}
-            
+
             <p className="text-muted-foreground text-sm mb-6">
               We've received your request for early access. Check your email for next steps within 24 hours.
             </p>
-            
+
             <Button
               variant="outline"
               className="border-primary text-primary"
@@ -147,7 +154,7 @@ export default function EarlyAccessPopup({ isOpen, onOpenChange }: EarlyAccessPo
                   </FormItem>
                 )}
               />
-              
+
               <FormField
                 control={form.control}
                 name="email"
@@ -166,7 +173,7 @@ export default function EarlyAccessPopup({ isOpen, onOpenChange }: EarlyAccessPo
                   </FormItem>
                 )}
               />
-              
+
               <FormField
                 control={form.control}
                 name="businessType"
@@ -194,7 +201,7 @@ export default function EarlyAccessPopup({ isOpen, onOpenChange }: EarlyAccessPo
                   </FormItem>
                 )}
               />
-              
+
               <FormField
                 control={form.control}
                 name="monthlyExpenses"
@@ -221,7 +228,7 @@ export default function EarlyAccessPopup({ isOpen, onOpenChange }: EarlyAccessPo
                   </FormItem>
                 )}
               />
-              
+
               <DialogFooter className="mt-4">
                 <Button 
                   type="submit" 
@@ -240,7 +247,7 @@ export default function EarlyAccessPopup({ isOpen, onOpenChange }: EarlyAccessPo
                   )}
                 </Button>
               </DialogFooter>
-              
+
               <p className="text-center text-xs text-muted-foreground">
                 By signing up, you agree to our Terms of Service and Privacy Policy.
               </p>
