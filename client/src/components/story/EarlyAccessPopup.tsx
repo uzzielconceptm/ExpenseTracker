@@ -74,11 +74,15 @@ export default function EarlyAccessPopup({ isOpen, onOpenChange }: EarlyAccessPo
         title: "Success!",
         description: "Your early access request has been submitted.",
       });
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error submitting form:", error);
+      const message = error?.message?.includes("duplicate key") 
+        ? "This email is already registered for early access."
+        : "There was a problem submitting your request. Please try again.";
+      
       toast({
         title: "Submission failed",
-        description: "There was a problem submitting your request. Please try again.",
+        description: message,
         variant: "destructive",
       });
     } finally {
