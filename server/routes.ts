@@ -50,22 +50,35 @@ const handleApiResponse = async (
 export async function registerRoutes(app: Express): Promise<Server> {
   // Early access form API endpoint
   app.post("/api/early-access", async (req, res) => {
-    await handleApiResponse(
-      req, 
-      res, 
-      insertEarlyAccessSchema, 
-      async (data) => {
-        const result = await storage.createEarlyAccessEntry(data);
-        try {
-          await sendConfirmationEmail(data.email, data.fullName);
-        } catch (error) {
-          console.error('Error sending confirmation email:', error);
-          // Continue even if email fails
-        }
-        return result;
-      },
-      "Early access request received"
-    );
+    try {
+      const validatedData = insertEarlyAccessSchema.safeParse(req.body);
+      
+      if (!validatedData.success) {
+        return res.status(400).json({ 
+          message: "Invalid data", 
+          errors: validatedData.error.format() 
+        });
+      }
+
+      const result = await storage.createEarlyAccessEntry(validatedData.data);
+      
+      try {
+        await sendConfirmationEmail(validatedData.data.email, validatedData.data.fullName);
+      } catch (error) {
+        console.error('Error sending confirmation email:', error);
+        // Continue even if email fails
+      }
+
+      return res.status(201).json({
+        message: "Early access request received",
+        data: result
+      });
+    } catch (error) {
+      console.error(`Error processing request: ${error}`);
+      return res.status(500).json({
+        message: "Error processing your request, please try again later"
+      });
+    }
   });
 
   // User registration endpoint with security features
