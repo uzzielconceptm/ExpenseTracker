@@ -66,15 +66,8 @@ export default function EarlyAccessPopup({ isOpen, onOpenChange }: EarlyAccessPo
       setReceiptCount(estimatedReceiptCount);
 
       // Call API to submit early access request
-      await apiRequest('/api/early-access', 'POST', data);
-      const response = await fetch('/api/early-access', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-
+      await apiRequest('POST', '/api/early-access', data);
+      
       setIsSuccess(true);
 
       toast({
