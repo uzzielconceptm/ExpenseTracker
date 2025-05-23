@@ -16,118 +16,30 @@
   z-index: 100 !important;
 }
 
-/* WIX 2899 inspired styles */
-.section-divider {
-  height: 1px;
-  background: linear-gradient(to right, transparent, rgba(0,0,0,0.06), transparent);
-  margin: 4rem 0;
-  width: 100%;
-}
-
-.card-modern {
-  border-radius: 8px;
-  border: 1px solid rgba(0,0,0,0.05);
-  background-color: white;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-  transition: all 0.3s ease;
-  overflow: hidden;
-}
-
-.card-modern:hover {
-  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
-  transform: translateY(-2px);
-}
-
-.card-modern-header {
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-  padding: 1.5rem;
-  background-color: rgba(0,0,0,0.01);
-}
-
-.card-modern-body {
-  padding: 1.5rem;
-}
-
-.text-balance {
-  text-wrap: balance;
-}
-
-.subtle-pattern {
-  background-color: #ffffff;
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f3f3f3' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-}
-
-.wix-section {
-  padding: 5rem 0;
-  position: relative;
-}
-
-.wix-section::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 200px;
-  background: linear-gradient(180deg, rgba(0,0,0,0.015) 0%, rgba(0,0,0,0) 100%);
-  top: 0;
-  z-index: -1;
-}
-
-.subtle-heading-underline {
-  position: relative;
-  display: inline-block;
-}
-
-.subtle-heading-underline::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 80px;
-  height: 3px;
-  background-color: hsl(var(--primary));
-  border-radius: 3px;
-}
-
-.centered-heading-underline {
-  position: relative;
-  display: inline-block;
-}
-
-.centered-heading-underline::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
-  background-color: hsl(var(--primary));
-  border-radius: 3px;
-}
+/* Custom additional styles will go here if needed */
 
 :root {
-  /* Updated color palette based on Wix 2899 template: green base with neutral backgrounds */
-  --background: 0 0% 100%; /* White background */
-  --foreground: 220 20% 20%; /* Dark slate for text */
-  --muted: 210 40% 96.1%; /* Light gray background */
-  --muted-foreground: 215 16% 47%; /* Soft gray for secondary text */
+  /* Modern color palette: teal, light gray, deep blue, clean white */
+  --background: 0 0% 100%;
+  --foreground: 222 47% 11%; /* deep blue-gray */
+  --muted: 210 40% 96.1%; /* light blue-gray */
+  --muted-foreground: 215 16% 47%;
   --popover: 0 0% 100%;
-  --popover-foreground: 220 20% 20%;
+  --popover-foreground: 222 47% 11%;
   --card: 0 0% 100%;
-  --card-foreground: 220 20% 20%;
-  --border: 214 32% 91%; /* Soft light gray for borders */
+  --card-foreground: 222 47% 11%;
+  --border: 214 32% 91%;
   --input: 214 32% 91%;
-  --primary: 165 72% 27%; /* #15765C Green base */
+  --primary: 174 75% 39%; /* teal */
   --primary-foreground: 0 0% 100%;
-  --secondary: 168 41% 93%; /* Soft green background */
-  --secondary-foreground: 165 72% 27%;
-  --accent: 165 30% 95%; /* Very soft green for accents */
-  --accent-foreground: 165 72% 27%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222 47% 11%;
+  --accent: 176 73% 94%; /* soft teal bg */
+  --accent-foreground: 222 47% 11%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 60 9.1% 97.8%;
-  --ring: 165 72% 27%;
-  --radius: 0.5rem; /* Slightly reduced radius for cleaner look */
+  --ring: 174 75% 39%;
+  --radius: 0.75rem; /* slightly larger radius for modern look */
   
   /* Font family */
   --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;

@@ -247,23 +247,24 @@ export default function ExpenseBenefits() {
                   transition={{ duration: 0.3 }}
                   className="space-y-6"
                 >
-                  <h3 className="text-2xl font-bold">{featureTabs[activeTab].content.title}</h3>
-                  <p className="text-foreground/80">{featureTabs[activeTab].content.description}</p>
+                  <span className="inline-block text-primary/80 font-medium text-sm mb-1">Featured Capability</span>
+                  <h3 className="text-2xl font-bold subtle-heading-underline mb-4">{featureTabs[activeTab].content.title}</h3>
+                  <p className="text-foreground/70 mt-6">{featureTabs[activeTab].content.description}</p>
                   
                   <ul className="space-y-4 my-8">
                     {featureTabs[activeTab].content.features.map((feature, i) => (
-                      <li key={i} className="flex items-start gap-3 hover-lift">
-                        <span className="flex-shrink-0 h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center shadow-sm">
-                          <Check className="h-3.5 w-3.5 text-primary" />
+                      <li key={i} className="flex items-start gap-3">
+                        <span className="flex-shrink-0 h-5 w-5 rounded-sm bg-primary/10 flex items-center justify-center mt-0.5">
+                          <Check className="h-3 w-3 text-primary" />
                         </span>
-                        <span className="text-foreground/90">{feature}</span>
+                        <span className="text-foreground/80 text-sm">{feature}</span>
                       </li>
                     ))}
                   </ul>
                   
                   <Button 
-                    className="mt-6 px-8 gradient-btn rounded-xl shadow-md" 
-                    size="lg"
+                    className="mt-8 px-6 gradient-btn rounded-md shadow-sm text-sm font-medium" 
+                    size="default"
                     onClick={() => window.location.href = '#early-access'}
                   >
                     Get early access
@@ -273,15 +274,15 @@ export default function ExpenseBenefits() {
               
               {/* Visual content */}
               <div className="order-1 lg:order-2 relative">
-                <div className="bg-muted/50 rounded-lg p-8 aspect-[4/3] flex items-center justify-center overflow-hidden">
+                <div className="bg-white p-8 rounded-xl shadow-sm border border-neutral-100 aspect-[4/3] flex items-center justify-center overflow-hidden">
                   <div className="relative w-full max-w-md mx-auto">
-                    <div className="bg-white rounded-xl shadow-xl overflow-hidden">
-                      <div className="p-4 border-b border-border">
+                    <div className="card-modern shadow-md overflow-hidden">
+                      <div className="p-4 border-b border-neutral-100 bg-neutral-50/50">
                         <div className="flex justify-between items-center">
-                          <h4 className="font-medium text-lg">FinMatch Dashboard</h4>
+                          <h4 className="font-medium text-base text-foreground/90">FinMatch Dashboard</h4>
                           <div className="flex gap-2">
-                            <Button variant="outline" size="sm">
-                              <FileCheck className="h-4 w-4 mr-1" />
+                            <Button variant="outline" size="sm" className="text-xs h-8 rounded-sm border-neutral-200 bg-white">
+                              <FileCheck className="h-3.5 w-3.5 mr-1" />
                               Export
                             </Button>
                           </div>
@@ -375,16 +376,25 @@ export default function ExpenseBenefits() {
             </div>
             
             {/* Additional features grid */}
-            <div className="mt-24 max-w-6xl mx-auto">
-              <h3 className="text-2xl font-bold mb-8 text-center">More powerful features</h3>
+            <div className="mt-32 max-w-6xl mx-auto">
+              <div className="text-center mb-16">
+                <span className="inline-block text-primary font-medium text-base mb-3">Enhanced Capabilities</span>
+                <h3 className="text-3xl font-bold mb-4 text-balance">
+                  <span className="inline-block centered-heading-underline">More powerful</span> features
+                </h3>
+                <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
+                  Every aspect of FinMatch is designed to save you time and make expense management effortless
+                </p>
+              </div>
+              
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {additionalFeatures.map((feature, index) => (
-                  <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-border hover-lift">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <div key={index} className="card-modern p-6 flex flex-col h-full">
+                    <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center mb-5">
                       {feature.icon}
                     </div>
-                    <h4 className="text-xl font-bold mb-2">{feature.title}</h4>
-                    <p className="text-foreground/80">{feature.description}</p>
+                    <h4 className="text-lg font-bold mb-3">{feature.title}</h4>
+                    <p className="text-foreground/70 text-sm">{feature.description}</p>
                   </div>
                 ))}
               </div>
