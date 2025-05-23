@@ -8,16 +8,26 @@ export default function ExpenseBenefits() {
   // Pain & Benefit sections
   const painAndBenefitSection = () => (
     <div className="mb-24">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <div className="text-center mb-16">
+        <span className="inline-block text-primary font-medium text-base mb-3">Pain Points & Solutions</span>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
+          <span className="inline-block centered-heading-underline">Why most expense tools fail</span> solo workers
+        </h2>
+        <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
+          We've designed FinMatch to address the specific challenges solo entrepreneurs face
+        </p>
+      </div>
+      
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Pain Section */}
-        <div className="bg-white rounded-xl p-8 shadow-sm border border-border hover-lift">
+        <div className="card-modern p-8">
           <div className="flex items-start mb-6">
-            <div className="bg-red-100 p-3 rounded-full mr-4">
+            <div className="bg-red-50 p-3 rounded-md mr-4">
               <AlertTriangle className="h-6 w-6 text-red-500" />
             </div>
             <div>
-              <h3 className="text-2xl font-bold mb-2">Why most expense tools fail solo workers</h3>
-              <p className="text-foreground/80 text-lg">
+              <h3 className="text-xl font-bold mb-2 subtle-heading-underline">Why most expense tools fail solo workers</h3>
+              <p className="text-foreground/70 mt-4">
                 Manual data entry, missing receipts, and tax-time stress.
               </p>
             </div>
@@ -63,14 +73,14 @@ export default function ExpenseBenefits() {
         </div>
         
         {/* Benefit Section */}
-        <div className="bg-white rounded-xl p-8 shadow-sm border border-border hover-lift">
+        <div className="card-modern p-8">
           <div className="flex items-start mb-6">
-            <div className="bg-green-100 p-3 rounded-full mr-4">
-              <LightbulbIcon className="h-6 w-6 text-green-500" />
+            <div className="bg-primary/10 p-3 rounded-md mr-4">
+              <LightbulbIcon className="h-6 w-6 text-primary" />
             </div>
             <div>
-              <h3 className="text-2xl font-bold mb-2">Save hours and stay tax-ready</h3>
-              <p className="text-foreground/80 text-lg">
+              <h3 className="text-xl font-bold mb-2 subtle-heading-underline">Save hours and stay tax-ready</h3>
+              <p className="text-foreground/70 mt-4">
                 Save hours and stay tax-ready — no more digging through emails.
               </p>
             </div>
@@ -188,32 +198,35 @@ export default function ExpenseBenefits() {
   return (
     <>
       {/* Pain & Benefit Sections */}
-      <section id="benefits" className="py-24 bg-white overflow-hidden">
+      <section id="benefits" className="py-24 bg-white overflow-hidden wix-section">
         <div className="container mx-auto px-4">
           {painAndBenefitSection()}
           
           {/* Features section */}
-          <div id="features" className="pt-12">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Designed for real business workflows
+          <div id="features" className="pt-16 mt-8">
+            <div className="section-divider mb-16"></div>
+            
+            <div className="text-center mb-16">
+              <span className="inline-block text-primary font-medium text-base mb-3">Our Approach</span>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
+                <span className="inline-block centered-heading-underline">Designed for real</span> business workflows
               </h2>
-              <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
+              <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
                 FinMatch is built for the way solopreneurs actually work, not how accountants think they should work.
               </p>
             </div>
             
             {/* Tab navigation */}
-            <div className="flex justify-center mb-12">
-              <div className="inline-flex border border-border rounded-full p-1 bg-background">
+            <div className="flex justify-center mb-16">
+              <div className="inline-flex border border-neutral-200 rounded-md p-1 bg-background shadow-sm">
                 {featureTabs.map((tab, index) => (
                   <button
                     key={index}
                     onClick={() => setActiveTab(index)}
-                    className={`flex items-center gap-2 px-5 py-3 rounded-full text-sm font-medium transition-all shadow-sm ${
+                    className={`flex items-center gap-2 px-6 py-3 text-sm font-medium transition-all ${
                       activeTab === index
-                        ? "bg-primary text-white shadow-md"
-                        : "bg-white hover:bg-muted/50"
+                        ? "bg-primary text-white"
+                        : "bg-white hover:bg-neutral-50 text-foreground/70"
                     }`}
                   >
                     {tab.icon}

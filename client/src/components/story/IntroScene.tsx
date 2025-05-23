@@ -33,10 +33,10 @@ export default function IntroScene() {
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Modern gradient background */}
       <div 
-        className="absolute inset-0 z-0 bg-gradient-to-br from-white via-accent/20 to-white"
+        className="absolute inset-0 z-0 bg-gradient-to-br from-white via-accent/10 to-white subtle-pattern"
         style={{
-          backgroundImage: `radial-gradient(circle at 20% 30%, rgba(176, 255, 240, 0.3) 0%, transparent 30%),
-                            radial-gradient(circle at 80% 70%, rgba(180, 240, 255, 0.3) 0%, transparent 40%)`
+          backgroundImage: `radial-gradient(circle at 30% 20%, rgba(21, 118, 92, 0.05) 0%, transparent 30%),
+                            radial-gradient(circle at 70% 80%, rgba(21, 118, 92, 0.03) 0%, transparent 30%)`
         }}
       />
       
@@ -77,17 +77,26 @@ export default function IntroScene() {
       
       <div className="container mx-auto px-4 z-20">
         <div className="max-w-3xl mx-auto text-center">
-          <motion.h1 
-            className="font-heading text-4xl md:text-6xl font-bold leading-tight mb-6"
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
+            className="mb-3"
           >
-            Receipts, bank transactions, and expenses—organized in one place.
+            <span className="inline-block text-primary font-medium text-lg mb-4">Smart Expense Management</span>
+          </motion.div>
+          
+          <motion.h1 
+            className="font-heading text-4xl md:text-6xl font-bold leading-tight mb-6 text-balance"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            <span className="inline-block centered-heading-underline">Receipts, bank transactions, and expenses</span>—organized in one place.
           </motion.h1>
           
           <motion.p
-            className="text-xl md:text-2xl text-foreground/80 mb-10 max-w-2xl mx-auto leading-relaxed"
+            className="text-xl md:text-2xl text-foreground/70 mb-10 max-w-2xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -104,7 +113,7 @@ export default function IntroScene() {
             <Button 
               onClick={scrollToEarlyAccess}
               size="lg" 
-              className="gradient-btn text-white text-lg px-8 py-6 rounded-xl shadow-lg"
+              className="gradient-btn text-white font-medium px-8 py-6 text-sm rounded-md shadow-sm"
             >
               Get early access
             </Button>
@@ -112,7 +121,7 @@ export default function IntroScene() {
               onClick={scrollToHowItWorks}
               size="lg" 
               variant="outline"
-              className="text-lg px-8 py-6 rounded-xl shadow-sm border-2"
+              className="text-sm font-medium px-8 py-6 rounded-md shadow-sm border border-neutral-200 hover:bg-neutral-50 text-foreground/80"
             >
               See how it works
             </Button>
