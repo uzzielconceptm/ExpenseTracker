@@ -7,7 +7,7 @@ import { Check, Camera, Clock, PieChart, Star, CreditCard, FileCheck, AlertTrian
 export default function ExpenseBenefits() {
   // Pain & Benefit sections
   const painAndBenefitSection = () => (
-    <div className="mb-24">
+    <div className="mb-8">
       <div className="text-center mb-16">
         <span className="inline-block text-primary font-medium text-base mb-3">Pain Points & Solutions</span>
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
@@ -203,10 +203,10 @@ export default function ExpenseBenefits() {
           {painAndBenefitSection()}
           
           {/* Features section */}
-          <div id="features" className="pt-16 mt-8">
-            <div className="section-divider mb-16"></div>
+          <div id="features" className="pt-6 mt-4">
+            <div className="section-divider mb-8"></div>
             
-            <div className="text-center mb-16">
+            <div className="text-center mb-8">
               <span className="inline-block text-primary font-medium text-base mb-3">Our Approach</span>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
                 <span className="inline-block centered-heading-underline">Designed for real</span> business workflows
