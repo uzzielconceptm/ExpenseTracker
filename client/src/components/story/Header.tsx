@@ -30,8 +30,8 @@ export default function StoryHeader() {
 
   return (
     <header 
-      className={`fixed w-full bg-white/95 backdrop-blur-sm z-50 transition-all duration-300 ${
-        isScrolled ? 'py-2 shadow-md' : 'py-3'
+      className={`fixed w-full bg-white/98 backdrop-blur-sm z-50 transition-all duration-300 ${
+        isScrolled ? 'py-2 shadow-sm border-b border-neutral-100' : 'py-4'
       } ${chaosMode ? 'chaos-mode' : ''}`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
@@ -55,15 +55,15 @@ export default function StoryHeader() {
         </motion.div>
         
         {/* Desktop Navigation - Updated menu items */}
-        <nav className="hidden md:flex items-center space-x-6">
-          <a href="#features" className="text-foreground hover:text-primary transition-colors">Features</a>
-          <a href="#how-it-works" className="text-foreground hover:text-primary transition-colors">How It Works</a>
-          <a href="#for-accountants" className="text-foreground hover:text-primary transition-colors">For Accountants</a>
-          <a href="#plans" className="text-foreground hover:text-primary transition-colors">Plans</a>
-          <a href="#security" className="text-foreground hover:text-primary transition-colors">Security</a>
+        <nav className="hidden md:flex items-center space-x-8">
+          <a href="#features" className="text-foreground/80 hover:text-primary transition-colors text-sm font-medium">Features</a>
+          <a href="#how-it-works" className="text-foreground/80 hover:text-primary transition-colors text-sm font-medium">How It Works</a>
+          <a href="#for-accountants" className="text-foreground/80 hover:text-primary transition-colors text-sm font-medium">For Accountants</a>
+          <a href="#plans" className="text-foreground/80 hover:text-primary transition-colors text-sm font-medium">Plans</a>
+          <a href="#security" className="text-foreground/80 hover:text-primary transition-colors text-sm font-medium">Security</a>
           <a 
             href="#early-access" 
-            className="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg transition-colors ml-4"
+            className="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-md transition-all ml-4 text-sm font-medium"
           >
             Get early access
           </a>
