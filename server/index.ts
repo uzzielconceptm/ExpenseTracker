@@ -65,6 +65,6 @@ app.use((req, res, next) => {
     host: "0.0.0.0",
     reusePort: true,
   }, () => {
-    log(`serving on port ${port}`);
+    log(`server started at http://0.0.0.0:5000`);
   });
 })();
