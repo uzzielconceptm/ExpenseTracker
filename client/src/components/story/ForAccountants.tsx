@@ -4,10 +4,10 @@ import { CheckCircle } from "lucide-react";
 
 export default function ForAccountants() {
   return (
-    <section id="for-accountants" className="py-14 bg-white overflow-hidden">
+    <section id="for-accountants" className="py-8 bg-white overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-6">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Built for solopreneurs and bookkeepers
             </h2>
@@ -17,7 +17,7 @@ export default function ForAccountants() {
           </div>
 
           {/* Trust block */}
-          <div className="bg-white rounded-xl p-8 shadow-sm border border-border hover-lift mb-12">
+          <div className="bg-white rounded-xl p-6 shadow-sm border border-border hover-lift mb-8">
             <div className="flex flex-col md:flex-row items-center justify-between">
               <div className="mb-6 md:mb-0">
                 <h3 className="text-xl font-bold mb-2">Used by early-access accountants in the U.S.</h3>
