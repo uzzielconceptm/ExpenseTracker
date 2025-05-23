@@ -4,14 +4,13 @@ import { Button } from "@/components/ui/button";
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-24 bg-white overflow-hidden wix-section">
+    <section id="how-it-works" className="py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <span className="inline-block text-primary font-medium text-base mb-3">Simple Process</span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
-            <span className="inline-block centered-heading-underline">How It</span> Works
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            How It Works
           </h2>
-          <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
+          <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
             Three simple steps to organize your business expenses
           </p>
         </div>

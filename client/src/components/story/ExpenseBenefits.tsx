@@ -198,7 +198,7 @@ export default function ExpenseBenefits() {
   return (
     <>
       {/* Pain & Benefit Sections */}
-      <section id="benefits" className="py-24 bg-white overflow-hidden wix-section">
+      <section id="benefits" className="py-24 bg-white overflow-hidden">
         <div className="container mx-auto px-4">
           {painAndBenefitSection()}
           

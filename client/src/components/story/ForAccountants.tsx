@@ -4,33 +4,32 @@ import { CheckCircle } from "lucide-react";
 
 export default function ForAccountants() {
   return (
-    <section id="for-accountants" className="py-24 bg-white overflow-hidden wix-section">
+    <section id="for-accountants" className="py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="inline-block text-primary font-medium text-base mb-3">Collaborative Platform</span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
-              <span className="inline-block centered-heading-underline">Built for solopreneurs</span> and bookkeepers
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Built for solopreneurs and bookkeepers
             </h2>
-            <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
+            <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
               FinMatch bridges the gap between clients and accountants with shared access and perfect documentation.
             </p>
           </div>
 
           {/* Trust block */}
-          <div className="card-modern p-8 mb-16">
+          <div className="bg-white rounded-xl p-8 shadow-sm border border-border hover-lift mb-12">
             <div className="flex flex-col md:flex-row items-center justify-between">
               <div className="mb-6 md:mb-0">
-                <h3 className="text-xl font-bold mb-3 subtle-heading-underline">Used by early-access accountants in the U.S.</h3>
-                <p className="text-foreground/70 text-sm mt-4">
+                <h3 className="text-xl font-bold mb-2">Used by early-access accountants in the U.S.</h3>
+                <p className="text-foreground/70">
                   Accountants love the audit-ready data and organized expense categories
                 </p>
               </div>
               
-              <div className="flex items-center gap-5">
+              <div className="flex items-center gap-4">
                 {/* Gmail icon */}
-                <div className="w-14 h-14 bg-neutral-100 rounded-md flex items-center justify-center shadow-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28">
+                <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                     <path fill="#4285F4" d="M22.1,4.2H1.9c-0.5,0-0.9,0.4-0.9,0.9v13.7c0,0.5,0.4,0.9,0.9,0.9h20.2c0.5,0,0.9-0.4,0.9-0.9V5.1 C23,4.6,22.6,4.2,22.1,4.2z"/>
                     <path fill="#FFFFFF" d="M12,14.8L1.9,7.2V5.1c0-0.5,0.4-0.9,0.9-0.9h18.3c0.5,0,0.9,0.4,0.9,0.9v2.1L12,14.8z"/>
                     <path fill="#EA4335" d="M5.6,7.9l6.4,4.5l6.4-4.5v8.6H5.6V7.9z"/>
@@ -38,8 +37,8 @@ export default function ForAccountants() {
                 </div>
                 
                 {/* Bank icon */}
-                <div className="w-14 h-14 bg-neutral-100 rounded-md flex items-center justify-center shadow-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28">
+                <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                     <path fill="#1A73E8" d="M12,3L4,7v2h16V7L12,3z M5,10v7h2v-7H5z M9,10v7h2v-7H9z M13,10v7h2v-7H13z M17,10v7h2v-7H17z M4,19h16v2H4 V19z"/>
                   </svg>
                 </div>
