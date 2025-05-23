@@ -13,16 +13,16 @@ export default function Logo({
   variant = "full",
   colorMode = "light"
 }: LogoProps) {
-  // New colors based on the provided image
+  // Colors based on the provided image
   const colors = {
     light: {
-      primary: "#3b9a6d", // Green color from the image
-      secondary: "#ffffff", // White for icons
-      text: "#1e293b" // Dark text color
+      primary: "#00AA80", // Teal/green color from the image
+      secondary: "#ffffff", // White for icon details
+      text: "#18212F" // Dark text color
     },
     dark: {
-      primary: "#3b9a6d", // Green color from the image
-      secondary: "#ffffff", // White for icons
+      primary: "#00AA80", // Same teal/green for dark mode
+      secondary: "#ffffff", // White for icon details
       text: "#f8fafc" // Light text color for dark mode
     }
   };
@@ -35,7 +35,7 @@ export default function Logo({
 
   const currentColors = colors[colorMode];
 
-  // Icon-only version - with dollar sign, arrow and bar chart
+  // Icon-only version
   if (variant === "icon") {
     return (
       <div className="flex items-center">
@@ -50,43 +50,27 @@ export default function Logo({
           {/* Green rounded square background */}
           <rect width="36" height="36" rx="8" fill={currentColors.primary} />
           
-          {/* Dollar sign */}
-          <path
-            d="M14 10C14 9.44772 14.4477 9 15 9H17C17.5523 9 18 9.44772 18 10V12C18 12.5523 17.5523 13 17 13H15C14.4477 13 14 12.5523 14 12V10Z"
-            fill={currentColors.secondary}
-          />
-          <path
-            d="M14 14C14 13.4477 14.4477 13 15 13H17C17.5523 13 18 13.4477 18 14V16C18 16.5523 17.5523 17 17 17H15C14.4477 17 14 16.5523 14 16V14Z"
-            fill={currentColors.primary}
-          />
+          {/* Checkmark */}
           <path 
-            d="M15 9C13.3431 9 12 10.3431 12 12V16C12 17.6569 13.3431 19 15 19H17C18.6569 19 20 17.6569 20 16V12C20 10.3431 18.6569 9 17 9H15Z" 
-            fill="none"
+            d="M8 18L14 24L28 10" 
             stroke={currentColors.secondary}
-            strokeWidth="2"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           
           {/* Bar chart */}
-          <rect x="18" y="26" width="3" height="5" rx="1" fill={currentColors.secondary} />
-          <rect x="23" y="23" width="3" height="8" rx="1" fill={currentColors.secondary} />
-          <rect x="28" y="20" width="3" height="11" rx="1" fill={currentColors.secondary} />
-          
-          {/* Arrow */}
           <path 
-            d="M10 24L18 16L21 19L28 12" 
-            fill="none"
-            stroke={currentColors.secondary}
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            d="M16 26H18V30H16V26Z" 
+            fill={currentColors.secondary}
           />
           <path 
-            d="M27 12H28V13" 
-            fill="none"
-            stroke={currentColors.secondary}
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            d="M20 23H22V30H20V23Z" 
+            fill={currentColors.secondary}
+          />
+          <path 
+            d="M24 20H26V30H24V20Z" 
+            fill={currentColors.secondary}
           />
         </svg>
       </div>
@@ -107,43 +91,27 @@ export default function Logo({
         {/* Green rounded square background */}
         <rect width="36" height="36" rx="8" fill={currentColors.primary} />
         
-        {/* Dollar sign */}
-        <path
-          d="M14 10C14 9.44772 14.4477 9 15 9H17C17.5523 9 18 9.44772 18 10V12C18 12.5523 17.5523 13 17 13H15C14.4477 13 14 12.5523 14 12V10Z"
-          fill={currentColors.secondary}
-        />
-        <path
-          d="M14 14C14 13.4477 14.4477 13 15 13H17C17.5523 13 18 13.4477 18 14V16C18 16.5523 17.5523 17 17 17H15C14.4477 17 14 16.5523 14 16V14Z"
-          fill={currentColors.primary}
-        />
+        {/* Checkmark */}
         <path 
-          d="M15 9C13.3431 9 12 10.3431 12 12V16C12 17.6569 13.3431 19 15 19H17C18.6569 19 20 17.6569 20 16V12C20 10.3431 18.6569 9 17 9H15Z" 
-          fill="none"
+          d="M8 18L14 24L28 10" 
           stroke={currentColors.secondary}
-          strokeWidth="2"
+          strokeWidth="4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         
         {/* Bar chart */}
-        <rect x="18" y="26" width="3" height="5" rx="1" fill={currentColors.secondary} />
-        <rect x="23" y="23" width="3" height="8" rx="1" fill={currentColors.secondary} />
-        <rect x="28" y="20" width="3" height="11" rx="1" fill={currentColors.secondary} />
-        
-        {/* Arrow */}
         <path 
-          d="M10 24L18 16L21 19L28 12" 
-          fill="none"
-          stroke={currentColors.secondary}
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          d="M16 26H18V30H16V26Z" 
+          fill={currentColors.secondary}
         />
         <path 
-          d="M27 12H28V13" 
-          fill="none"
-          stroke={currentColors.secondary}
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          d="M20 23H22V30H20V23Z" 
+          fill={currentColors.secondary}
+        />
+        <path 
+          d="M24 20H26V30H24V20Z" 
+          fill={currentColors.secondary}
         />
       </svg>
       <span className="font-bold text-xl ml-2" style={{ color: currentColors.text }}>
