@@ -129,20 +129,7 @@ export default function IntroScene() {
         </div>
       </div>
       
-      {/* Scroll indicator */}
-      <motion.div 
-        className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 mt-16"
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ 
-          duration: 0.5, 
-          delay: 1.2,
-          repeat: Infinity,
-          repeatType: "reverse"
-        }}
-      >
-        <ArrowDown size={40} className="text-primary animate-bounce" />
-      </motion.div>
+      {/* Removed scroll indicator arrow */}
       
       {/* Abstract wave pattern */}
       <div className="absolute bottom-0 left-0 right-0 h-40 md:h-60 z-10">
