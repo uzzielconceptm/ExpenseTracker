@@ -55,9 +55,9 @@ export default function Features() {
   ];
 
   return (
-    <section id="features" className="py-16 md:py-24 bg-neutral-100 px-4">
+    <section id="features" className="py-12 md:py-16 bg-neutral-100 px-4">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">Powerful Features for Busy Solopreneurs</h2>
           <p className="text-neutral-700 text-lg max-w-3xl mx-auto">
             Smart tools that save you time and eliminate the headache of expense management.
