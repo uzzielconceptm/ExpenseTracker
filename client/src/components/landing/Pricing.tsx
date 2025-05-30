@@ -54,9 +54,9 @@ export default function Pricing() {
   ];
 
   return (
-    <section id="pricing" className="py-8 md:py-12 px-4">
+    <section id="pricing" className="py-6 md:py-8 px-4">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-6">
+        <div className="text-center mb-4">
           <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">Simple, Transparent Pricing</h2>
           <p className="text-neutral-700 text-lg max-w-3xl mx-auto">
             Start free, then choose the plan that fits your business as you grow.

@@ -3,7 +3,7 @@ import { fadeIn, slideUp } from "@/lib/animations";
 
 export default function Hero() {
   return (
-    <section id="hero" className="pt-16 pb-8 md:pt-20 md:pb-10 px-4">
+    <section id="hero" className="pt-20 pb-4 md:pt-24 md:pb-6 px-4">
       <div className="container mx-auto max-w-6xl">
         <div className="grid md:grid-cols-2 gap-6 items-center">
           <motion.div 

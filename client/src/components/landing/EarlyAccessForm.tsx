@@ -59,16 +59,16 @@ export default function EarlyAccessForm() {
   };
 
   return (
-    <section id="early-access" className="py-8 md:py-12 bg-neutral-100 px-4">
+    <section id="early-access" className="py-6 md:py-8 bg-neutral-100 px-4">
       <div className="container mx-auto max-w-6xl">
         <motion.div 
-          className="bg-white rounded-2xl shadow-xl p-8 md:p-12 max-w-4xl mx-auto"
+          className="bg-white rounded-2xl shadow-xl p-6 md:p-8 max-w-4xl mx-auto"
           variants={fadeIn}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
         >
-          <div className="grid md:grid-cols-2 gap-6 items-center">
+          <div className="grid md:grid-cols-2 gap-4 items-center">
             <div>
               <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">Get Early Access</h2>
               <p className="text-neutral-700 mb-6">
