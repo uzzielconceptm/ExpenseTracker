@@ -183,9 +183,9 @@ export default function CombinedSuccessStories() {
   ];
 
   return (
-    <section id="success-stories" className="py-24 relative overflow-hidden" ref={containerRef}>
+    <section id="success-stories" className="py-8 relative overflow-hidden" ref={containerRef}>
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Real People. Real Results.
           </h2>
@@ -195,7 +195,7 @@ export default function CombinedSuccessStories() {
         </div>
         
         {/* Modern testimonial with avatar navigation */}
-        <div className="max-w-6xl mx-auto mb-16">
+        <div className="max-w-6xl mx-auto mb-8">
           <ModernTestimonial testimonials={testimonials} />
         </div>
         

@@ -10,7 +10,7 @@ export default function StoryEarlyAccessForm() {
   // Removed automatic popup opening to prevent unwanted scrolling
 
   return (
-    <section id="early-access" className="py-20 relative">
+    <section id="early-access" className="py-8 relative">
       {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-white to-muted/50 -z-10"></div>
       
