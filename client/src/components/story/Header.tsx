@@ -47,10 +47,13 @@ export default function StoryHeader() {
             repeatType: "reverse"
           }}
         >
-          {/* Updated brand name to FinMatch */}
+          {/* FinMatch official logo */}
           <div className="flex items-center">
-            <Logo variant="icon" size="sm" colorMode="light" className="h-8 w-8 mr-2" />
-            <span className="font-bold text-xl">FinMatch</span>
+            <img 
+              src="/attached_assets/Logo1.png" 
+              alt="FinMatch" 
+              className="h-8"
+            />
           </div>
         </motion.div>
         
