@@ -70,11 +70,11 @@ export default function EarlyAccessForm() {
         >
           <div className="grid md:grid-cols-2 gap-4 items-center">
             <div>
-              <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">Get Early Access</h2>
-              <p className="text-neutral-700 mb-6">
+              <h2 className="font-heading font-bold text-3xl md:text-4xl mb-3">Get Early Access</h2>
+              <p className="text-neutral-700 mb-4">
                 Be among the first to experience ExpenseWise and help shape the future of expense tracking for solopreneurs.
               </p>
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-2 mb-6">
                 <li className="flex items-start">
                   <i className="fas fa-check-circle text-accent mt-1 mr-3"></i>
                   <span>14-day free trial</span>

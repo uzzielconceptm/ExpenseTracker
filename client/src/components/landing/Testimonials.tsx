@@ -31,7 +31,7 @@ export default function Testimonials() {
     <section id="testimonials" className="py-6 md:py-8 bg-neutral-900 text-white px-4">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-4">
-          <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">What Our Users Say</h2>
+          <h2 className="font-heading font-bold text-3xl md:text-4xl mb-3">What Our Users Say</h2>
           <p className="text-neutral-300 text-lg max-w-3xl mx-auto">
             Join hundreds of solopreneurs who are saving time and getting organized with ExpenseWise.
           </p>

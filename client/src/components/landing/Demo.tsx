@@ -58,7 +58,7 @@ export default function Demo() {
     <section id="demo" className="py-6 md:py-8 px-4">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-4">
-          <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">See How It Works</h2>
+          <h2 className="font-heading font-bold text-3xl md:text-4xl mb-3">See How It Works</h2>
           <p className="text-neutral-700 text-lg max-w-3xl mx-auto">
             Experience how ExpenseWise simplifies expense tracking with our interactive demo.
           </p>
