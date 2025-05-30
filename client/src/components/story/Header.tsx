@@ -57,8 +57,7 @@ export default function StoryHeader() {
         {/* Desktop Navigation - Updated menu items */}
         <nav className="hidden md:flex items-center space-x-8">
           <a href="#features" className="text-foreground/80 hover:text-primary transition-colors text-sm font-medium">Features</a>
-          <a href="#how-it-works" className="text-foreground/80 hover:text-primary transition-colors text-sm font-medium">How It Works</a>
-          <a href="#for-accountants" className="text-foreground/80 hover:text-primary transition-colors text-sm font-medium">For Accountants</a>
+          <a href="#savings" className="text-foreground/80 hover:text-primary transition-colors text-sm font-medium">Savings</a>
           <a href="#plans" className="text-foreground/80 hover:text-primary transition-colors text-sm font-medium">Plans</a>
           <a href="#security" className="text-foreground/80 hover:text-primary transition-colors text-sm font-medium">Security</a>
           <a 
@@ -100,18 +99,11 @@ export default function StoryHeader() {
                 Features
               </a>
               <a 
-                href="#how-it-works" 
+                href="#savings" 
                 className="text-foreground hover:text-primary transition-colors block py-2"
                 onClick={closeMobileMenu}
               >
-                How It Works
-              </a>
-              <a 
-                href="#for-accountants" 
-                className="text-foreground hover:text-primary transition-colors block py-2"
-                onClick={closeMobileMenu}
-              >
-                For Accountants
+                Savings
               </a>
               <a 
                 href="#plans" 

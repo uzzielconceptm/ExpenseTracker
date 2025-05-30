@@ -9,6 +9,7 @@ import ExpenseBenefits from "@/components/story/ExpenseBenefits";
 import SecurityFeatures from "@/components/story/SecurityFeatures";
 import CombinedSuccessStories from "@/components/story/CombinedSuccessStories";
 import ForAccountants from "@/components/story/ForAccountants";
+import Savings from "@/components/story/Savings";
 import Plans from "@/components/story/Plans";
 
 export default function StoryLandingPage() {
@@ -67,6 +68,7 @@ export default function StoryLandingPage() {
         <ExpenseBenefits />
         <HowItWorks />
         <ForAccountants />
+        <Savings />
         <Plans />
         <SecurityFeatures />
         <CombinedSuccessStories />
