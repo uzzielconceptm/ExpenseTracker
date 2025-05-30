@@ -6,7 +6,6 @@ export default function Plans() {
   const plans = [
     {
       name: "Basic",
-      price: "$10",
       description: "Manual receipt uploads and transaction matching for solo users.",
       features: [
         "Manual receipt uploads",
@@ -18,7 +17,6 @@ export default function Plans() {
     },
     {
       name: "Pro",
-      price: "$25",
       description: "Automated extraction from email, smart categorization, and bank feed syncing.",
       features: [
         "Email receipt extraction",
@@ -31,7 +29,6 @@ export default function Plans() {
     },
     {
       name: "For Accountants",
-      price: "$37",
       description: "Multi-client dashboard, smart rules, and accountant-ready reports.",
       features: [
         "Multi-client dashboard",
@@ -82,11 +79,7 @@ export default function Plans() {
               <div className="p-6">
                 <div className="bg-primary/5 -mx-6 -mt-6 p-6 mb-6">
                   <div className="font-medium text-sm text-center mb-4">EARLY ACCESS</div>
-                  <h3 className="text-2xl font-bold mb-1 text-center">{plan.name}</h3>
-                  <div className="text-center mb-2">
-                    <span className="text-3xl font-bold">{plan.price}</span>
-                    <span className="text-foreground/60">/month</span>
-                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-center">{plan.name}</h3>
                   <p className="text-sm text-center text-foreground/70">
                     {plan.description}
                   </p>
