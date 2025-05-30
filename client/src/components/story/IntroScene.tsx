@@ -30,7 +30,7 @@ export default function IntroScene() {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
       {/* Modern gradient background */}
       <div 
         className="absolute inset-0 z-0 bg-gradient-to-br from-white via-accent/10 to-white subtle-pattern"

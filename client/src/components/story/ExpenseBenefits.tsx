@@ -377,7 +377,7 @@ export default function ExpenseBenefits() {
             
             {/* Additional features grid */}
             <div className="mt-32 max-w-6xl mx-auto">
-              <div className="text-center mb-16">
+              <div className="text-center mb-8">
                 <span className="inline-block text-primary font-medium text-base mb-3">Enhanced Capabilities</span>
                 <h3 className="text-3xl font-bold mb-4 text-balance">
                   <span className="inline-block centered-heading-underline">More powerful</span> features

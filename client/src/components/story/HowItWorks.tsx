@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-8 bg-white overflow-hidden">
+    <section id="how-it-works" className="py-6 bg-white overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-6">
+        <div className="text-center mb-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             How It Works
           </h2>

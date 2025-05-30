@@ -45,9 +45,9 @@ export default function Plans() {
   ];
 
   return (
-    <section id="plans" className="py-24 bg-muted/30 overflow-hidden">
+    <section id="plans" className="py-12 bg-muted/30 overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Choose Your Plan
           </h2>
