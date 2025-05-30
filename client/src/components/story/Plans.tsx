@@ -7,37 +7,38 @@ export default function Plans() {
     {
       name: "Basic",
       price: "$10",
-      description: "Perfect for solopreneurs just getting started",
+      description: "Manual receipt uploads and transaction matching for solo users.",
       features: [
-        "Auto email receipt capture",
-        "Manual bank matching",
-        "Unlimited receipts",
-        "Basic reports"
+        "Manual receipt uploads",
+        "Transaction matching",
+        "Basic categorization",
+        "Export capabilities"
       ],
       isPopular: false
     },
     {
       name: "Pro",
       price: "$25",
-      description: "Our most popular plan for serious business owners",
+      description: "Automated extraction from email, smart categorization, and bank feed syncing.",
       features: [
-        "Everything in Basic",
-        "Auto bank + card matching",
-        "Tax-category tagging",
-        "Invite your accountant",
-        "Priority support"
+        "Email receipt extraction",
+        "Smart categorization",
+        "Bank feed syncing",
+        "Advanced reporting",
+        "Custom categories"
       ],
       isPopular: true
     },
     {
-      name: "Team",
+      name: "For Accountants",
       price: "$37",
-      description: "For teams that need advanced features",
+      description: "Multi-client dashboard, smart rules, and accountant-ready reports.",
       features: [
-        "Everything in Pro",
-        "Shared team dashboard",
-        "Accountant collaboration features",
-        "Export to CSV, PDF, TurboTax"
+        "Multi-client dashboard",
+        "Smart automation rules",
+        "Accountant-ready reports",
+        "Client collaboration tools",
+        "Advanced analytics"
       ],
       isPopular: false
     }
