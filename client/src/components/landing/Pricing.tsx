@@ -7,8 +7,8 @@ export default function Pricing() {
     {
       name: "Starter",
       description: "Perfect for new solopreneurs",
-      price: 9,
-      frequency: "month",
+      price: null,
+      frequency: "",
       features: [
         "Up to 50 receipts/month",
         "Email receipt scanning",
@@ -16,14 +16,14 @@ export default function Pricing() {
         "1 bank connection"
       ],
       popular: false,
-      buttonText: "Start Free Trial",
+      buttonText: "Get Early Access",
       buttonLink: "#early-access"
     },
     {
       name: "Professional",
       description: "For growing solo businesses",
-      price: 19,
-      frequency: "month",
+      price: null,
+      frequency: "",
       features: [
         "Unlimited receipts",
         "Advanced receipt matching",
@@ -32,14 +32,14 @@ export default function Pricing() {
         "Quarterly tax reports"
       ],
       popular: true,
-      buttonText: "Start Free Trial",
+      buttonText: "Get Early Access",
       buttonLink: "#early-access"
     },
     {
       name: "Business",
       description: "For established businesses",
-      price: 39,
-      frequency: "month",
+      price: null,
+      frequency: "",
       features: [
         "Everything in Professional",
         "Priority support",
@@ -48,7 +48,7 @@ export default function Pricing() {
         "API access"
       ],
       popular: false,
-      buttonText: "Start Free Trial",
+      buttonText: "Get Early Access",
       buttonLink: "#early-access"
     }
   ];
@@ -57,9 +57,9 @@ export default function Pricing() {
     <section id="pricing" className="py-6 md:py-8 px-4">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-4">
-          <h2 className="font-heading font-bold text-3xl md:text-4xl mb-3">Simple, Transparent Pricing</h2>
+          <h2 className="font-heading font-bold text-3xl md:text-4xl mb-3">Choose Your Plan</h2>
           <p className="text-neutral-700 text-lg max-w-3xl mx-auto">
-            Start free, then choose the plan that fits your business as you grow.
+            Select the plan that fits your business needs and workflow.
           </p>
         </div>
         
@@ -88,7 +88,7 @@ export default function Pricing() {
         
         <div className="text-center mt-12">
           <p className="text-neutral-700">
-            All plans include a 14-day free trial. No credit card required.
+            All plans include comprehensive support and regular updates.
           </p>
         </div>
       </div>

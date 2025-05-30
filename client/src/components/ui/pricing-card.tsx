@@ -5,7 +5,7 @@ import { itemFadeIn } from "@/lib/animations";
 interface PricingCardProps {
   name: string;
   description: string;
-  price: number;
+  price: number | null;
   frequency: string;
   features: string[];
   popular: boolean;
@@ -46,10 +46,12 @@ export default function PricingCard({
         <h3 className="font-heading font-semibold text-2xl mb-2">{name}</h3>
         <p className="text-neutral-700 mb-6">{description}</p>
         
-        <div className="mb-6">
-          <span className="font-heading font-bold text-4xl">${price}</span>
-          <span className="text-neutral-500">/{frequency}</span>
-        </div>
+        {price && (
+          <div className="mb-6">
+            <span className="font-heading font-bold text-4xl">${price}</span>
+            <span className="text-neutral-500">/{frequency}</span>
+          </div>
+        )}
         
         <ul className="space-y-3 mb-8">
           {features.map((feature, i) => (
