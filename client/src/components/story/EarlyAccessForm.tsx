@@ -48,9 +48,9 @@ export default function StoryEarlyAccessForm() {
                       <Sparkles size={20} className="text-white" />
                     </div>
                     <div>
-                      <h3 className="font-medium text-xl mb-1">14-Day Free Access</h3>
+                      <h3 className="font-medium text-xl mb-1">Early Beta Access</h3>
                       <p className="text-white/80">
-                        Experience the full platform with no commitment
+                        Get exclusive access to beta features and updates
                       </p>
                     </div>
                   </div>

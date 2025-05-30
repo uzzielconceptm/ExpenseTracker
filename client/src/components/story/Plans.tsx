@@ -48,10 +48,10 @@ export default function Plans() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Try FinMatch free for 15 days
+            Choose Your Plan
           </h2>
           <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
-            No credit card required. Choose your plan when you're ready.
+            Select the plan that fits your business needs and workflow.
           </p>
         </div>
         
@@ -80,7 +80,7 @@ export default function Plans() {
               
               <div className="p-6">
                 <div className="bg-primary/5 -mx-6 -mt-6 p-6 mb-6">
-                  <div className="font-medium text-sm text-center mb-4">15-DAY FREE TRIAL</div>
+                  <div className="font-medium text-sm text-center mb-4">EARLY ACCESS</div>
                   <h3 className="text-2xl font-bold mb-1 text-center">{plan.name}</h3>
                   <div className="text-center mb-2">
                     <span className="text-3xl font-bold">{plan.price}</span>
@@ -110,7 +110,7 @@ export default function Plans() {
                   }`}
                   onClick={() => window.location.href = '#early-access'}
                 >
-                  Start Free Trial
+                  Get Early Access
                 </Button>
               </div>
             </motion.div>

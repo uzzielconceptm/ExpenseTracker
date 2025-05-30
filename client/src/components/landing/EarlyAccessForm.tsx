@@ -77,7 +77,7 @@ export default function EarlyAccessForm() {
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start">
                   <i className="fas fa-check-circle text-accent mt-1 mr-3"></i>
-                  <span>14-day free trial</span>
+                  <span>Early access to beta features</span>
                 </li>
                 <li className="flex items-start">
                   <i className="fas fa-check-circle text-accent mt-1 mr-3"></i>
@@ -89,7 +89,7 @@ export default function EarlyAccessForm() {
                 </li>
                 <li className="flex items-start">
                   <i className="fas fa-check-circle text-accent mt-1 mr-3"></i>
-                  <span>Cancel anytime</span>
+                  <span>Direct feedback channel</span>
                 </li>
               </ul>
             </div>
