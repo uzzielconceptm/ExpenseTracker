@@ -3,19 +3,19 @@ import { fadeIn, slideUp } from "@/lib/animations";
 
 export default function Hero() {
   return (
-    <section id="hero" className="pt-20 pb-4 md:pt-24 md:pb-6 px-4">
+    <section id="hero" className="pt-16 pb-2 md:pt-18 md:pb-3 px-4">
       <div className="container mx-auto max-w-6xl">
-        <div className="grid md:grid-cols-2 gap-6 items-center">
+        <div className="grid md:grid-cols-2 gap-4 items-center">
           <motion.div 
             className="order-2 md:order-1"
             variants={slideUp}
             initial="hidden"
             animate="visible"
           >
-            <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight text-neutral-900 mb-4">
+            <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight text-neutral-900 mb-3">
               Smart Expense Tracking Built for Solopreneurs
             </h1>
-            <p className="text-xl md:text-2xl text-neutral-700 mb-4">
+            <p className="text-xl md:text-2xl text-neutral-700 mb-3">
               Stop losing receipts. Start automating your audit trail.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
