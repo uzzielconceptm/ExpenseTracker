@@ -5,47 +5,47 @@ import PricingCard from "@/components/ui/pricing-card";
 export default function Pricing() {
   const pricingPlans = [
     {
-      name: "Starter",
-      description: "Perfect for new solopreneurs",
+      name: "Basic",
+      description: "Manual receipt uploads and transaction matching for solo users.",
       price: null,
       frequency: "",
       features: [
-        "Up to 50 receipts/month",
-        "Email receipt scanning",
-        "Basic expense reports",
-        "1 bank connection"
+        "Manual receipt uploads",
+        "Transaction matching",
+        "Basic categorization",
+        "Export capabilities"
       ],
       popular: false,
       buttonText: "Get Early Access",
       buttonLink: "#early-access"
     },
     {
-      name: "Professional",
-      description: "For growing solo businesses",
+      name: "Pro",
+      description: "Automated extraction from email, smart categorization, and bank feed syncing.",
       price: null,
       frequency: "",
       features: [
-        "Unlimited receipts",
-        "Advanced receipt matching",
-        "Custom expense categories",
-        "5 bank connections",
-        "Quarterly tax reports"
+        "Email receipt extraction",
+        "Smart categorization",
+        "Bank feed syncing",
+        "Advanced reporting",
+        "Custom categories"
       ],
       popular: true,
       buttonText: "Get Early Access",
       buttonLink: "#early-access"
     },
     {
-      name: "Business",
-      description: "For established businesses",
+      name: "For Accountants",
+      description: "Multi-client dashboard, smart rules, and accountant-ready reports.",
       price: null,
       frequency: "",
       features: [
-        "Everything in Professional",
-        "Priority support",
-        "Unlimited bank connections",
-        "Accountant access",
-        "API access"
+        "Multi-client dashboard",
+        "Smart automation rules",
+        "Accountant-ready reports",
+        "Client collaboration tools",
+        "Advanced analytics"
       ],
       popular: false,
       buttonText: "Get Early Access",
