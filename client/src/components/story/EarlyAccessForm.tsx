@@ -92,7 +92,7 @@ export default function StoryEarlyAccessForm() {
                       variant="outline"
                       size="sm"
                       className="flex-1"
-                      onClick={() => window.open('mailto:contact@finmatch.com')}
+                      onClick={() => window.open('https://calendly.com/finmatch/consultation', '_blank')}
                     >
                       Talk to an expert
                     </Button>
