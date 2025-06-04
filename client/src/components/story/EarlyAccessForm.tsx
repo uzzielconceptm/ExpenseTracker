@@ -101,9 +101,9 @@ export default function StoryEarlyAccessForm() {
                       variant="outline"
                       size="sm"
                       className="flex-1"
-                      onClick={() => setIsOpen(true)}
+                      onClick={() => window.open('https://app.finmatch.com/signup?trial=true', '_blank')}
                     >
-                      Try it free
+                      Start free trial
                     </Button>
                   </div>
                 </div>
