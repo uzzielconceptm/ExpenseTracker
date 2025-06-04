@@ -3,9 +3,11 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
 import EarlyAccessPopup from "./EarlyAccessPopup";
+import FreeTrialPopup from "./FreeTrialPopup";
 
 export default function StoryEarlyAccessForm() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isTrialOpen, setIsTrialOpen] = useState(false);
   
   // Removed automatic popup opening to prevent unwanted scrolling
 
@@ -101,7 +103,7 @@ export default function StoryEarlyAccessForm() {
                       variant="outline"
                       size="sm"
                       className="flex-1"
-                      onClick={() => window.open('https://app.finmatch.com/signup?trial=true', '_blank')}
+                      onClick={() => setIsTrialOpen(true)}
                     >
                       Start free trial
                     </Button>
@@ -115,6 +117,9 @@ export default function StoryEarlyAccessForm() {
       
       {/* Early Access Popup Dialog */}
       <EarlyAccessPopup isOpen={isOpen} onOpenChange={setIsOpen} />
+      
+      {/* Free Trial Popup Dialog */}
+      <FreeTrialPopup isOpen={isTrialOpen} onOpenChange={setIsTrialOpen} />
     </section>
   );
 }

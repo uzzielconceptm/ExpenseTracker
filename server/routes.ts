@@ -81,6 +81,53 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Free trial sign-up API endpoint
+  app.post("/api/trial-signup", async (req, res) => {
+    try {
+      const trialSchema = z.object({
+        fullName: z.string().min(2),
+        email: z.string().email(),
+        company: z.string().min(2),
+      });
+
+      const validatedData = trialSchema.safeParse(req.body);
+      
+      if (!validatedData.success) {
+        return res.status(400).json({ 
+          message: "Invalid data", 
+          errors: validatedData.error.format() 
+        });
+      }
+
+      // Create user account for trial
+      const userData = {
+        username: validatedData.data.email,
+        email: validatedData.data.email,
+        fullName: validatedData.data.fullName,
+        company: validatedData.data.company,
+      };
+
+      const result = await storage.createUser(userData);
+      
+      try {
+        await sendConfirmationEmail(validatedData.data.email, validatedData.data.fullName);
+      } catch (error) {
+        console.error('Error sending trial confirmation email:', error);
+        // Continue even if email fails
+      }
+
+      return res.status(201).json({
+        message: "Free trial account created successfully",
+        data: result
+      });
+    } catch (error) {
+      console.error(`Error processing trial signup: ${error}`);
+      return res.status(500).json({
+        message: "Error creating trial account, please try again later"
+      });
+    }
+  });
+
   // User registration endpoint with security features
   app.post("/api/users", async (req, res) => {
     await handleApiResponse(
