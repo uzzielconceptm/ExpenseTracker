@@ -102,11 +102,9 @@ export default function Plans() {
                       ? "gradient-btn text-white" 
                       : "bg-background hover:bg-muted border border-border"
                   }`}
-                  asChild
+                  onClick={() => window.location.href = '#early-access'}
                 >
-                  <a href="https://calendly.com/finmatch" target="_blank" rel="noopener noreferrer">
-                    Schedule Demo
-                  </a>
+                  Get Early Access
                 </Button>
               </div>
             </motion.div>
