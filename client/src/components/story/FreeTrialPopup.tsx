@@ -89,7 +89,7 @@ export default function FreeTrialPopup({ isOpen, onOpenChange }: FreeTrialPopupP
                 Start Your Free Trial
               </DialogTitle>
               <p className="text-white/90 text-sm">
-                Get 14 days of FinMatch Pro features at no cost. No credit card required.
+                Get 14 days of ExactusBooks Pro features at no cost. No credit card required.
               </p>
             </DialogHeader>
           </div>

@@ -14,7 +14,7 @@ export default function ExpenseBenefits() {
           <span className="inline-block centered-heading-underline">Why most expense tools fail</span> solo workers
         </h2>
         <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
-          We've designed FinMatch to address the specific challenges solo entrepreneurs face
+          We've designed ExactusBooks to address the specific challenges solo entrepreneurs face
         </p>
       </div>
       
@@ -137,7 +137,7 @@ export default function ExpenseBenefits() {
       icon: <Camera className="h-5 w-5" />,
       content: {
         title: "Auto-email receipt extraction",
-        description: "FinMatch monitors your email for receipts and automatically extracts all the important data including vendor, date, amount, and tax information.",
+        description: "ExactusBooks monitors your email for receipts and automatically extracts all the important data including vendor, date, amount, and tax information.",
         features: [
           "Connect Gmail or Outlook in just a few clicks",
           "Automatic processing of existing and new receipts",
@@ -212,7 +212,7 @@ export default function ExpenseBenefits() {
                 <span className="inline-block centered-heading-underline">Designed for real</span> business workflows
               </h2>
               <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
-                FinMatch is built for the way solopreneurs actually work, not how accountants think they should work.
+                ExactusBooks is built for the way solopreneurs actually work, not how accountants think they should work.
               </p>
             </div>
             
@@ -279,7 +279,7 @@ export default function ExpenseBenefits() {
                     <div className="card-modern shadow-md overflow-hidden">
                       <div className="p-4 border-b border-neutral-100 bg-neutral-50/50">
                         <div className="flex justify-between items-center">
-                          <h4 className="font-medium text-base text-foreground/90">FinMatch Dashboard</h4>
+                          <h4 className="font-medium text-base text-foreground/90">ExactusBooks Dashboard</h4>
                           <div className="flex gap-2">
                             <Button variant="outline" size="sm" className="text-xs h-8 rounded-sm border-neutral-200 bg-white">
                               <FileCheck className="h-3.5 w-3.5 mr-1" />
@@ -383,7 +383,7 @@ export default function ExpenseBenefits() {
                   <span className="inline-block centered-heading-underline">More powerful</span> features
                 </h3>
                 <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-                  Every aspect of FinMatch is designed to save you time and make expense management effortless
+                  Every aspect of ExactusBooks is designed to save you time and make expense management effortless
                 </p>
               </div>
               

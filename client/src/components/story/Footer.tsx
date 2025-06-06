@@ -84,10 +84,10 @@ export default function StoryFooter() {
           </div>
           
           <div className="mb-4 text-neutral-500 max-w-xl mx-auto">
-            <p>FinMatch is not affiliated with any banking institution. Gmail is a trademark of Google.</p>
+            <p>ExactusBooks is not affiliated with any banking institution. Gmail is a trademark of Google.</p>
           </div>
           
-          <p className="text-neutral-500">&copy; {currentYear} FinMatch. All rights reserved.</p>
+          <p className="text-neutral-500">&copy; {currentYear} ExactusBooks. All rights reserved.</p>
         </div>
       </div>
     </footer>

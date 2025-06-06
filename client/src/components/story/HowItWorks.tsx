@@ -84,7 +84,7 @@ export default function HowItWorks() {
                 <span className="text-primary/80 font-medium text-sm block mb-2">Optional Feature</span>
                 <h3 className="text-xl font-bold mb-3 subtle-heading-underline">For Paper Receipts Too</h3>
                 <p className="text-foreground/70 text-sm mb-4">
-                  Have physical receipts? No problem. Simply snap a photo with your phone, and FinMatch's 
+                  Have physical receipts? No problem. Simply snap a photo with your phone, and ExactusBooks' 
                   OCR technology extracts all the data automatically. All your receipts organized in one place — 
                   digital and physical.
                 </p>
