@@ -77,7 +77,7 @@ export default function StoryEarlyAccessForm() {
                   Start organizing your finances in minutes
                 </h3>
                 <p className="text-muted-foreground mb-8">
-                  Join FinMatch early access and get special benefits only available to our founding members.
+                  Join ExactusBooks early access and get special benefits only available to our founding members.
                 </p>
                 
                 <div className="space-y-4">
@@ -94,7 +94,7 @@ export default function StoryEarlyAccessForm() {
                       variant="outline"
                       size="sm"
                       className="flex-1"
-                      onClick={() => window.open('https://calendly.com/finmatch/consultation', '_blank')}
+                      onClick={() => window.open('https://calendly.com/exactusbooks/consultation', '_blank')}
                     >
                       Talk to an expert
                     </Button>

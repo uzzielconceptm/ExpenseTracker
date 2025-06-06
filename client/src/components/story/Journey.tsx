@@ -229,7 +229,7 @@ export default function Journey() {
         
         {/* How It Works Section */}
         <div className="max-w-6xl mx-auto mb-24">
-          <h2 className="text-3xl font-bold mb-10 text-left">How FinMatch Works</h2>
+          <h2 className="text-3xl font-bold mb-10 text-left">How ExactusBooks Works</h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Connect Accounts */}

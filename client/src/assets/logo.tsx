@@ -115,7 +115,7 @@ export default function Logo({
         />
       </svg>
       <span className="font-bold text-xl ml-2" style={{ color: currentColors.text }}>
-        FinMatch
+        ExactusBooks
       </span>
     </div>
   );

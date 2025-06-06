@@ -79,7 +79,7 @@ export default function StoryFooter() {
             </p>
             <p className="flex items-center justify-center gap-2">
               <Mail size={16} />
-              <a href="mailto:hello@finmatch.com" className="hover:text-white transition-colors">hello@finmatch.com</a>
+              <a href="mailto:hello@exactusbooks.com" className="hover:text-white transition-colors">hello@exactusbooks.com</a>
             </p>
           </div>
           

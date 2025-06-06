@@ -47,10 +47,10 @@ export default function StoryHeader() {
             repeatType: "reverse"
           }}
         >
-          {/* Updated brand name to FinMatch */}
+          {/* Updated brand name to ExactusBooks */}
           <div className="flex items-center">
             <Logo variant="icon" size="sm" colorMode="light" className="h-8 w-8 mr-2" />
-            <span className="font-bold text-xl">FinMatch</span>
+            <span className="font-bold text-xl">ExactusBooks</span>
           </div>
         </motion.div>
         

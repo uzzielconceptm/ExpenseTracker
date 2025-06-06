@@ -8,7 +8,7 @@ export default function Savings() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            How much time and money can FinMatch save you?
+            How much time and money can ExactusBooks save you?
           </h2>
           <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
             Solo business owners often spend hours — or hundreds of dollars — each month on manual receipt tracking.
@@ -37,7 +37,7 @@ export default function Savings() {
                 Manual receipt handling can take 5–8 hours a month.
               </p>
               <p className="text-foreground font-medium">
-                FinMatch automates the process — saving you a full day's work.
+                ExactusBooks automates the process — saving you a full day's work.
               </p>
             </div>
           </motion.div>
@@ -63,7 +63,7 @@ export default function Savings() {
                 Bookkeepers often charge $300–$500/month for manual expense tracking.
               </p>
               <p className="text-foreground font-medium">
-                FinMatch replaces that with smart, automated matching — at a fraction of the cost.
+                ExactusBooks replaces that with smart, automated matching — at a fraction of the cost.
               </p>
             </div>
           </motion.div>

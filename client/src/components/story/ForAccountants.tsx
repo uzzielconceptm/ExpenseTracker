@@ -12,7 +12,7 @@ export default function ForAccountants() {
               Built for solopreneurs and bookkeepers
             </h2>
             <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
-              FinMatch bridges the gap between clients and accountants with shared access and perfect documentation.
+              ExactusBooks bridges the gap between clients and accountants with shared access and perfect documentation.
             </p>
           </div>
 
