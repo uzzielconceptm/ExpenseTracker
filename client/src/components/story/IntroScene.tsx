@@ -30,7 +30,7 @@ export default function IntroScene() {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
+    <section className="relative py-16 md:py-24 flex items-center overflow-hidden">
       {/* Modern gradient background */}
       <div 
         className="absolute inset-0 z-0 bg-gradient-to-br from-white via-accent/10 to-white subtle-pattern"
@@ -76,18 +76,18 @@ export default function IntroScene() {
       ))}
       
       <div className="container mx-auto px-4 z-20">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-6"
+            className="mb-4"
           >
             <span className="inline-block text-primary font-semibold text-lg tracking-wide">SMART EXPENSE MANAGEMENT</span>
           </motion.div>
           
           <motion.h1 
-            className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8 text-balance max-w-5xl mx-auto"
+            className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-balance"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -104,7 +104,7 @@ export default function IntroScene() {
           </motion.h1>
           
           <motion.p
-            className="text-xl md:text-2xl text-slate-600 mb-12 max-w-4xl mx-auto leading-relaxed font-medium"
+            className="text-lg md:text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed font-medium"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
