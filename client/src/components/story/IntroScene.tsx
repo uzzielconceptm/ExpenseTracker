@@ -87,21 +87,25 @@ export default function IntroScene() {
           </motion.div>
           
           <motion.h1 
-            className="font-heading text-4xl md:text-6xl font-bold leading-tight mb-6 text-balance"
+            className="font-heading text-5xl md:text-7xl font-bold leading-[1.1] mb-8 text-balance"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <span className="inline-block centered-heading-underline">Receipts, bank transactions, and expenses</span>—organized in one place.
+            <span className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text text-transparent">
+              Receipts, bank transactions, and expenses
+            </span>
+            <br />
+            <span className="text-primary font-extrabold">organized in one place.</span>
           </motion.h1>
           
           <motion.p
-            className="text-xl md:text-2xl text-foreground/70 mb-10 max-w-2xl mx-auto leading-relaxed"
+            className="text-xl md:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto leading-relaxed font-medium"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Automatically extract receipts from email and match them to your bank transactions.
+            Stop losing receipts and missing deductions. ExactusBooks automatically extracts receipts from your email and matches them to bank transactions—giving you perfect expense records without the manual work.
           </motion.p>
           
           <motion.div
@@ -113,17 +117,17 @@ export default function IntroScene() {
             <Button 
               onClick={scrollToEarlyAccess}
               size="lg" 
-              className="gradient-btn text-white font-medium px-8 py-6 text-sm rounded-md shadow-sm"
+              className="bg-primary hover:bg-primary/90 text-white font-semibold px-10 py-4 text-base rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-[1.02]"
             >
-              Get early access
+              Start Free Trial
             </Button>
             <Button 
               onClick={scrollToHowItWorks}
               size="lg" 
               variant="outline"
-              className="text-sm font-medium px-8 py-6 rounded-md shadow-sm border border-neutral-200 hover:bg-neutral-50 text-foreground/80"
+              className="bg-white/80 backdrop-blur-sm border-2 border-slate-200 hover:border-primary hover:bg-white text-slate-700 hover:text-primary font-semibold px-10 py-4 text-base rounded-xl shadow-sm hover:shadow-md transition-all duration-200"
             >
-              See how it works
+              See How It Works
             </Button>
           </motion.div>
         </div>
