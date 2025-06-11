@@ -52,27 +52,32 @@ export default function Savings() {
 
           {/* Money Savings */}
           <motion.div 
-            className="card-modern p-8 hover-lift"
+            className="relative bg-white rounded-2xl p-10 shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <div className="flex items-start mb-6">
-              <div className="w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center mr-4">
-                <DollarSign className="h-6 w-6 text-green-600" />
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-t-2xl"></div>
+            <div className="flex items-start mb-8">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center mr-6 shadow-lg">
+                <DollarSign className="h-8 w-8 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2">Money Saved</h3>
+                <h3 className="text-2xl font-bold mb-2 text-slate-900">Money Saved</h3>
               </div>
             </div>
-            <div className="space-y-4">
-              <p className="text-foreground/70">
-                Bookkeepers often charge $300–$500/month for manual expense tracking.
-              </p>
-              <p className="text-foreground font-medium">
-                ExactusBooks replaces that with smart, automated matching — at a fraction of the cost.
-              </p>
+            <div className="space-y-6">
+              <div className="bg-slate-50 rounded-xl p-6">
+                <p className="text-slate-600 text-lg leading-relaxed">
+                  Bookkeepers often charge <span className="font-bold text-slate-800">$300–$500/month</span> for manual expense tracking.
+                </p>
+              </div>
+              <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-6">
+                <p className="text-green-900 font-semibold text-lg leading-relaxed">
+                  ExactusBooks replaces that with smart, automated matching — at a fraction of the cost.
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -81,11 +86,11 @@ export default function Savings() {
           <Button 
             asChild
             size="lg"
-            className="group"
+            className="bg-primary hover:bg-primary/90 text-white font-semibold px-10 py-4 text-base rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 group"
           >
             <a href="#plans">
-              See how it compares
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              See How It Compares
+              <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </Button>
         </div>

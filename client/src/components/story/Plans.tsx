@@ -42,18 +42,21 @@ export default function Plans() {
   ];
 
   return (
-    <section id="plans" className="py-12 bg-muted/30 overflow-hidden">
+    <section id="plans" className="py-20 bg-gradient-to-br from-white to-slate-50 overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center justify-center p-2 mb-6 rounded-full bg-primary/10">
+            <span className="text-primary font-semibold text-sm px-4 py-1">Choose Your Plan</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
             Choose Your Plan
           </h2>
-          <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto font-medium">
             Select the plan that fits your business needs and workflow.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-7xl mx-auto">
           {plans.map((plan, index) => (
             <motion.div
               key={index}
@@ -61,11 +64,11 @@ export default function Plans() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`relative bg-white rounded-xl border ${
+              className={`relative bg-white rounded-2xl border ${
                 plan.isPopular 
-                  ? "border-primary shadow-lg" 
-                  : "border-border shadow-md"
-              } overflow-hidden hover-lift`}
+                  ? "border-2 border-primary shadow-xl transform scale-105" 
+                  : "border-slate-200 shadow-lg"
+              } overflow-hidden hover:shadow-xl transition-all duration-300`}
             >
               {plan.isPopular && (
                 <div className="absolute top-0 right-0">
@@ -76,22 +79,22 @@ export default function Plans() {
                 </div>
               )}
               
-              <div className="p-6">
-                <div className="bg-primary/5 -mx-6 -mt-6 p-6 mb-6">
-                  <div className="font-medium text-sm text-center mb-4">EARLY ACCESS</div>
-                  <h3 className="text-2xl font-bold mb-4 text-center">{plan.name}</h3>
-                  <p className="text-sm text-center text-foreground/70">
+              <div className="p-8">
+                <div className="bg-gradient-to-br from-slate-50 to-slate-100 -mx-8 -mt-8 p-8 mb-8">
+                  <div className="font-semibold text-sm text-center mb-6 text-primary">EARLY ACCESS</div>
+                  <h3 className="text-3xl font-bold mb-6 text-center text-slate-900">{plan.name}</h3>
+                  <p className="text-base text-center text-slate-600 leading-relaxed">
                     {plan.description}
                   </p>
                 </div>
                 
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-6 mb-10">
                   {plan.features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <span className="flex-shrink-0 h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
-                        <Check className="h-3 w-3 text-primary" />
+                    <li key={i} className="flex items-start gap-4">
+                      <span className="flex-shrink-0 h-6 w-6 rounded-full bg-primary/15 flex items-center justify-center mt-1">
+                        <Check className="h-4 w-4 text-primary" />
                       </span>
-                      <span className="text-foreground/90">{feature}</span>
+                      <span className="text-slate-700 text-base leading-relaxed">{feature}</span>
                     </li>
                   ))}
                 </ul>
