@@ -81,30 +81,30 @@ export default function IntroScene() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-8"
+            className="mb-6"
           >
-            <span className="inline-block bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent font-black text-2xl md:text-3xl tracking-wide">SMART EXPENSE MANAGEMENT</span>
+            <span className="inline-block text-primary font-semibold text-lg tracking-wide">SMART EXPENSE MANAGEMENT</span>
           </motion.div>
           
           <motion.h1 
-            className="font-heading text-6xl md:text-8xl lg:text-9xl font-black leading-[0.95] mb-12 text-balance max-w-7xl mx-auto"
+            className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8 text-balance max-w-5xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <span className="block text-slate-900 mb-2">
+            <span className="block text-slate-900 mb-1">
               Receipts, bank transactions,
             </span>
-            <span className="block text-slate-900 mb-2">
+            <span className="block text-slate-900 mb-1">
               and expenses
             </span>
-            <span className="block bg-gradient-to-r from-primary via-blue-600 to-purple-600 bg-clip-text text-transparent font-black">
+            <span className="block bg-gradient-to-r from-primary via-blue-600 to-purple-600 bg-clip-text text-transparent font-bold">
               organized in one place.
             </span>
           </motion.h1>
           
           <motion.p
-            className="text-2xl md:text-3xl lg:text-4xl text-slate-700 mb-16 max-w-6xl mx-auto leading-relaxed font-medium"
+            className="text-xl md:text-2xl text-slate-600 mb-12 max-w-4xl mx-auto leading-relaxed font-medium"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -113,7 +113,7 @@ export default function IntroScene() {
           </motion.p>
           
           <motion.div
-            className="flex flex-col lg:flex-row gap-6 justify-center items-center max-w-2xl mx-auto"
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-lg mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -121,7 +121,7 @@ export default function IntroScene() {
             <Button 
               onClick={scrollToEarlyAccess}
               size="lg" 
-              className="w-full lg:w-auto bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90 text-white font-black px-16 py-8 text-2xl rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-[1.08] border-0"
+              className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] border-0"
             >
               Start Free Trial
             </Button>
@@ -129,7 +129,7 @@ export default function IntroScene() {
               onClick={scrollToHowItWorks}
               variant="outline"
               size="lg"
-              className="w-full lg:w-auto bg-white/90 backdrop-blur-md border-4 border-slate-400 hover:border-primary hover:bg-white text-slate-900 hover:text-primary font-black px-16 py-8 text-2xl rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.08]"
+              className="w-full sm:w-auto bg-white/90 backdrop-blur-sm border-2 border-slate-300 hover:border-primary hover:bg-white text-slate-700 hover:text-primary font-semibold px-8 py-4 text-lg rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
             >
               See How It Works
             </Button>
