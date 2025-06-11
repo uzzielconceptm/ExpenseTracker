@@ -30,8 +30,8 @@ export default function StoryHeader() {
 
   return (
     <header 
-      className={`fixed w-full bg-white/98 backdrop-blur-sm z-50 transition-all duration-300 ${
-        isScrolled ? 'py-2 shadow-sm border-b border-neutral-100' : 'py-4'
+      className={`fixed w-full bg-white/95 backdrop-blur-md z-50 transition-all duration-300 ${
+        isScrolled ? 'py-3 shadow-lg border-b border-slate-200/50' : 'py-5'
       } ${chaosMode ? 'chaos-mode' : ''}`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
@@ -55,16 +55,16 @@ export default function StoryHeader() {
         </motion.div>
         
         {/* Desktop Navigation - Updated menu items */}
-        <nav className="hidden md:flex items-center space-x-8">
-          <a href="#features" className="text-foreground/80 hover:text-primary transition-colors text-sm font-medium">Features</a>
-          <a href="#savings" className="text-foreground/80 hover:text-primary transition-colors text-sm font-medium">Savings</a>
-          <a href="#plans" className="text-foreground/80 hover:text-primary transition-colors text-sm font-medium">Plans</a>
-          <a href="#security" className="text-foreground/80 hover:text-primary transition-colors text-sm font-medium">Security</a>
+        <nav className="hidden md:flex items-center space-x-10">
+          <a href="#features" className="text-slate-600 hover:text-primary transition-colors text-base font-medium">Features</a>
+          <a href="#savings" className="text-slate-600 hover:text-primary transition-colors text-base font-medium">Savings</a>
+          <a href="#plans" className="text-slate-600 hover:text-primary transition-colors text-base font-medium">Plans</a>
+          <a href="#security" className="text-slate-600 hover:text-primary transition-colors text-base font-medium">Security</a>
           <a 
             href="#early-access" 
-            className="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-md transition-all ml-4 text-sm font-medium"
+            className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-xl transition-all ml-6 text-base font-semibold shadow-md hover:shadow-lg transform hover:scale-[1.02]"
           >
-            Get early access
+            Start Free Trial
           </a>
         </nav>
         
@@ -88,7 +88,7 @@ export default function StoryHeader() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-white border-t absolute w-full left-0 py-3"
+            className="md:hidden bg-white/95 backdrop-blur-md border-t border-slate-200 absolute w-full left-0 py-4 shadow-lg"
           >
             <div className="container mx-auto px-4 flex flex-col space-y-4">
               <a 

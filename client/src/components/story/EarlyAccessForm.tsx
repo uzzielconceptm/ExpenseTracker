@@ -12,14 +12,15 @@ export default function StoryEarlyAccessForm() {
   // Removed automatic popup opening to prevent unwanted scrolling
 
   return (
-    <section id="early-access" className="py-8 relative">
+    <section id="early-access" className="py-20 relative">
       {/* Background elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white to-muted/50 -z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 -z-10"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.1),transparent_50%)] -z-10"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto">
           <motion.div 
-            className="bg-white rounded-2xl shadow-xl overflow-hidden"
+            className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-200"
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.7 }}
@@ -80,32 +81,32 @@ export default function StoryEarlyAccessForm() {
                   Join ExactusBooks early access and get special benefits only available to our founding members.
                 </p>
                 
-                <div className="space-y-4">
+                <div className="space-y-6">
                   <Button 
                     onClick={() => setIsOpen(true)}
                     size="lg"
-                    className="w-full bg-primary hover:bg-primary/90 text-white"
+                    className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-[1.02]"
                   >
-                    Join the waitlist
+                    Join the Waitlist
                   </Button>
                   
-                  <div className="flex justify-between gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <Button 
                       variant="outline"
-                      size="sm"
-                      className="flex-1"
+                      size="lg"
+                      className="flex-1 border-2 border-slate-200 hover:border-primary text-slate-700 hover:text-primary font-semibold py-3 rounded-xl transition-all duration-200"
                       onClick={() => window.open('https://calendly.com/exactusbooks/consultation', '_blank')}
                     >
-                      Talk to an expert
+                      Talk to Expert
                     </Button>
                     
                     <Button 
                       variant="outline"
-                      size="sm"
-                      className="flex-1"
+                      size="lg"
+                      className="flex-1 border-2 border-slate-200 hover:border-primary text-slate-700 hover:text-primary font-semibold py-3 rounded-xl transition-all duration-200"
                       onClick={() => setIsTrialOpen(true)}
                     >
-                      Start free trial
+                      Start Free Trial
                     </Button>
                   </div>
                 </div>
