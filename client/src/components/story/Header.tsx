@@ -34,42 +34,63 @@ export default function StoryHeader() {
         isScrolled ? 'py-3 shadow-lg border-b border-slate-200/50' : 'py-5'
       } ${chaosMode ? 'chaos-mode' : ''}`}
     >
-      <div className="container mx-auto px-4 flex justify-between items-center">
-        {/* Logo */}
-        <motion.div 
-          className="flex items-center"
-          animate={{
-            rotate: chaosMode ? [0, -2, 0, 2, 0] : 0
-          }}
-          transition={{
-            duration: 5,
-            repeat: chaosMode ? Infinity : 0,
-            repeatType: "reverse"
-          }}
-        >
-          {/* Updated brand name to ExactusBooks */}
-          <div className="flex items-center">
-            <Logo variant="icon" size="sm" colorMode="light" className="h-8 w-8 mr-2" />
-            <span className="font-bold text-xl">ExactusBooks</span>
+      <div className="container mx-auto px-4">
+        {/* Desktop Layout - Centered */}
+        <div className="hidden md:flex justify-center items-center">
+          <div className="flex items-center space-x-12">
+            {/* Logo */}
+            <motion.div 
+              className="flex items-center"
+              animate={{
+                rotate: chaosMode ? [0, -2, 0, 2, 0] : 0
+              }}
+              transition={{
+                duration: 5,
+                repeat: chaosMode ? Infinity : 0,
+                repeatType: "reverse"
+              }}
+            >
+              <div className="flex items-center">
+                <Logo variant="icon" size="sm" colorMode="light" className="h-8 w-8 mr-2" />
+                <span className="font-bold text-xl">ExactusBooks</span>
+              </div>
+            </motion.div>
+            
+            {/* Desktop Navigation */}
+            <nav className="flex items-center space-x-8">
+              <a href="#features" className="text-slate-600 hover:text-primary transition-colors text-base font-medium">Features</a>
+              <a href="#savings" className="text-slate-600 hover:text-primary transition-colors text-base font-medium">Savings</a>
+              <a href="#plans" className="text-slate-600 hover:text-primary transition-colors text-base font-medium">Plans</a>
+              <a href="#security" className="text-slate-600 hover:text-primary transition-colors text-base font-medium">Security</a>
+              <a 
+                href="#early-access" 
+                className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-xl transition-all ml-4 text-base font-semibold shadow-md hover:shadow-lg transform hover:scale-[1.02]"
+              >
+                Start Free Trial
+              </a>
+            </nav>
           </div>
-        </motion.div>
-        
-        {/* Desktop Navigation - Updated menu items */}
-        <nav className="hidden md:flex items-center space-x-10">
-          <a href="#features" className="text-slate-600 hover:text-primary transition-colors text-base font-medium">Features</a>
-          <a href="#savings" className="text-slate-600 hover:text-primary transition-colors text-base font-medium">Savings</a>
-          <a href="#plans" className="text-slate-600 hover:text-primary transition-colors text-base font-medium">Plans</a>
-          <a href="#security" className="text-slate-600 hover:text-primary transition-colors text-base font-medium">Security</a>
-          <a 
-            href="#early-access" 
-            className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-xl transition-all ml-6 text-base font-semibold shadow-md hover:shadow-lg transform hover:scale-[1.02]"
+        </div>
+
+        {/* Mobile Layout - Logo left, Menu right */}
+        <div className="flex md:hidden justify-between items-center">
+          <motion.div 
+            className="flex items-center"
+            animate={{
+              rotate: chaosMode ? [0, -2, 0, 2, 0] : 0
+            }}
+            transition={{
+              duration: 5,
+              repeat: chaosMode ? Infinity : 0,
+              repeatType: "reverse"
+            }}
           >
-            Start Free Trial
-          </a>
-        </nav>
-        
-        {/* Mobile Menu Button */}
-        <div className="flex items-center md:hidden">
+            <div className="flex items-center">
+              <Logo variant="icon" size="sm" colorMode="light" className="h-8 w-8 mr-2" />
+              <span className="font-bold text-xl">ExactusBooks</span>
+            </div>
+          </motion.div>
+          
           <button 
             className="text-foreground hover:text-primary focus:outline-none" 
             onClick={toggleMobileMenu}
