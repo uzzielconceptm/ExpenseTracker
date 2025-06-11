@@ -81,21 +81,21 @@ export default function IntroScene() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-4"
+            className="mb-6"
           >
-            <span className="inline-block text-primary font-semibold text-lg tracking-wide">SMART EXPENSE MANAGEMENT</span>
+            <span className="inline-block text-primary font-semibold text-xl md:text-2xl tracking-wide">SMART EXPENSE MANAGEMENT</span>
           </motion.div>
           
           <motion.h1 
-            className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-balance"
+            className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8 text-balance"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <span className="block text-slate-900 mb-1">
+            <span className="block text-slate-900 mb-2">
               Receipts, bank transactions,
             </span>
-            <span className="block text-slate-900 mb-1">
+            <span className="block text-slate-900 mb-2">
               and expenses
             </span>
             <span className="block bg-gradient-to-r from-primary via-blue-600 to-purple-600 bg-clip-text text-transparent font-bold">
@@ -104,7 +104,7 @@ export default function IntroScene() {
           </motion.h1>
           
           <motion.p
-            className="text-lg md:text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed font-medium"
+            className="text-xl md:text-2xl lg:text-3xl text-slate-600 mb-12 max-w-5xl mx-auto leading-relaxed font-medium"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
