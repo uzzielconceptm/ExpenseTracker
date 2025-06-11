@@ -81,184 +81,58 @@ export default function IntroScene() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-3"
+            className="mb-8"
           >
-            <span className="inline-block text-primary font-medium text-lg mb-4">Smart Expense Management</span>
+            <span className="inline-block bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent font-black text-2xl md:text-3xl tracking-wide">SMART EXPENSE MANAGEMENT</span>
           </motion.div>
           
           <motion.h1 
-            className="font-heading text-5xl md:text-7xl font-bold leading-[1.1] mb-8 text-balance"
+            className="font-heading text-6xl md:text-8xl lg:text-9xl font-black leading-[0.95] mb-12 text-balance max-w-7xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <span className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text text-transparent">
-              Receipts, bank transactions, and expenses
+            <span className="block text-slate-900 mb-2">
+              Receipts, bank transactions,
             </span>
-            <br />
-            <span className="text-primary font-extrabold">organized in one place.</span>
+            <span className="block text-slate-900 mb-2">
+              and expenses
+            </span>
+            <span className="block bg-gradient-to-r from-primary via-blue-600 to-purple-600 bg-clip-text text-transparent font-black">
+              organized in one place.
+            </span>
           </motion.h1>
           
           <motion.p
-            className="text-xl md:text-2xl text-slate-600 mb-8 max-w-4xl mx-auto leading-relaxed font-medium"
+            className="text-2xl md:text-3xl lg:text-4xl text-slate-700 mb-16 max-w-6xl mx-auto leading-relaxed font-medium"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             Stop losing receipts and missing deductions. ExactusBooks automatically extracts receipts from your email and matches them to bank transactions—giving you perfect expense records without the manual work.
           </motion.p>
-
+          
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12"
+            className="flex flex-col lg:flex-row gap-6 justify-center items-center max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <div className="text-center">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                <Mail className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2 text-slate-800">Auto Email Extraction</h3>
-              <p className="text-slate-600">Automatically finds and processes receipts from your inbox</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                <CreditCard className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2 text-slate-800">Smart Bank Matching</h3>
-              <p className="text-slate-600">Connects receipts to your bank transactions instantly</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                <FileCheck className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2 text-slate-800">Tax-Ready Reports</h3>
-              <p className="text-slate-600">Generate audit-ready expense reports in seconds</p>
-            </div>
-          </motion.div>
-          
-          <motion.div
-            className="flex flex-col sm:flex-row gap-6 justify-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-          >
             <Button 
               onClick={scrollToEarlyAccess}
               size="lg" 
-              className="bg-primary hover:bg-primary/90 text-white font-semibold px-10 py-4 text-base rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-[1.02]"
+              className="w-full lg:w-auto bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90 text-white font-black px-16 py-8 text-2xl rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-[1.08] border-0"
             >
               Start Free Trial
             </Button>
             <Button 
               onClick={scrollToHowItWorks}
-              size="lg" 
               variant="outline"
-              className="bg-white/80 backdrop-blur-sm border-2 border-slate-200 hover:border-primary hover:bg-white text-slate-700 hover:text-primary font-semibold px-10 py-4 text-base rounded-xl shadow-sm hover:shadow-md transition-all duration-200"
+              size="lg"
+              className="w-full lg:w-auto bg-white/90 backdrop-blur-md border-4 border-slate-400 hover:border-primary hover:bg-white text-slate-900 hover:text-primary font-black px-16 py-8 text-2xl rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.08]"
             >
               See How It Works
             </Button>
-          </motion.div>
-
-          {/* Social Proof & Stats */}
-          <motion.div
-            className="mt-16 max-w-6xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.0 }}
-          >
-            <div className="text-center mb-12">
-              <p className="text-slate-500 text-lg mb-8">Trusted by solopreneurs and small businesses</p>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-slate-800 mb-2">5-8</div>
-                  <div className="text-slate-600 text-sm">Hours saved monthly</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-slate-800 mb-2">99%</div>
-                  <div className="text-slate-600 text-sm">Accuracy rate</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-slate-800 mb-2">$500</div>
-                  <div className="text-slate-600 text-sm">Average monthly savings</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-slate-800 mb-2">2k+</div>
-                  <div className="text-slate-600 text-sm">Receipts processed daily</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Integration badges */}
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-slate-200 shadow-lg">
-              <div className="text-center mb-6">
-                <p className="text-slate-600 font-medium">Seamlessly integrates with</p>
-              </div>
-              <div className="grid grid-cols-2 md:grid-cols-6 gap-8 items-center justify-items-center">
-                <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-lg bg-red-50 flex items-center justify-center mb-2">
-                    <span className="text-red-600 font-bold text-lg">G</span>
-                  </div>
-                  <span className="text-sm text-slate-600">Gmail</span>
-                </div>
-                <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center mb-2">
-                    <span className="text-blue-600 font-bold text-lg">O</span>
-                  </div>
-                  <span className="text-sm text-slate-600">Outlook</span>
-                </div>
-                <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center mb-2">
-                    <span className="text-green-600 font-bold text-lg">$</span>
-                  </div>
-                  <span className="text-sm text-slate-600">Chase</span>
-                </div>
-                <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-lg bg-purple-50 flex items-center justify-center mb-2">
-                    <span className="text-purple-600 font-bold text-lg">A</span>
-                  </div>
-                  <span className="text-sm text-slate-600">AmEx</span>
-                </div>
-                <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-lg bg-orange-50 flex items-center justify-center mb-2">
-                    <span className="text-orange-600 font-bold text-lg">Q</span>
-                  </div>
-                  <span className="text-sm text-slate-600">QuickBooks</span>
-                </div>
-                <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-lg bg-slate-50 flex items-center justify-center mb-2">
-                    <span className="text-slate-600 font-bold text-lg">+</span>
-                  </div>
-                  <span className="text-sm text-slate-600">More</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Featured Testimonial */}
-            <motion.div
-              className="mt-16 bg-gradient-to-br from-slate-50 to-white rounded-3xl p-8 md:p-12 border border-slate-200 shadow-lg"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.2 }}
-            >
-              <div className="text-center max-w-4xl mx-auto">
-                <div className="text-6xl text-primary/20 mb-4">"</div>
-                <blockquote className="text-xl md:text-2xl text-slate-700 font-medium mb-8 leading-relaxed">
-                  ExactusBooks transformed how I handle expenses. What used to take me hours every month now happens automatically. I found $2,400 in missed deductions in my first quarter alone.
-                </blockquote>
-                <div className="flex items-center justify-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                    <span className="text-white font-bold text-lg">SJ</span>
-                  </div>
-                  <div className="text-left">
-                    <div className="font-semibold text-slate-800">Sarah Johnson</div>
-                    <div className="text-slate-600 text-sm">Freelance Marketing Consultant</div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
           </motion.div>
         </div>
       </div>
