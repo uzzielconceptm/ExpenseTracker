@@ -81,21 +81,21 @@ export default function IntroScene() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-6"
+            className="mb-4"
           >
-            <span className="inline-block text-primary font-semibold text-xl md:text-2xl tracking-wide">SMART EXPENSE MANAGEMENT</span>
+            <span className="inline-block text-primary font-semibold text-lg tracking-wide">SMART EXPENSE MANAGEMENT</span>
           </motion.div>
           
           <motion.h1 
-            className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8 text-balance"
+            className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-balance"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <span className="block text-slate-900 mb-2">
+            <span className="block text-slate-900 mb-1">
               Receipts, bank transactions,
             </span>
-            <span className="block text-slate-900 mb-2">
+            <span className="block text-slate-900 mb-1">
               and expenses
             </span>
             <span className="block bg-gradient-to-r from-primary via-blue-600 to-purple-600 bg-clip-text text-transparent font-bold">
@@ -104,13 +104,33 @@ export default function IntroScene() {
           </motion.h1>
           
           <motion.p
-            className="text-xl md:text-2xl lg:text-3xl text-slate-600 mb-12 max-w-5xl mx-auto leading-relaxed font-medium"
+            className="text-lg md:text-xl text-slate-600 mb-8 max-w-4xl mx-auto leading-relaxed font-medium"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Stop losing receipts and missing deductions. ExactusBooks automatically extracts receipts from your email and matches them to bank transactions—giving you perfect expense records without the manual work.
+            Stop losing receipts and missing deductions. ExactusBooks automatically extracts receipts from your email and matches them to bank transactions—giving you perfect expense records without the manual work. Our intelligent system learns from your spending patterns to categorize expenses accurately, while our automated reconciliation ensures every transaction is properly matched and organized for tax season.
           </motion.p>
+
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
+            <div className="text-center p-4">
+              <div className="text-2xl font-bold text-slate-800 mb-2">5-8 Hours</div>
+              <div className="text-slate-600">Saved monthly on expense tracking</div>
+            </div>
+            <div className="text-center p-4">
+              <div className="text-2xl font-bold text-slate-800 mb-2">99% Accuracy</div>
+              <div className="text-slate-600">Automated receipt matching</div>
+            </div>
+            <div className="text-center p-4">
+              <div className="text-2xl font-bold text-slate-800 mb-2">$2,400+</div>
+              <div className="text-slate-600">Average deductions recovered</div>
+            </div>
+          </motion.div>
           
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-lg mx-auto"
