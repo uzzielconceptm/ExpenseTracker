@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useChaos } from "@/lib/ChaosContext";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Mail, CreditCard, FileCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function IntroScene() {
@@ -100,19 +100,50 @@ export default function IntroScene() {
           </motion.h1>
           
           <motion.p
-            className="text-xl md:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto leading-relaxed font-medium"
+            className="text-xl md:text-2xl text-slate-600 mb-8 max-w-4xl mx-auto leading-relaxed font-medium"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             Stop losing receipts and missing deductions. ExactusBooks automatically extracts receipts from your email and matches them to bank transactions—giving you perfect expense records without the manual work.
           </motion.p>
-          
+
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <Mail className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2 text-slate-800">Auto Email Extraction</h3>
+              <p className="text-slate-600">Automatically finds and processes receipts from your inbox</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <CreditCard className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2 text-slate-800">Smart Bank Matching</h3>
+              <p className="text-slate-600">Connects receipts to your bank transactions instantly</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <FileCheck className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2 text-slate-800">Tax-Ready Reports</h3>
+              <p className="text-slate-600">Generate audit-ready expense reports in seconds</p>
+            </div>
+          </motion.div>
+          
+          <motion.div
+            className="flex flex-col sm:flex-row gap-6 justify-center"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
           >
             <Button 
               onClick={scrollToEarlyAccess}
@@ -129,6 +160,105 @@ export default function IntroScene() {
             >
               See How It Works
             </Button>
+          </motion.div>
+
+          {/* Social Proof & Stats */}
+          <motion.div
+            className="mt-16 max-w-6xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.0 }}
+          >
+            <div className="text-center mb-12">
+              <p className="text-slate-500 text-lg mb-8">Trusted by solopreneurs and small businesses</p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-slate-800 mb-2">5-8</div>
+                  <div className="text-slate-600 text-sm">Hours saved monthly</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-slate-800 mb-2">99%</div>
+                  <div className="text-slate-600 text-sm">Accuracy rate</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-slate-800 mb-2">$500</div>
+                  <div className="text-slate-600 text-sm">Average monthly savings</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-slate-800 mb-2">2k+</div>
+                  <div className="text-slate-600 text-sm">Receipts processed daily</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Integration badges */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-slate-200 shadow-lg">
+              <div className="text-center mb-6">
+                <p className="text-slate-600 font-medium">Seamlessly integrates with</p>
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-6 gap-8 items-center justify-items-center">
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 rounded-lg bg-red-50 flex items-center justify-center mb-2">
+                    <span className="text-red-600 font-bold text-lg">G</span>
+                  </div>
+                  <span className="text-sm text-slate-600">Gmail</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center mb-2">
+                    <span className="text-blue-600 font-bold text-lg">O</span>
+                  </div>
+                  <span className="text-sm text-slate-600">Outlook</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center mb-2">
+                    <span className="text-green-600 font-bold text-lg">$</span>
+                  </div>
+                  <span className="text-sm text-slate-600">Chase</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 rounded-lg bg-purple-50 flex items-center justify-center mb-2">
+                    <span className="text-purple-600 font-bold text-lg">A</span>
+                  </div>
+                  <span className="text-sm text-slate-600">AmEx</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 rounded-lg bg-orange-50 flex items-center justify-center mb-2">
+                    <span className="text-orange-600 font-bold text-lg">Q</span>
+                  </div>
+                  <span className="text-sm text-slate-600">QuickBooks</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 rounded-lg bg-slate-50 flex items-center justify-center mb-2">
+                    <span className="text-slate-600 font-bold text-lg">+</span>
+                  </div>
+                  <span className="text-sm text-slate-600">More</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Featured Testimonial */}
+            <motion.div
+              className="mt-16 bg-gradient-to-br from-slate-50 to-white rounded-3xl p-8 md:p-12 border border-slate-200 shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.2 }}
+            >
+              <div className="text-center max-w-4xl mx-auto">
+                <div className="text-6xl text-primary/20 mb-4">"</div>
+                <blockquote className="text-xl md:text-2xl text-slate-700 font-medium mb-8 leading-relaxed">
+                  ExactusBooks transformed how I handle expenses. What used to take me hours every month now happens automatically. I found $2,400 in missed deductions in my first quarter alone.
+                </blockquote>
+                <div className="flex items-center justify-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                    <span className="text-white font-bold text-lg">SJ</span>
+                  </div>
+                  <div className="text-left">
+                    <div className="font-semibold text-slate-800">Sarah Johnson</div>
+                    <div className="text-slate-600 text-sm">Freelance Marketing Consultant</div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>
