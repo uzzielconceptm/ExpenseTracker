@@ -7,6 +7,7 @@ import NotFound from "@/pages/not-found";
 import StoryLandingPage from "@/pages/StoryLandingPage";
 import LandingPage from "@/pages/LandingPage";
 import { ChaosProvider } from "./lib/ChaosContext";
+import { AuthProvider } from "./lib/AuthContext";
 
 function Router() {
   return (
@@ -22,12 +23,14 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <ChaosProvider>
-          <Toaster />
-          <Router />
-        </ChaosProvider>
-      </TooltipProvider>
+      <AuthProvider>
+        <TooltipProvider>
+          <ChaosProvider>
+            <Toaster />
+            <Router />
+          </ChaosProvider>
+        </TooltipProvider>
+      </AuthProvider>
     </QueryClientProvider>
   );
 }
