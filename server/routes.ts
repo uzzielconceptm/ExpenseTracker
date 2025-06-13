@@ -189,12 +189,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
         });
       }
 
+      // Generate temporary password for trial account
+      const tempPassword = Math.random().toString(36).substring(2, 15);
+      const hashedPassword = await authService.hashPassword(tempPassword);
+
       // Create user account for trial
       const userData = {
         username: validatedData.data.email,
+        password: hashedPassword,
         email: validatedData.data.email,
         fullName: validatedData.data.fullName,
-        company: validatedData.data.company,
       };
 
       const result = await storage.createUser(userData);
@@ -208,7 +212,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       return res.status(201).json({
         message: "Free trial account created successfully",
-        data: result
+        data: {
+          id: result.id,
+          email: result.email,
+          fullName: result.fullName,
+          temporaryPassword: tempPassword
+        }
       });
     } catch (error) {
       console.error(`Error processing trial signup: ${error}`);
