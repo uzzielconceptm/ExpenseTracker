@@ -6,6 +6,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import StoryLandingPage from "@/pages/StoryLandingPage";
 import LandingPage from "@/pages/LandingPage";
+import AuthPage from "@/pages/AuthPage";
+import Dashboard from "@/pages/Dashboard";
 import { ChaosProvider } from "./lib/ChaosContext";
 import { AuthProvider } from "./lib/AuthContext";
 
@@ -15,6 +17,10 @@ function Router() {
       <Route path="/" component={StoryLandingPage} />
       <Route path="/story" component={StoryLandingPage} />
       <Route path="/classic" component={LandingPage} />
+      <Route path="/auth" component={AuthPage} />
+      <Route path="/login" component={AuthPage} />
+      <Route path="/register" component={AuthPage} />
+      <Route path="/dashboard" component={Dashboard} />
       <Route component={NotFound} />
     </Switch>
   );

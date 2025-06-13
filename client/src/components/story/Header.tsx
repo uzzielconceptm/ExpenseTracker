@@ -1,13 +1,17 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, User, LogOut } from "lucide-react";
+import { Link } from "wouter";
 import { useChaos } from "@/lib/ChaosContext";
+import { useAuth } from "@/lib/AuthContext";
 import Logo from "@/assets/logo";
+import { Button } from "@/components/ui/button";
 
 export default function StoryHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { chaosMode } = useChaos();
+  const { user, logout, isAuthenticated } = useAuth();
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -62,12 +66,32 @@ export default function StoryHeader() {
               <a href="#savings" className="text-slate-600 hover:text-primary transition-colors text-base font-medium">Savings</a>
               <a href="#plans" className="text-slate-600 hover:text-primary transition-colors text-base font-medium">Plans</a>
               <a href="#security" className="text-slate-600 hover:text-primary transition-colors text-base font-medium">Security</a>
-              <a 
-                href="#early-access" 
-                className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-xl transition-all ml-4 text-base font-semibold shadow-md hover:shadow-lg transform hover:scale-[1.02]"
-              >
-                Start Free Trial
-              </a>
+              
+              {isAuthenticated ? (
+                <div className="flex items-center space-x-4 ml-4">
+                  <Link href="/dashboard">
+                    <Button variant="outline" size="sm">
+                      <User className="h-4 w-4 mr-2" />
+                      Dashboard
+                    </Button>
+                  </Link>
+                  <Button variant="outline" size="sm" onClick={logout}>
+                    <LogOut className="h-4 w-4 mr-2" />
+                    Logout
+                  </Button>
+                </div>
+              ) : (
+                <div className="flex items-center space-x-4 ml-4">
+                  <Link href="/auth">
+                    <Button variant="outline">Login</Button>
+                  </Link>
+                  <Link href="/auth">
+                    <Button className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-xl transition-all text-base font-semibold shadow-md hover:shadow-lg transform hover:scale-[1.02]">
+                      Start Free Trial
+                    </Button>
+                  </Link>
+                </div>
+              )}
             </nav>
           </div>
         </div>
