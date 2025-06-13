@@ -2,6 +2,7 @@ import {
   users, 
   type User, 
   type InsertUser,
+  updateUserSchema,
   earlyAccess,
   type EarlyAccess,
   type InsertEarlyAccess,
@@ -20,6 +21,7 @@ import {
   sessions,
   type Session
 } from "@shared/schema";
+import { z } from "zod";
 import { db } from "./db";
 import { eq, and, desc } from "drizzle-orm";
 
@@ -29,7 +31,7 @@ export interface IStorage {
   getUserByUsername(username: string): Promise<User | undefined>;
   getUserByEmail(email: string): Promise<User | undefined>;
   createUser(user: InsertUser): Promise<User>;
-  updateUser(id: number, user: Partial<InsertUser>): Promise<User | undefined>;
+  updateUser(id: number, user: z.infer<typeof updateUserSchema>): Promise<User | undefined>;
   
   // Early access operations
   createEarlyAccessEntry(entry: InsertEarlyAccess): Promise<EarlyAccess>;
@@ -92,7 +94,7 @@ export class DatabaseStorage implements IStorage {
     return user;
   }
   
-  async updateUser(id: number, userData: Partial<InsertUser>): Promise<User | undefined> {
+  async updateUser(id: number, userData: z.infer<typeof updateUserSchema>): Promise<User | undefined> {
     const [updatedUser] = await db
       .update(users)
       .set(userData)
@@ -263,6 +265,32 @@ export class DatabaseStorage implements IStorage {
       .delete(invoices)
       .where(eq(invoices.id, id))
       .returning({ id: invoices.id });
+    return result.length > 0;
+  }
+
+  // Session operations
+  async createSession(session: { id: string; userId: number; expiresAt: Date }): Promise<Session> {
+    const [newSession] = await db
+      .insert(sessions)
+      .values(session)
+      .returning();
+    return newSession;
+  }
+
+  async getSession(id: string): Promise<Session | undefined> {
+    const [session] = await db
+      .select()
+      .from(sessions)
+      .where(eq(sessions.id, id))
+      .limit(1);
+    return session;
+  }
+
+  async deleteSession(id: string): Promise<boolean> {
+    const result = await db
+      .delete(sessions)
+      .where(eq(sessions.id, id))
+      .returning({ id: sessions.id });
     return result.length > 0;
   }
 }

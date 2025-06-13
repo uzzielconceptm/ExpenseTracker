@@ -58,7 +58,8 @@ export class AuthService {
       return null;
     }
 
-    return storage.getUser(session.userId) || null;
+    const user = await storage.getUser(session.userId);
+    return user || null;
   }
 
   async deleteSession(sessionId: string): Promise<void> {

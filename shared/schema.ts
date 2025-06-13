@@ -56,6 +56,15 @@ export const insertUserSchema = createInsertSchema(users).pick({
   mobileNumber: true,
 });
 
+export const updateUserSchema = createInsertSchema(users).pick({
+  username: true,
+  password: true,
+  fullName: true,
+  email: true,
+  mobileNumber: true,
+  lastLogin: true,
+}).partial();
+
 // Linked financial accounts
 export const accounts = pgTable("accounts", {
   id: serial("id").primaryKey(),
