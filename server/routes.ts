@@ -52,6 +52,15 @@ const handleApiResponse = async (
 };
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Health check endpoint for Railway deployment
+  app.get('/health', (req, res) => {
+    res.status(200).json({ 
+      status: 'healthy',
+      timestamp: new Date().toISOString(),
+      port: process.env.PORT || 5000
+    });
+  });
+
   // Authentication routes
   app.post("/api/auth/register", async (req, res) => {
     try {
