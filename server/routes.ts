@@ -3,6 +3,8 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { z } from "zod";
 import { sendConfirmationEmail } from "./emailService";
+import { authService } from "./authService";
+import { requireAuth, optionalAuth, type AuthenticatedRequest } from "./authMiddleware";
 import { 
   insertEarlyAccessSchema, 
   insertUserSchema, 
@@ -10,7 +12,9 @@ import {
   insertExpenseSchema,
   insertTimeEntrySchema,
   insertInvoiceSchema,
-  categoryEnum
+  categoryEnum,
+  loginSchema,
+  registerSchema
 } from "@shared/schema";
 
 // Helper function for API responses
@@ -48,6 +52,92 @@ const handleApiResponse = async (
 };
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Authentication routes
+  app.post("/api/auth/register", async (req, res) => {
+    try {
+      const validatedData = registerSchema.safeParse(req.body);
+      
+      if (!validatedData.success) {
+        return res.status(400).json({ 
+          message: "Invalid registration data", 
+          errors: validatedData.error.format() 
+        });
+      }
+      
+      const result = await authService.register(validatedData.data);
+      
+      if (!result.success) {
+        return res.status(400).json({ message: result.error });
+      }
+      
+      return res.status(201).json({
+        message: "Registration successful",
+        user: result.user,
+        token: result.token
+      });
+    } catch (error) {
+      console.error(`Registration error: ${error}`);
+      return res.status(500).json({ message: "Registration failed" });
+    }
+  });
+
+  app.post("/api/auth/login", async (req, res) => {
+    try {
+      const validatedData = loginSchema.safeParse(req.body);
+      
+      if (!validatedData.success) {
+        return res.status(400).json({ 
+          message: "Invalid login data", 
+          errors: validatedData.error.format() 
+        });
+      }
+      
+      const result = await authService.login(validatedData.data);
+      
+      if (!result.success) {
+        return res.status(401).json({ message: result.error });
+      }
+      
+      return res.status(200).json({
+        message: "Login successful",
+        user: result.user,
+        token: result.token
+      });
+    } catch (error) {
+      console.error(`Login error: ${error}`);
+      return res.status(500).json({ message: "Login failed" });
+    }
+  });
+
+  app.post("/api/auth/logout", requireAuth, async (req: AuthenticatedRequest, res) => {
+    try {
+      if (req.sessionId) {
+        await authService.logout(req.sessionId);
+      }
+      
+      return res.status(200).json({ message: "Logout successful" });
+    } catch (error) {
+      console.error(`Logout error: ${error}`);
+      return res.status(500).json({ message: "Logout failed" });
+    }
+  });
+
+  app.get("/api/auth/me", requireAuth, async (req: AuthenticatedRequest, res) => {
+    try {
+      if (!req.user) {
+        return res.status(401).json({ message: "Not authenticated" });
+      }
+      
+      const { password, ...userWithoutPassword } = req.user;
+      
+      return res.status(200).json({
+        user: userWithoutPassword
+      });
+    } catch (error) {
+      console.error(`Get current user error: ${error}`);
+      return res.status(500).json({ message: "Failed to get user info" });
+    }
+  });
   // Early access form API endpoint
   app.post("/api/early-access", async (req, res) => {
     try {
