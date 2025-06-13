@@ -215,6 +215,21 @@ export const insertEarlyAccessSchema = createInsertSchema(earlyAccess).pick({
   monthlyExpenses: true,
 });
 
+// Sessions table for authentication
+export const sessions = pgTable("sessions", {
+  id: text("id").primaryKey(),
+  userId: integer("user_id").notNull().references(() => users.id),
+  expiresAt: timestamp("expires_at").notNull(),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
+export const sessionsRelations = relations(sessions, ({ one }) => ({
+  user: one(users, {
+    fields: [sessions.userId],
+    references: [users.id],
+  }),
+}));
+
 // Type definitions
 export type User = typeof users.$inferSelect;
 export type InsertUser = z.infer<typeof insertUserSchema>;
@@ -233,3 +248,21 @@ export type InsertInvoice = z.infer<typeof insertInvoiceSchema>;
 
 export type EarlyAccess = typeof earlyAccess.$inferSelect;
 export type InsertEarlyAccess = z.infer<typeof insertEarlyAccessSchema>;
+
+export type Session = typeof sessions.$inferSelect;
+
+// Auth schemas
+export const loginSchema = z.object({
+  email: z.string().email(),
+  password: z.string().min(6),
+});
+
+export const registerSchema = z.object({
+  email: z.string().email(),
+  password: z.string().min(6),
+  fullName: z.string().min(1),
+  username: z.string().min(3),
+});
+
+export type LoginCredentials = z.infer<typeof loginSchema>;
+export type RegisterCredentials = z.infer<typeof registerSchema>;

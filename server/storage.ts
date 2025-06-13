@@ -16,7 +16,9 @@ import {
   type InsertTimeEntry,
   invoices,
   type Invoice,
-  type InsertInvoice
+  type InsertInvoice,
+  sessions,
+  type Session
 } from "@shared/schema";
 import { db } from "./db";
 import { eq, and, desc } from "drizzle-orm";
@@ -61,6 +63,11 @@ export interface IStorage {
   getUserInvoices(userId: number): Promise<Invoice[]>;
   updateInvoice(id: number, invoice: Partial<InsertInvoice>): Promise<Invoice | undefined>;
   deleteInvoice(id: number): Promise<boolean>;
+  
+  // Session operations
+  createSession(session: { id: string; userId: number; expiresAt: Date }): Promise<Session>;
+  getSession(id: string): Promise<Session | undefined>;
+  deleteSession(id: string): Promise<boolean>;
 }
 
 export class DatabaseStorage implements IStorage {
