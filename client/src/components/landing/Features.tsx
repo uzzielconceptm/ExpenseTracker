@@ -55,7 +55,7 @@ export default function Features() {
   ];
 
   return (
-    <section id="features" className="py-6 md:py-8 bg-neutral-100 px-4">
+    <section id="features" className="py-6 md:py-8 px-4 relative overflow-hidden bg-gradient-to-br from-slate-50/90 via-blue-50/60 to-teal-50/70">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-4">
           <h2 className="font-heading font-bold text-3xl md:text-4xl mb-3">Powerful Features for Busy Solopreneurs</h2>

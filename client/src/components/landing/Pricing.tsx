@@ -54,7 +54,7 @@ export default function Pricing() {
   ];
 
   return (
-    <section id="pricing" className="py-6 md:py-8 px-4">
+    <section id="pricing" className="py-6 md:py-8 px-4 relative overflow-hidden bg-gradient-to-br from-white via-purple-50/40 to-teal-50/60">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-4">
           <h2 className="font-heading font-bold text-3xl md:text-4xl mb-3">Choose Your Plan</h2>

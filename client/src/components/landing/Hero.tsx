@@ -3,7 +3,7 @@ import { fadeIn, slideUp } from "@/lib/animations";
 
 export default function Hero() {
   return (
-    <section id="hero" className="pt-6 pb-2 md:pt-8 md:pb-3 px-4">
+    <section id="hero" className="pt-6 pb-2 md:pt-8 md:pb-3 px-4 relative overflow-hidden bg-gradient-to-br from-white via-blue-50/30 to-slate-50/60">
       <div className="container mx-auto max-w-6xl pt-0">
         <div className="grid md:grid-cols-2 gap-4 items-center">
           <motion.div 
