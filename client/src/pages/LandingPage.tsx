@@ -32,13 +32,20 @@ export default function LandingPage() {
   }, []);
 
   return (
-    <div className="font-sans text-neutral-900 bg-white">
+    <div className="font-sans text-neutral-900 relative min-h-screen">
+      {/* Floating geometric shapes */}
+      <div className="floating-shapes"></div>
+      
       <Header />
       <main>
         <Hero />
-        <Features />
+        <div className="section-gradient">
+          <Features />
+        </div>
         <Demo />
-        <Testimonials />
+        <div className="section-gradient">
+          <Testimonials />
+        </div>
         <Pricing />
         <EarlyAccessForm />
       </main>
