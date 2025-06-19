@@ -3,7 +3,16 @@ import { fadeIn, slideUp } from "@/lib/animations";
 
 export default function Hero() {
   return (
-    <section id="hero" className="pt-6 pb-2 md:pt-8 md:pb-3 px-4 relative overflow-hidden bg-gradient-to-br from-sky-50 via-blue-50 to-slate-100">
+    <section id="hero" className="pt-6 pb-2 md:pt-8 md:pb-3 px-4 relative overflow-hidden">
+      {/* Enhanced section background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-sky-100 via-blue-50 to-slate-100"></div>
+      <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-indigo-50/50 to-transparent"></div>
+      <div className="absolute inset-0 opacity-30" 
+           style={{
+             backgroundImage: `radial-gradient(circle at 15% 15%, rgba(59, 130, 246, 0.25) 0%, transparent 50%),
+                              radial-gradient(circle at 85% 85%, rgba(14, 165, 233, 0.20) 0%, transparent 50%)`
+           }}>
+      </div>
       <div className="container mx-auto max-w-6xl pt-0">
         <div className="grid md:grid-cols-2 gap-4 items-center">
           <motion.div 

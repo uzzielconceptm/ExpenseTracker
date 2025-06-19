@@ -54,7 +54,16 @@ export default function Pricing() {
   ];
 
   return (
-    <section id="pricing" className="py-6 md:py-8 px-4 relative overflow-hidden bg-gradient-to-br from-emerald-50 via-cyan-50 to-blue-50">
+    <section id="pricing" className="py-6 md:py-8 px-4 relative overflow-hidden">
+      {/* Enhanced section background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-emerald-100 via-teal-50 to-cyan-100"></div>
+      <div className="absolute inset-0 bg-gradient-to-bl from-transparent via-green-50/40 to-transparent"></div>
+      <div className="absolute inset-0 opacity-35" 
+           style={{
+             backgroundImage: `radial-gradient(circle at 30% 30%, rgba(34, 197, 94, 0.20) 0%, transparent 55%),
+                              radial-gradient(circle at 70% 70%, rgba(20, 184, 166, 0.18) 0%, transparent 55%)`
+           }}>
+      </div>
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-4">
           <h2 className="font-heading font-bold text-3xl md:text-4xl mb-3">Choose Your Plan</h2>

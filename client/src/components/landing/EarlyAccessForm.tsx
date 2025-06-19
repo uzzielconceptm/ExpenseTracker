@@ -59,7 +59,16 @@ export default function EarlyAccessForm() {
   };
 
   return (
-    <section id="early-access" className="py-6 md:py-8 px-4 relative overflow-hidden bg-gradient-to-br from-violet-50 via-purple-50 to-indigo-50">
+    <section id="early-access" className="py-6 md:py-8 px-4 relative overflow-hidden">
+      {/* Enhanced section background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-violet-100 via-fuchsia-50 to-purple-100"></div>
+      <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-pink-50/40 to-transparent"></div>
+      <div className="absolute inset-0 opacity-35" 
+           style={{
+             backgroundImage: `radial-gradient(circle at 40% 20%, rgba(168, 85, 247, 0.22) 0%, transparent 60%),
+                              radial-gradient(circle at 60% 80%, rgba(217, 70, 239, 0.18) 0%, transparent 60%)`
+           }}>
+      </div>
       <div className="container mx-auto max-w-6xl">
         <motion.div 
           className="bg-white rounded-2xl shadow-xl p-6 md:p-8 max-w-4xl mx-auto"

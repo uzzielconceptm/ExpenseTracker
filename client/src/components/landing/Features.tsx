@@ -55,7 +55,16 @@ export default function Features() {
   ];
 
   return (
-    <section id="features" className="py-6 md:py-8 px-4 relative overflow-hidden bg-gradient-to-br from-blue-50 via-slate-100 to-teal-50">
+    <section id="features" className="py-6 md:py-8 px-4 relative overflow-hidden">
+      {/* Enhanced section background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-indigo-50 to-teal-100"></div>
+      <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-purple-50/30 to-transparent"></div>
+      <div className="absolute inset-0 opacity-40" 
+           style={{
+             backgroundImage: `radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+                              radial-gradient(circle at 75% 75%, rgba(20, 184, 166, 0.12) 0%, transparent 50%)`
+           }}>
+      </div>
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-4">
           <h2 className="font-heading font-bold text-3xl md:text-4xl mb-3">Powerful Features for Busy Solopreneurs</h2>

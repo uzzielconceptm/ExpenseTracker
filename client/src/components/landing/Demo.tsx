@@ -55,7 +55,16 @@ export default function Demo() {
   };
 
   return (
-    <section id="demo" className="py-6 md:py-8 px-4 relative overflow-hidden bg-gradient-to-br from-slate-50 via-indigo-50 to-purple-50">
+    <section id="demo" className="py-6 md:py-8 px-4 relative overflow-hidden">
+      {/* Enhanced section background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-100 via-pink-50 to-indigo-100"></div>
+      <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-blue-50/40 to-transparent"></div>
+      <div className="absolute inset-0 opacity-35" 
+           style={{
+             backgroundImage: `radial-gradient(circle at 20% 80%, rgba(168, 85, 247, 0.18) 0%, transparent 50%),
+                              radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.15) 0%, transparent 50%)`
+           }}>
+      </div>
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-4">
           <h2 className="font-heading font-bold text-3xl md:text-4xl mb-3">See How It Works</h2>
