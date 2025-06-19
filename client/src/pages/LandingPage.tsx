@@ -66,10 +66,15 @@ export default function LandingPage() {
         <div className="absolute top-1/2 right-10 w-28 h-28 bg-gradient-to-br from-indigo-400/20 to-purple-400/25 rounded-full blur-md animate-bounce" style={{animationDuration: '4s', animationDelay: '0.5s'}}></div>
         
         {/* Additional floating elements for complete coverage */}
-        <div className="absolute top-1/3 left-1/3 w-24 h-24 bg-gradient-to-br from-emerald-400/15 to-teal-400/20 rounded-full blur-sm animate-pulse" style={{animationDelay: '2s'}}></div>
-        <div className="absolute bottom-1/4 right-1/3 w-20 h-20 bg-gradient-to-br from-violet-400/18 to-purple-400/15 rounded-full blur-sm animate-bounce" style={{animationDuration: '5s', animationDelay: '1.5s'}}></div>
-        <div className="absolute top-3/4 left-1/5 w-32 h-32 bg-gradient-to-br from-cyan-400/20 to-blue-400/15 rounded-full blur-md animate-pulse" style={{animationDelay: '3s'}}></div>
-        <div className="absolute top-1/6 right-1/4 w-18 h-18 bg-gradient-to-br from-pink-400/12 to-rose-400/18 rounded-full blur-sm animate-bounce" style={{animationDuration: '6s'}}></div>
+        <div className="absolute top-1/3 left-1/3 w-32 h-32 bg-gradient-to-br from-emerald-400/20 to-teal-400/25 rounded-full blur-sm animate-pulse" style={{animationDelay: '2s'}}></div>
+        <div className="absolute bottom-1/4 right-1/3 w-28 h-28 bg-gradient-to-br from-violet-400/22 to-purple-400/18 rounded-full blur-sm animate-bounce" style={{animationDuration: '5s', animationDelay: '1.5s'}}></div>
+        <div className="absolute top-3/4 left-1/5 w-40 h-40 bg-gradient-to-br from-cyan-400/25 to-blue-400/20 rounded-full blur-md animate-pulse" style={{animationDelay: '3s'}}></div>
+        <div className="absolute top-1/6 right-1/4 w-24 h-24 bg-gradient-to-br from-pink-400/18 to-rose-400/22 rounded-full blur-sm animate-bounce" style={{animationDuration: '6s'}}></div>
+        
+        {/* Additional sophisticated elements */}
+        <div className="absolute top-1/5 left-1/6 w-16 h-16 bg-gradient-to-br from-amber-400/15 to-orange-400/20 rounded-full blur-sm animate-pulse" style={{animationDelay: '4s'}}></div>
+        <div className="absolute bottom-1/3 right-1/6 w-22 h-22 bg-gradient-to-br from-lime-400/18 to-green-400/15 rounded-full blur-sm animate-bounce" style={{animationDuration: '7s', animationDelay: '2.5s'}}></div>
+        <div className="absolute top-2/5 left-4/5 w-18 h-18 bg-gradient-to-br from-red-400/12 to-pink-400/18 rounded-full blur-sm animate-pulse" style={{animationDelay: '5s'}}></div>
       </div>
       
       <Header />
