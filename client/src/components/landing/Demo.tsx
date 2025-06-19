@@ -55,7 +55,7 @@ export default function Demo() {
   };
 
   return (
-    <section id="demo" className="py-6 md:py-8 px-4 relative overflow-hidden bg-gradient-to-br from-white via-slate-50/80 to-blue-50/50">
+    <section id="demo" className="py-6 md:py-8 px-4 relative overflow-hidden bg-gradient-to-br from-slate-50 via-indigo-50 to-purple-50">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-4">
           <h2 className="font-heading font-bold text-3xl md:text-4xl mb-3">See How It Works</h2>
