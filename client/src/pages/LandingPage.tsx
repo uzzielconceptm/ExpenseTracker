@@ -36,12 +36,34 @@ export default function LandingPage() {
       {/* Enhanced floating geometric shapes */}
       <div className="floating-shapes"></div>
       
-      {/* Additional visible background elements */}
+      {/* Large dramatic background elements */}
       <div className="fixed inset-0 pointer-events-none z-[-1]">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-blue-400/20 to-teal-400/15 rounded-full blur-sm animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-br from-purple-400/15 to-blue-400/20 rounded-full blur-sm animate-bounce" style={{animationDuration: '3s'}}></div>
-        <div className="absolute bottom-32 left-1/4 w-28 h-28 bg-gradient-to-br from-teal-400/20 to-cyan-400/15 rounded-full blur-sm animate-pulse" style={{animationDelay: '1s'}}></div>
-        <div className="absolute top-1/2 right-10 w-20 h-20 bg-gradient-to-br from-indigo-400/15 to-purple-400/20 rounded-full blur-sm animate-bounce" style={{animationDuration: '4s', animationDelay: '0.5s'}}></div>
+        {/* Large moving gradient orb */}
+        <div 
+          className="absolute w-96 h-96 bg-gradient-to-br from-blue-500/30 to-purple-500/20 rounded-full blur-xl"
+          style={{
+            top: '10%',
+            right: '5%',
+            animation: 'mega-drift 15s ease-in-out infinite'
+          }}
+        ></div>
+        
+        {/* Second large moving orb */}
+        <div 
+          className="absolute w-80 h-80 bg-gradient-to-br from-teal-500/25 to-cyan-500/20 rounded-full blur-xl"
+          style={{
+            bottom: '15%',
+            left: '8%',
+            animation: 'mega-drift 20s ease-in-out infinite reverse',
+            animationDelay: '-5s'
+          }}
+        ></div>
+        
+        {/* Medium floating elements */}
+        <div className="absolute top-20 left-10 w-40 h-40 bg-gradient-to-br from-blue-400/25 to-teal-400/20 rounded-full blur-md animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-32 h-32 bg-gradient-to-br from-purple-400/20 to-blue-400/25 rounded-full blur-md animate-bounce" style={{animationDuration: '3s'}}></div>
+        <div className="absolute bottom-32 left-1/4 w-36 h-36 bg-gradient-to-br from-teal-400/25 to-cyan-400/20 rounded-full blur-md animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-1/2 right-10 w-28 h-28 bg-gradient-to-br from-indigo-400/20 to-purple-400/25 rounded-full blur-md animate-bounce" style={{animationDuration: '4s', animationDelay: '0.5s'}}></div>
       </div>
       
       <Header />

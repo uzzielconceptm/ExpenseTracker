@@ -152,6 +152,13 @@
     100% { transform: translateX(100%); }
   }
 
+  @keyframes mega-drift {
+    0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+    25% { transform: translate(100px, -50px) rotate(90deg) scale(1.1); }
+    50% { transform: translate(-50px, -100px) rotate(180deg) scale(0.9); }
+    75% { transform: translate(-100px, 50px) rotate(270deg) scale(1.05); }
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Outfit', sans-serif;
     letter-spacing: -0.02em;
