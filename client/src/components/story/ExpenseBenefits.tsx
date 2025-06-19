@@ -1,9 +1,12 @@
 import { useState } from "react";
-import { AlertTriangle, LightbulbIcon, Check, Camera, CreditCard, PieChart, FileCheck, Settings } from "lucide-react";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Check, Camera, Clock, PieChart, Star, CreditCard, FileCheck, AlertTriangle, LightbulbIcon, Settings } from "lucide-react";
 
 export default function ExpenseBenefits() {
   const [activeTab, setActiveTab] = useState(0);
 
+  // Pain & Benefit sections
   const painAndBenefitSection = () => (
     <div className="mb-8">
       <div className="text-center mb-16">
@@ -247,27 +250,160 @@ export default function ExpenseBenefits() {
               </div>
             </div>
 
-            {/* Tab content */}
-            <div className="max-w-4xl mx-auto">
-              <div className="card-modern p-8 md:p-12">
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                    {featureTabs[activeTab].content.title}
-                  </h3>
-                  <p className="text-lg text-foreground/70">
-                    {featureTabs[activeTab].content.description}
-                  </p>
+            {/* Tab content with visual */}
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                {/* Text content */}
+                <div className="order-2 lg:order-1">
+                  <motion.div
+                    key={activeTab}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <h3 className="text-2xl font-bold subtle-heading-underline mb-4">{featureTabs[activeTab].content.title}</h3>
+                    <p className="text-foreground/70 mt-6">{featureTabs[activeTab].content.description}</p>
+                    
+                    <ul className="space-y-4 my-8">
+                      {featureTabs[activeTab].content.features.map((feature, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <span className="flex-shrink-0 h-5 w-5 rounded-sm bg-primary/10 flex items-center justify-center mt-0.5">
+                            <Check className="h-3 w-3 text-primary" />
+                          </span>
+                          <span className="text-foreground/80 text-sm">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    
+                    <Button 
+                      className="mt-8 px-6 gradient-btn rounded-md shadow-sm text-sm font-medium" 
+                      size="default"
+                      onClick={() => window.location.href = '#early-access'}
+                    >
+                      Get early access
+                    </Button>
+                  </motion.div>
                 </div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {featureTabs[activeTab].content.features.map((feature, i) => (
-                    <div key={i} className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <Check className="h-4 w-4 text-primary" />
+                {/* Visual content */}
+                <div className="order-1 lg:order-2 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-sm border border-neutral-100 aspect-[4/3] flex items-center justify-center overflow-hidden">
+                    <div className="relative w-full max-w-md mx-auto">
+                      <div className="card-modern shadow-md overflow-hidden">
+                        <div className="p-4 border-b border-neutral-100 bg-neutral-50/50">
+                          <div className="flex justify-between items-center">
+                            <h4 className="font-medium text-base text-foreground/90">ExactusBooks Dashboard</h4>
+                            <div className="flex gap-2">
+                              <Button variant="outline" size="sm" className="text-xs h-8 rounded-sm border-neutral-200 bg-white">
+                                <FileCheck className="h-3.5 w-3.5 mr-1" />
+                                Export
+                              </Button>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        {/* Content depends on active tab */}
+                        {activeTab === 0 && (
+                          <div className="p-4">
+                            <div className="grid grid-cols-2 gap-4 mb-4">
+                              <div className="p-4 border border-dashed border-border rounded-lg flex flex-col items-center justify-center">
+                                <Camera className="h-8 w-8 text-muted-foreground mb-2" />
+                                <p className="text-sm text-muted-foreground">Tap to scan</p>
+                              </div>
+                              <div className="bg-muted/30 rounded-lg p-3 h-32 flex flex-col justify-between">
+                                <div className="flex items-center gap-2 mb-2">
+                                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                                  <span className="text-xs text-foreground/70">Auto-extracted</span>
+                                </div>
+                                <div>
+                                  <p className="text-sm font-medium">Starbucks Coffee</p>
+                                  <p className="text-xs text-muted-foreground">$4.95 • Business meals</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="space-y-2">
+                              <div className="flex justify-between text-sm">
+                                <span>Recent extractions</span>
+                                <span className="text-primary">24 today</span>
+                              </div>
+                              <div className="h-2 bg-muted rounded-full overflow-hidden">
+                                <div className="h-full bg-primary rounded-full w-3/4"></div>
+                              </div>
+                            </div>
+                          </div>
+                        )}
+
+                        {activeTab === 1 && (
+                          <div className="p-4">
+                            <div className="space-y-3">
+                              <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg border-l-4 border-green-500">
+                                <div className="flex items-center gap-3">
+                                  <CreditCard className="h-5 w-5 text-green-600" />
+                                  <div>
+                                    <p className="text-sm font-medium">Wells Fargo ****4532</p>
+                                    <p className="text-xs text-muted-foreground">Amazon.com - $49.99</p>
+                                  </div>
+                                </div>
+                                <Check className="h-5 w-5 text-green-600" />
+                              </div>
+                              
+                              <div className="flex items-center justify-between p-3 bg-yellow-50 rounded-lg border-l-4 border-yellow-500">
+                                <div className="flex items-center gap-3">
+                                  <Clock className="h-5 w-5 text-yellow-600" />
+                                  <div>
+                                    <p className="text-sm font-medium">Chase ****1234</p>
+                                    <p className="text-xs text-muted-foreground">Gas Station - $45.00</p>
+                                  </div>
+                                </div>
+                                <span className="text-xs text-yellow-600">Pending</span>
+                              </div>
+                            </div>
+                            
+                            <div className="mt-4 pt-4 border-t">
+                              <div className="flex justify-between text-sm">
+                                <span>Matched this month</span>
+                                <span className="text-primary font-medium">98.5%</span>
+                              </div>
+                            </div>
+                          </div>
+                        )}
+
+                        {activeTab === 2 && (
+                          <div className="p-4">
+                            <div className="grid grid-cols-2 gap-4 mb-4">
+                              <div className="text-center">
+                                <div className="text-2xl font-bold text-primary">$12,450</div>
+                                <p className="text-xs text-muted-foreground">Deductible expenses</p>
+                              </div>
+                              <div className="text-center">
+                                <div className="text-2xl font-bold text-green-600">$3,115</div>
+                                <p className="text-xs text-muted-foreground">Tax savings</p>
+                              </div>
+                            </div>
+                            
+                            <div className="space-y-2">
+                              <div className="flex justify-between text-sm">
+                                <span>Office supplies</span>
+                                <span>$2,340</span>
+                              </div>
+                              <div className="flex justify-between text-sm">
+                                <span>Business meals</span>
+                                <span>$1,890</span>
+                              </div>
+                              <div className="flex justify-between text-sm">
+                                <span>Travel</span>
+                                <span>$3,220</span>
+                              </div>
+                            </div>
+                            
+                            <Button size="sm" className="w-full mt-4 text-xs">
+                              Generate tax report
+                            </Button>
+                          </div>
+                        )}
                       </div>
-                      <p className="text-foreground/80">{feature}</p>
                     </div>
-                  ))}
+                  </div>
                 </div>
               </div>
             </div>
