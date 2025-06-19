@@ -22,12 +22,12 @@ export default function HowItWorks() {
              backgroundSize: '100px 100px'
            }}>
       </div>
-      <div className="container mx-auto px-4">
+      <div className="relative container mx-auto px-4">
         <div className="text-center mb-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
             How It Works
           </h2>
-          <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
             Three simple steps to organize your business expenses
           </p>
         </div>
@@ -48,8 +48,8 @@ export default function HowItWorks() {
                 </div>
                 
                 <Mail className="h-10 w-10 text-primary mb-5" />
-                <h3 className="text-lg font-bold mb-3">Connect your email</h3>
-                <p className="text-foreground/70 text-sm">
+                <h3 className="text-lg font-bold mb-3 text-gray-900">Connect your email</h3>
+                <p className="text-gray-700 text-sm">
                   Securely link your Gmail or Outlook account. We'll automatically find receipts without any manual searching.
                 </p>
               </div>
@@ -65,8 +65,8 @@ export default function HowItWorks() {
                 </div>
                 
                 <CreditCard className="h-10 w-10 text-primary mb-5" />
-                <h3 className="text-lg font-bold mb-3">We find receipts and match them</h3>
-                <p className="text-foreground/70 text-sm">
+                <h3 className="text-lg font-bold mb-3 text-gray-900">We find receipts and match them</h3>
+                <p className="text-gray-700 text-sm">
                   Our AI automatically extracts receipt data and matches it to your bank and card transactions.
                 </p>
               </div>
@@ -82,8 +82,8 @@ export default function HowItWorks() {
                 </div>
                 
                 <FileCheck className="h-10 w-10 text-primary mb-5" />
-                <h3 className="text-lg font-bold mb-3">You get clean, audit-ready records</h3>
-                <p className="text-foreground/70 text-sm">
+                <h3 className="text-lg font-bold mb-3 text-gray-900">You get clean, audit-ready records</h3>
+                <p className="text-gray-700 text-sm">
                   Access organized expenses with categorized transactions and downloadable reports anytime.
                 </p>
               </div>
@@ -98,9 +98,9 @@ export default function HowItWorks() {
               </div>
               
               <div>
-                <span className="text-primary/80 font-medium text-sm block mb-2">Optional Feature</span>
-                <h3 className="text-xl font-bold mb-3 subtle-heading-underline">For Paper Receipts Too</h3>
-                <p className="text-foreground/70 text-sm mb-4">
+                <span className="text-primary font-medium text-sm block mb-2">Optional Feature</span>
+                <h3 className="text-xl font-bold mb-3 subtle-heading-underline text-gray-900">For Paper Receipts Too</h3>
+                <p className="text-gray-700 text-sm mb-4">
                   Have physical receipts? No problem. Simply snap a photo with your phone, and ExactusBooks' 
                   OCR technology extracts all the data automatically. All your receipts organized in one place — 
                   digital and physical.
@@ -109,7 +109,7 @@ export default function HowItWorks() {
                   <span className="flex-shrink-0 h-5 w-5 rounded-sm bg-primary/10 flex items-center justify-center mr-2">
                     <Check className="h-3 w-3 text-primary" />
                   </span>
-                  <span className="text-foreground/80 text-sm">Automatic text recognition for paper receipts</span>
+                  <span className="text-gray-700 text-sm">Automatic text recognition for paper receipts</span>
                 </div>
               </div>
             </div>
