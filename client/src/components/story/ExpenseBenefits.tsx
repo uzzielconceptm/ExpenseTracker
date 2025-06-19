@@ -5,13 +5,14 @@ export default function ExpenseBenefits() {
   const [activeTab, setActiveTab] = useState(0);
 
   const painAndBenefitSection = () => (
-    <div className="mb-12">
-      <div className="text-center mb-12">
+    <div className="mb-8">
+      <div className="text-center mb-16">
+        <span className="inline-block text-primary font-medium text-base mb-3">Pain Points & Solutions</span>
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
-          <span className="inline-block centered-heading-underline">Stop losing money</span> to poor expense tracking
+          <span className="inline-block centered-heading-underline">Why most expense tools fail</span> solo workers
         </h2>
-        <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-          Most expense tools are built for big companies with accounting teams. We built ExactusBooks for solo workers who need something that actually works.
+        <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
+          We've designed ExactusBooks to address the specific challenges solo entrepreneurs face
         </p>
       </div>
       
@@ -34,11 +35,11 @@ export default function ExpenseBenefits() {
             <div className="bg-muted/30 p-4 rounded-lg">
               <div className="flex items-start gap-3">
                 <div className="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
-                  <span className="text-red-500 font-bold text-sm">×</span>
+                  <span className="text-red-500 font-bold">1</span>
                 </div>
                 <div>
-                  <p className="font-medium">You manually enter every expense</p>
-                  <p className="text-sm text-foreground/70">Typing receipts by hand is slow and error-prone</p>
+                  <p className="font-medium">Manual data entry is error-prone</p>
+                  <p className="text-sm text-foreground/70">Typing each receipt wastes hours of your valuable time</p>
                 </div>
               </div>
             </div>
@@ -46,11 +47,11 @@ export default function ExpenseBenefits() {
             <div className="bg-muted/30 p-4 rounded-lg">
               <div className="flex items-start gap-3">
                 <div className="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
-                  <span className="text-red-500 font-bold text-sm">×</span>
+                  <span className="text-red-500 font-bold">2</span>
                 </div>
                 <div>
-                  <p className="font-medium">Receipts get lost in email chaos</p>
-                  <p className="text-sm text-foreground/70">Finding that one receipt from three months ago takes forever</p>
+                  <p className="font-medium">Lost receipts means lost deductions</p>
+                  <p className="text-sm text-foreground/70">Missing just one receipt can cost you hundreds in tax deductions</p>
                 </div>
               </div>
             </div>
@@ -58,7 +59,7 @@ export default function ExpenseBenefits() {
             <div className="bg-muted/30 p-4 rounded-lg">
               <div className="flex items-start gap-3">
                 <div className="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
-                  <span className="text-red-500 font-bold text-sm">×</span>
+                  <span className="text-red-500 font-bold">3</span>
                 </div>
                 <div>
                   <p className="font-medium">Tax time becomes a nightmare</p>
@@ -91,7 +92,7 @@ export default function ExpenseBenefits() {
                 </div>
                 <div>
                   <p className="font-medium">Automatic receipt extraction</p>
-                  <p className="text-sm text-foreground/70">We scan your email for receipts so you don't have to search</p>
+                  <p className="text-sm text-foreground/70">Our system automatically scans your email and extracts all receipts</p>
                 </div>
               </div>
             </div>
@@ -102,8 +103,8 @@ export default function ExpenseBenefits() {
                   <Check className="h-5 w-5 text-green-500" />
                 </div>
                 <div>
-                  <p className="font-medium">Receipt-to-bank matching</p>
-                  <p className="text-sm text-foreground/70">Receipts automatically pair with your bank transactions</p>
+                  <p className="font-medium">Smart categorization</p>
+                  <p className="text-sm text-foreground/70">AI automatically categorizes expenses for maximum tax deductions</p>
                 </div>
               </div>
             </div>
@@ -114,8 +115,8 @@ export default function ExpenseBenefits() {
                   <Check className="h-5 w-5 text-green-500" />
                 </div>
                 <div>
-                  <p className="font-medium">Tax-ready categorization</p>
-                  <p className="text-sm text-foreground/70">Every expense is automatically tagged for tax purposes</p>
+                  <p className="font-medium">One-click tax reports</p>
+                  <p className="text-sm text-foreground/70">Generate professional tax reports instantly when you need them</p>
                 </div>
               </div>
             </div>
