@@ -120,6 +120,32 @@
     z-index: -1;
   }
 
+  @keyframes float-complex {
+    0% { transform: translateY(0px) translateX(0px) rotate(0deg) scale(1); }
+    20% { transform: translateY(-25px) translateX(12px) rotate(2deg) scale(1.03); }
+    40% { transform: translateY(-45px) translateX(-8px) rotate(0deg) scale(0.98); }
+    60% { transform: translateY(-30px) translateX(-15px) rotate(-1.5deg) scale(1.02); }
+    80% { transform: translateY(-10px) translateX(8px) rotate(1deg) scale(0.99); }
+    100% { transform: translateY(0px) translateX(0px) rotate(0deg) scale(1); }
+  }
+
+  @keyframes ambient-drift {
+    0%, 100% { transform: translateX(0px) translateY(0px); }
+    25% { transform: translateX(15px) translateY(-10px); }
+    50% { transform: translateX(-8px) translateY(-20px); }
+    75% { transform: translateX(-18px) translateY(-5px); }
+  }
+
+  @keyframes pattern-drift {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    100% { transform: translate(40px, 40px) rotate(360deg); }
+  }
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Outfit', sans-serif;
     letter-spacing: -0.02em;
