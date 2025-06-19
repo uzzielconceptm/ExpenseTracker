@@ -64,6 +64,12 @@ export default function LandingPage() {
         <div className="absolute top-40 right-20 w-32 h-32 bg-gradient-to-br from-purple-400/20 to-blue-400/25 rounded-full blur-md animate-bounce" style={{animationDuration: '3s'}}></div>
         <div className="absolute bottom-32 left-1/4 w-36 h-36 bg-gradient-to-br from-teal-400/25 to-cyan-400/20 rounded-full blur-md animate-pulse" style={{animationDelay: '1s'}}></div>
         <div className="absolute top-1/2 right-10 w-28 h-28 bg-gradient-to-br from-indigo-400/20 to-purple-400/25 rounded-full blur-md animate-bounce" style={{animationDuration: '4s', animationDelay: '0.5s'}}></div>
+        
+        {/* Additional floating elements for complete coverage */}
+        <div className="absolute top-1/3 left-1/3 w-24 h-24 bg-gradient-to-br from-emerald-400/15 to-teal-400/20 rounded-full blur-sm animate-pulse" style={{animationDelay: '2s'}}></div>
+        <div className="absolute bottom-1/4 right-1/3 w-20 h-20 bg-gradient-to-br from-violet-400/18 to-purple-400/15 rounded-full blur-sm animate-bounce" style={{animationDuration: '5s', animationDelay: '1.5s'}}></div>
+        <div className="absolute top-3/4 left-1/5 w-32 h-32 bg-gradient-to-br from-cyan-400/20 to-blue-400/15 rounded-full blur-md animate-pulse" style={{animationDelay: '3s'}}></div>
+        <div className="absolute top-1/6 right-1/4 w-18 h-18 bg-gradient-to-br from-pink-400/12 to-rose-400/18 rounded-full blur-sm animate-bounce" style={{animationDuration: '6s'}}></div>
       </div>
       
       <Header />

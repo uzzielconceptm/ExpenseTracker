@@ -27,7 +27,7 @@ export default function Header() {
 
   return (
     <header 
-      className={`fixed w-full bg-white bg-opacity-95 shadow-sm z-50 transition-all duration-300 ${
+      className={`fixed w-full bg-gradient-to-r from-white/95 via-slate-50/90 to-blue-50/85 backdrop-blur-sm shadow-sm z-50 transition-all duration-300 ${
         isScrolled ? 'py-2 shadow' : 'py-3'
       }`}
     >
