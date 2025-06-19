@@ -4,7 +4,24 @@ import { Button } from "@/components/ui/button";
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-6 bg-white overflow-hidden">
+    <section id="how-it-works" className="py-6 relative overflow-hidden">
+      {/* Enhanced section background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-50/90 via-blue-50/50 to-indigo-50/70"></div>
+      <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-teal-50/40 to-transparent"></div>
+      <div className="absolute inset-0 opacity-30" 
+           style={{
+             backgroundImage: `radial-gradient(circle at 25% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+                              radial-gradient(circle at 75% 80%, rgba(16, 185, 129, 0.06) 0%, transparent 50%),
+                              radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.05) 0%, transparent 40%)`
+           }}>
+      </div>
+      {/* Subtle pattern overlay */}
+      <div className="absolute inset-0 opacity-15 pointer-events-none" 
+           style={{
+             backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%2314b8a6' stroke-width='1' stroke-opacity='0.1'%3E%3Cpath d='M40 20v40M20 40h40'/%3E%3Ccircle cx='40' cy='40' r='6'/%3E%3C/g%3E%3C/svg%3E")`,
+             backgroundSize: '100px 100px'
+           }}>
+      </div>
       <div className="container mx-auto px-4">
         <div className="text-center mb-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
