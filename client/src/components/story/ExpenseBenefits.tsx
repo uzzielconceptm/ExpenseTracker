@@ -17,63 +17,52 @@ export default function ExpenseBenefits() {
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Pain Section */}
-        <div className="relative overflow-hidden rounded-xl">
-          {/* Enhanced card background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-red-50/80 via-orange-50/40 to-pink-50/60"></div>
-          <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-red-50/20 to-transparent"></div>
-          <div className="absolute inset-0 opacity-30" 
-               style={{
-                 backgroundImage: `radial-gradient(circle at 30% 20%, rgba(239, 68, 68, 0.08) 0%, transparent 50%), radial-gradient(circle at 70% 80%, rgba(245, 101, 101, 0.06) 0%, transparent 50%)`
-               }}>
+        <div className="card-modern p-8">
+          <div className="flex items-start mb-6">
+            <div className="bg-red-50 p-3 rounded-md mr-4">
+              <AlertTriangle className="h-6 w-6 text-red-500" />
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-2 subtle-heading-underline">Why most expense tools fail solo workers</h3>
+              <p className="text-foreground/70 mt-4">
+                Manual data entry, missing receipts, and tax-time stress.
+              </p>
+            </div>
           </div>
           
-          <div className="relative card-modern p-8 bg-white/90 backdrop-blur-sm border border-red-100/50">
-            <div className="flex items-start mb-6">
-              <div className="bg-red-100 p-3 rounded-lg mr-4 shadow-sm">
-                <AlertTriangle className="h-6 w-6 text-red-600" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2 subtle-heading-underline">Why most expense tools fail solo workers</h3>
-                <p className="text-foreground/70 mt-4">
-                  Manual data entry, missing receipts, and tax-time stress.
-                </p>
+          <div className="space-y-4 mt-8">
+            <div className="bg-muted/30 p-4 rounded-lg">
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
+                  <span className="text-red-500 font-bold text-sm">×</span>
+                </div>
+                <div>
+                  <p className="font-medium">You manually enter every expense</p>
+                  <p className="text-sm text-foreground/70">Typing receipts by hand is slow and error-prone</p>
+                </div>
               </div>
             </div>
             
-            <div className="space-y-4 mt-8">
-              <div className="bg-muted/30 p-4 rounded-lg">
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
-                    <span className="text-red-500 font-bold text-sm">×</span>
-                  </div>
-                  <div>
-                    <p className="font-medium">You manually enter every expense</p>
-                    <p className="text-sm text-foreground/70">Typing receipts by hand is slow and error-prone</p>
-                  </div>
+            <div className="bg-muted/30 p-4 rounded-lg">
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
+                  <span className="text-red-500 font-bold text-sm">×</span>
+                </div>
+                <div>
+                  <p className="font-medium">Receipts get lost in email chaos</p>
+                  <p className="text-sm text-foreground/70">Finding that one receipt from three months ago takes forever</p>
                 </div>
               </div>
-              
-              <div className="bg-muted/30 p-4 rounded-lg">
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
-                    <span className="text-red-500 font-bold text-sm">×</span>
-                  </div>
-                  <div>
-                    <p className="font-medium">Receipts get lost in email chaos</p>
-                    <p className="text-sm text-foreground/70">Finding that one receipt from three months ago takes forever</p>
-                  </div>
+            </div>
+            
+            <div className="bg-muted/30 p-4 rounded-lg">
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
+                  <span className="text-red-500 font-bold text-sm">×</span>
                 </div>
-              </div>
-              
-              <div className="bg-muted/30 p-4 rounded-lg">
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
-                    <span className="text-red-500 font-bold text-sm">×</span>
-                  </div>
-                  <div>
-                    <p className="font-medium">Tax time becomes a nightmare</p>
-                    <p className="text-sm text-foreground/70">Rushing to organize expenses at the last minute creates stress</p>
-                  </div>
+                <div>
+                  <p className="font-medium">Tax time becomes a nightmare</p>
+                  <p className="text-sm text-foreground/70">Rushing to organize expenses at the last minute creates stress</p>
                 </div>
               </div>
             </div>
@@ -81,63 +70,52 @@ export default function ExpenseBenefits() {
         </div>
         
         {/* Benefit Section */}
-        <div className="relative overflow-hidden rounded-xl">
-          {/* Enhanced card background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-green-50/80 via-emerald-50/40 to-teal-50/60"></div>
-          <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-green-50/20 to-transparent"></div>
-          <div className="absolute inset-0 opacity-30" 
-               style={{
-                 backgroundImage: `radial-gradient(circle at 30% 20%, rgba(34, 197, 94, 0.08) 0%, transparent 50%), radial-gradient(circle at 70% 80%, rgba(16, 185, 129, 0.06) 0%, transparent 50%)`
-               }}>
+        <div className="card-modern p-8">
+          <div className="flex items-start mb-6">
+            <div className="bg-primary/10 p-3 rounded-md mr-4">
+              <LightbulbIcon className="h-6 w-6 text-primary" />
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-2 subtle-heading-underline">Save hours and stay tax-ready</h3>
+              <p className="text-foreground/70 mt-4">
+                Save hours and stay tax-ready — no more digging through emails.
+              </p>
+            </div>
           </div>
           
-          <div className="relative card-modern p-8 bg-white/90 backdrop-blur-sm border border-green-100/50">
-            <div className="flex items-start mb-6">
-              <div className="bg-primary/10 p-3 rounded-md mr-4">
-                <LightbulbIcon className="h-6 w-6 text-primary" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2 subtle-heading-underline">Save hours and stay tax-ready</h3>
-                <p className="text-foreground/70 mt-4">
-                  Save hours and stay tax-ready — no more digging through emails.
-                </p>
+          <div className="space-y-4 mt-8">
+            <div className="bg-muted/30 p-4 rounded-lg">
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+                  <Check className="h-5 w-5 text-green-500" />
+                </div>
+                <div>
+                  <p className="font-medium">Automatic receipt extraction</p>
+                  <p className="text-sm text-foreground/70">We scan your email for receipts so you don't have to search</p>
+                </div>
               </div>
             </div>
             
-            <div className="space-y-4 mt-8">
-              <div className="bg-muted/30 p-4 rounded-lg">
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
-                    <Check className="h-5 w-5 text-green-500" />
-                  </div>
-                  <div>
-                    <p className="font-medium">Automatic receipt extraction</p>
-                    <p className="text-sm text-foreground/70">We scan your email for receipts so you don't have to search</p>
-                  </div>
+            <div className="bg-muted/30 p-4 rounded-lg">
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+                  <Check className="h-5 w-5 text-green-500" />
+                </div>
+                <div>
+                  <p className="font-medium">Receipt-to-bank matching</p>
+                  <p className="text-sm text-foreground/70">Receipts automatically pair with your bank transactions</p>
                 </div>
               </div>
-              
-              <div className="bg-muted/30 p-4 rounded-lg">
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
-                    <Check className="h-5 w-5 text-green-500" />
-                  </div>
-                  <div>
-                    <p className="font-medium">Receipt-to-bank matching</p>
-                    <p className="text-sm text-foreground/70">Receipts automatically pair with your bank transactions</p>
-                  </div>
+            </div>
+            
+            <div className="bg-muted/30 p-4 rounded-lg">
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+                  <Check className="h-5 w-5 text-green-500" />
                 </div>
-              </div>
-              
-              <div className="bg-muted/30 p-4 rounded-lg">
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
-                    <Check className="h-5 w-5 text-green-500" />
-                  </div>
-                  <div>
-                    <p className="font-medium">Tax-ready categorization</p>
-                    <p className="text-sm text-foreground/70">Every expense is automatically tagged for tax purposes</p>
-                  </div>
+                <div>
+                  <p className="font-medium">Tax-ready categorization</p>
+                  <p className="text-sm text-foreground/70">Every expense is automatically tagged for tax purposes</p>
                 </div>
               </div>
             </div>
@@ -147,7 +125,7 @@ export default function ExpenseBenefits() {
     </div>
   );
 
-  // Feature tabs data  
+  // Feature tabs data
   const featureTabs = [
     {
       title: "Auto-Extract",
@@ -157,7 +135,7 @@ export default function ExpenseBenefits() {
         description: "Our intelligent system learns from your spending patterns to categorize expenses accurately, while our automated reconciliation ensures every transaction is properly matched and organized for tax season.",
         features: [
           "Connect unlimited email accounts",
-          "Smart AI extraction of receipt data", 
+          "Smart AI extraction of receipt data",
           "Automatic vendor and amount recognition",
           "Real-time processing of new receipts"
         ]
@@ -172,7 +150,7 @@ export default function ExpenseBenefits() {
         features: [
           "Connect unlimited bank accounts and cards",
           "Smart AI matching of receipts to transactions",
-          "Get alerted about missing receipts", 
+          "Get alerted about missing receipts",
           "Reconcile accounts with a single click"
         ]
       }
@@ -206,7 +184,7 @@ export default function ExpenseBenefits() {
       icon: <FileCheck className="h-6 w-6 text-primary" />
     },
     {
-      title: "Custom rules for auto-categorization", 
+      title: "Custom rules for auto-categorization",
       description: "Create personalized rules that automatically assign categories based on merchant, amount, or other criteria.",
       icon: <Settings className="h-6 w-6 text-primary" />
     }
@@ -297,14 +275,8 @@ export default function ExpenseBenefits() {
       </section>
 
       {/* Additional features section */}
-      <section className="py-12 bg-gradient-to-br from-muted/30 via-slate-50/40 to-blue-50/20 relative overflow-hidden">
-        {/* Background enhancement */}
-        <div className="absolute inset-0 opacity-30" 
-             style={{
-               backgroundImage: `radial-gradient(circle at 30% 80%, rgba(59, 130, 246, 0.06) 0%, transparent 50%)`
-             }}>
-        </div>
-        <div className="relative container mx-auto px-4">
+      <section className="py-12 bg-muted/30">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Everything you need to <span className="text-primary">stay organized</span>
@@ -316,7 +288,7 @@ export default function ExpenseBenefits() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {additionalFeatures.map((feature, index) => (
-              <div key={index} className="card-modern p-6 text-center bg-white/90 backdrop-blur-sm border border-blue-100/30">
+              <div key={index} className="card-modern p-6 text-center">
                 <div className="flex justify-center mb-4">
                   {feature.icon}
                 </div>
