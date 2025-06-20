@@ -37,7 +37,7 @@ app.use((req, res, next) => {
 });
 
 (async () => {
-  const server = await registerRoutes(app);
+  await registerRoutes(app);
 
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
     const status = err.status || err.statusCode || 500;
@@ -47,34 +47,17 @@ app.use((req, res, next) => {
     throw err;
   });
 
-  // importantly only setup vite in development and after
-  // setting up all the other routes so the catch-all route
-  // doesn't interfere with the other routes
+  const port = process.env.PORT || 5000;
+  const server = app.listen(Number(port), "0.0.0.0", () => {
+    log(`🚀 Server started at http://0.0.0.0:${port}`);
+    log(`🌎 Environment: ${process.env.NODE_ENV || "development"}`);
+    log(`🗄️  Database connected: ${process.env.DATABASE_URL ? "Yes" : "No"}`);
+  });
+
+  // Use Vite middleware only in development
   if (app.get("env") === "development") {
     await setupVite(app, server);
   } else {
     serveStatic(app);
   }
-
-  // Use Railway's PORT environment variable or default to 5000
-  const port = process.env.PORT || 5000;
-  
-  // Add error handling for Railway deployment
-  server.on('error', (error: any) => {
-    console.error('Server error:', error);
-    if (error.code === 'EADDRINUSE') {
-      console.error(`Port ${port} is already in use`);
-      process.exit(1);
-    }
-  });
-
-  server.listen({
-    port: Number(port),
-    host: "0.0.0.0",
-    reusePort: true,
-  }, () => {
-    log(`server started at http://0.0.0.0:${port}`);
-    log(`Environment: ${process.env.NODE_ENV || 'development'}`);
-    log(`Database connected: ${process.env.DATABASE_URL ? 'Yes' : 'No'}`);
-  });
 })();
