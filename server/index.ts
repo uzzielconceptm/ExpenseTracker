@@ -1,11 +1,13 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
+import { createServer } from "http";
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+// Log middleware
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;
@@ -24,11 +26,9 @@ app.use((req, res, next) => {
       if (capturedJsonResponse) {
         logLine += ` :: ${JSON.stringify(capturedJsonResponse)}`;
       }
-
       if (logLine.length > 80) {
         logLine = logLine.slice(0, 79) + "…";
       }
-
       log(logLine);
     }
   });
@@ -42,22 +42,22 @@ app.use((req, res, next) => {
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
     const status = err.status || err.statusCode || 500;
     const message = err.message || "Internal Server Error";
-
     res.status(status).json({ message });
     throw err;
   });
 
   const port = process.env.PORT || 5000;
-  const server = app.listen(Number(port), "0.0.0.0", () => {
+  const server = createServer(app);
+
+  if (app.get("env") === "development") {
+    await setupVite(app, server); // ✅ Required for Vite HMR
+  } else {
+    serveStatic(app); // ✅ serve frontend in production
+  }
+
+  server.listen(Number(port), "0.0.0.0", () => {
     log(`🚀 Server started at http://0.0.0.0:${port}`);
     log(`🌎 Environment: ${process.env.NODE_ENV || "development"}`);
     log(`🗄️  Database connected: ${process.env.DATABASE_URL ? "Yes" : "No"}`);
   });
-
-  // Use Vite middleware only in development
-  if (app.get("env") === "development") {
-    await setupVite(app, server);
-  } else {
-    serveStatic(app);
-  }
 })();
