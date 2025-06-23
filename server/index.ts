@@ -68,6 +68,12 @@ app.use((req, res, next) => {
     }
   });
 
+  // Catch-all 404 handler — should be before `listen`
+  app.use("*", (_req, res) => {
+    res.status(404).json({ message: "Not Found" });
+  });
+
+  // Start the server
   server.listen(
     {
       port: Number(port),
