@@ -6,6 +6,11 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+// ✅ Add this for Railway healthcheck
+app.get("/health", (_req: Request, res: Response) => {
+  res.status(200).send("OK");
+});
+
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;
