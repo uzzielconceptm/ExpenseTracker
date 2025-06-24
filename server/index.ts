@@ -8,7 +8,12 @@ app.use(express.urlencoded({ extended: false }));
 
 // ✅ Add this for Railway healthcheck
 app.get("/health", (_req: Request, res: Response) => {
-  res.status(200).send("OK");
+  res.status(200).json({ 
+    status: "healthy",
+    timestamp: new Date().toISOString(),
+    port: process.env.PORT || 5000,
+    environment: process.env.NODE_ENV || "development"
+  });
 });
 
 app.use((req, res, next) => {
