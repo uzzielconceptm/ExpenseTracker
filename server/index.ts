@@ -83,17 +83,11 @@ app.use((req, res, next) => {
     res.status(404).json({ message: "Not Found" });
   });
 
-  // Start the server
-  server.listen(
-    {
-      port: Number(port),
-      host: "0.0.0.0",
-      reusePort: true,
-    },
-    () => {
-      log(`server started at http://0.0.0.0:${port}`);
-      log(`Environment: ${process.env.NODE_ENV || "development"}`);
-      log(`Database connected: ${process.env.DATABASE_URL ? "Yes" : "No"}`);
-    },
-  );
+  // Start the server for Railway deployment
+  server.listen(Number(port), "0.0.0.0", () => {
+    log(`Server started at http://0.0.0.0:${port}`);
+    log(`Environment: ${process.env.NODE_ENV || "development"}`);
+    log(`Database connected: ${process.env.DATABASE_URL ? "Yes" : "No"}`);
+    log(`Health check available at /health`);
+  });
 })();
