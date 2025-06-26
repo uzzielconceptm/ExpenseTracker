@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import { useLocation } from "wouter";
 import { apiRequest, queryClient } from "./queryClient";
 import type { User, LoginCredentials, RegisterCredentials } from "@shared/schema";
 
@@ -16,6 +17,7 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [, setLocation] = useLocation();
 
   const isAuthenticated = !!user;
 
@@ -102,6 +104,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       setUser(null);
       localStorage.removeItem('auth_token');
       queryClient.clear();
+      // Redirect to landing page after logout
+      setLocation("/");
     }
   };
 
