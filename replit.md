@@ -111,8 +111,14 @@ The application is configured for deployment on Railway with multiple deployment
 - `NODE_ENV`: Set to "production" for deployment
 - `SENDGRID_API_KEY`: Optional for email functionality
 
+## Recent Changes
+- June 26, 2025: Fixed logout functionality to redirect to landing page using wouter navigation
+- June 26, 2025: Resolved HTML parsing errors in Vite development server
+- June 26, 2025: Enhanced Railway deployment configuration with proper health checks
+
 ## Changelog
 - June 13, 2025. Initial setup
+- June 26, 2025. Updated logout functionality and fixed HTML parsing issues
 
 ## User Preferences
 Preferred communication style: Simple, everyday language.
