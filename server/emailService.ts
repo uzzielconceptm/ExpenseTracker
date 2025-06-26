@@ -14,13 +14,13 @@ const transporter = nodemailer.createTransport({
 const sendAdminNotification = async (userEmail: string, fullName: string) => {
   try {
     const msg = {
-      from: `"ExpenseWise" <${process.env.GMAIL_USER}>`,
+      from: `"ExactusBooks" <${process.env.GMAIL_USER}>`,
       to: process.env.GMAIL_USER,
-      subject: 'New ExpenseWise Sign Up!',
+      subject: 'New ExactusBooks Sign Up!',
       text: `New user signed up: ${fullName} (${userEmail})`,
       html: `
         <h2>New User Registration</h2>
-        <p>A new user has signed up for ExpenseWise:</p>
+        <p>A new user has signed up for ExactusBooks:</p>
         <ul>
           <li><strong>Name:</strong> ${fullName}</li>
           <li><strong>Email:</strong> ${userEmail}</li>
@@ -42,13 +42,13 @@ export const sendConfirmationEmail = async (email: string, fullName: string) => 
     await transporter.verify();
     
     const msg = {
-      from: `"ExpenseWise" <${process.env.GMAIL_USER}>`,
+      from: `"ExactusBooks" <${process.env.GMAIL_USER}>`,
       to: email,
-      subject: 'Welcome to ExpenseWise!',
+      subject: 'Welcome to ExactusBooks!',
       text: 'Thanks for subscribing! This confirms your email.',
       html: `
-        <h1>Welcome to ExpenseWise${fullName ? `, ${fullName}` : ''}!</h1>
-        <p>Thank you for signing up for early access to ExpenseWise. We're excited to have you join us!</p>
+        <h1>Welcome to ExactusBooks${fullName ? `, ${fullName}` : ''}!</h1>
+        <p>Thank you for signing up for early access to ExactusBooks. We're excited to have you join us!</p>
         <p>This email confirms your subscription to our updates.</p>
       `
     };

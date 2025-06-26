@@ -112,8 +112,9 @@ The application is configured for deployment on Railway with multiple deployment
 - `SENDGRID_API_KEY`: Optional for email functionality
 
 ## Recent Changes
+- June 26, 2025: Fixed email branding from "ExpenseWise" to "ExactusBooks" in confirmation emails
+- June 26, 2025: Resolved HTML parsing errors in Vite development server with inline script import
 - June 26, 2025: Fixed logout functionality to redirect to landing page using wouter navigation
-- June 26, 2025: Resolved HTML parsing errors in Vite development server
 - June 26, 2025: Enhanced Railway deployment configuration with proper health checks
 
 ## Changelog
